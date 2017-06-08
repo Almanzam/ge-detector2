@@ -24,7 +24,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
 
     particle_gun->SetParticleDefinition(particle);
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
-            (-1., 0., -1.));
+            (0, -1, 0));
     particle_gun->SetParticleEnergy(1. * MeV);
 }
 
@@ -36,6 +36,6 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
     particle_gun->SetParticlePosition(G4ThreeVector
-                                      (5 * cm, 5 * cm, 5 * cm));
+                                      (0, 10 * cm, 0));
     particle_gun->GeneratePrimaryVertex(event);
 }
