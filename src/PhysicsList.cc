@@ -36,7 +36,8 @@ PhysicsList::PhysicsList()
 }
 
 PhysicsList::~PhysicsList()
-{;
+{
+    ;
 }
 
 void PhysicsList::ConstructParticle()

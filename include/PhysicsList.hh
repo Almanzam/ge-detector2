@@ -6,12 +6,13 @@
 #include "G4VModularPhysicsList.hh"
 
 
-class PhysicsList:public G4VModularPhysicsList {
-  public:
+class PhysicsList: public G4VModularPhysicsList
+{
+public:
     PhysicsList();
     ~PhysicsList();
 
-  protected:
+protected:
     void ConstructParticle();
     void ConstructProcess();
     void SetCuts();
