@@ -5,6 +5,7 @@
 
 class G4ParticleGun;
 class G4Event;
+// class G4Double;
 
 class PrimaryGeneratorAction: public G4VUserPrimaryGeneratorAction
 {
@@ -18,6 +19,8 @@ public:
         return particle_gun;
     } private:
     G4ParticleGun *particle_gun;
+//     G4Double *xdir;
+//     G4Double *zdir;
 };
 
 #endif

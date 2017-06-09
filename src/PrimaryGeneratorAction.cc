@@ -22,9 +22,9 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     G4ParticleTable *particle_table = G4ParticleTable::GetParticleTable();
     G4ParticleDefinition *particle = particle_table->FindParticle("gamma");
 
+    
     particle_gun->SetParticleDefinition(particle);
-    particle_gun->SetParticleMomentumDirection(G4ThreeVector
-            (0, -1, 0));
+    
     particle_gun->SetParticleEnergy(1. * MeV);
 }
 
@@ -35,6 +35,11 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
+    double xdir = .75*G4UniformRand()*(G4UniformRand()-.5);
+    double zdir = .75*G4UniformRand()*(G4UniformRand()-.5);
+    
+    particle_gun->SetParticleMomentumDirection(G4ThreeVector
+            (xdir, -.5, zdir));
     particle_gun->SetParticlePosition(G4ThreeVector
                                       (0, 10 * cm, 0));
     particle_gun->GeneratePrimaryVertex(event);
