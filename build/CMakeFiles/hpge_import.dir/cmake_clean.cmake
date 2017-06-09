@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hpge_import.dir/main.cpp.o"
-  "CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o"
   "CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o"
   "CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o"
   "hpge_import.pdb"

@@ -5070,7 +5070,7 @@
    <Dref ref="universe_mean_density" />
    <atom value="1.01" />
   </material>
- </materials>
+  </materials>
  <solids>
   <box aunit="radian" lunit="mm" name="WorldBox" x="1000" y="1000" z="1000"/>
   <tessellated aunit="radian" lunit="mm" name="Al_Foil" >
@@ -15158,31 +15158,31 @@
    <solidref ref="Al_Foil" />
   </volume>
   <volume name="Copper_Cup_vol_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Cu" />
    <solidref ref="Copper_Cup_vol" />
   </volume>
   <volume name="Ge_B_Layer_vol_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Ge" />
    <solidref ref="Ge_B_Layer_vol" />
   </volume>
   <volume name="Ge_B_Layer_1_vol_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Ge" />
    <solidref ref="Ge_B_Layer_1_vol" />
   </volume>
   <volume name="Ge_Crystal_vol_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Ge" />
    <solidref ref="Ge_Crystal_vol" />
   </volume>
   <volume name="Ge_Li_Layer_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Ge" />
    <solidref ref="Ge_Li_Layer" />
   </volume>
   <volume name="Mylar_Foil_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_MYLAR" />
    <solidref ref="Mylar_Foil" />
   </volume>
   <volume name="Shell_vol_vol" >
-   <materialref ref="G4_Al" />
+   <materialref ref="G4_Mg" />
    <solidref ref="Shell_vol" />
   </volume>
   <volume name="World" >

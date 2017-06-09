@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/daq/projects/HPGe_Import/main.cpp" "/home/daq/projects/HPGe_Import/build/CMakeFiles/hpge_import.dir/main.cpp.o"
-  "/home/daq/projects/HPGe_Import/src/DetectorConstruction.cc" "/home/daq/projects/HPGe_Import/build/CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o"
   "/home/daq/projects/HPGe_Import/src/PhysicsList.cc" "/home/daq/projects/HPGe_Import/build/CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o"
   "/home/daq/projects/HPGe_Import/src/PrimaryGeneratorAction.cc" "/home/daq/projects/HPGe_Import/build/CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o"
   )

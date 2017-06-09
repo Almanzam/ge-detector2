@@ -196,33 +196,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/hpge_import.dir/build.make CMakeFiles/hpge_import.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/DetectorConstruction.o: src/DetectorConstruction.cc.o
-
-.PHONY : src/DetectorConstruction.o
-
-# target to build an object file
-src/DetectorConstruction.cc.o:
-	$(MAKE) -f CMakeFiles/hpge_import.dir/build.make CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o
-.PHONY : src/DetectorConstruction.cc.o
-
-src/DetectorConstruction.i: src/DetectorConstruction.cc.i
-
-.PHONY : src/DetectorConstruction.i
-
-# target to preprocess a source file
-src/DetectorConstruction.cc.i:
-	$(MAKE) -f CMakeFiles/hpge_import.dir/build.make CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.i
-.PHONY : src/DetectorConstruction.cc.i
-
-src/DetectorConstruction.s: src/DetectorConstruction.cc.s
-
-.PHONY : src/DetectorConstruction.s
-
-# target to generate assembly for a file
-src/DetectorConstruction.cc.s:
-	$(MAKE) -f CMakeFiles/hpge_import.dir/build.make CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.s
-.PHONY : src/DetectorConstruction.cc.s
-
 src/PhysicsList.o: src/PhysicsList.cc.o
 
 .PHONY : src/PhysicsList.o
@@ -293,9 +266,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/DetectorConstruction.o"
-	@echo "... src/DetectorConstruction.i"
-	@echo "... src/DetectorConstruction.s"
 	@echo "... src/PhysicsList.o"
 	@echo "... src/PhysicsList.i"
 	@echo "... src/PhysicsList.s"

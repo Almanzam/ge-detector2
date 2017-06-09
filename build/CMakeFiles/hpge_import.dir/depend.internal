@@ -27,6 +27,7 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/event/include/evmandefs.hh
  /home/daq/geant4.10.03.p01/source/event/include/evtdefs.hh
  /home/daq/geant4.10.03.p01/source/event/include/trajectoryControl.hh
+ /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Evaluator/Evaluator.h
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Normal3D.h
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Plane3D.h
@@ -99,6 +100,8 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationZ.icc
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc
+ /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/TwoVector.h
+ /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/TwoVector.icc
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4AffineTransform.hh
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4AffineTransform.icc
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4BlockingList.hh
@@ -115,6 +118,7 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4SmartVoxelProxy.hh
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4SmartVoxelProxy.icc
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4TouchableHandle.hh
+ /home/daq/geant4.10.03.p01/source/geometry/management/include/G4USolid.hh
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VPVParameterisation.hh
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VPhysicalVolume.hh
  /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VPhysicalVolume.icc
@@ -136,8 +140,64 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4RegularNavigation.hh
  /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4ReplicaNavigation.hh
  /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4ReplicaNavigation.icc
+ /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4SafetyHelper.hh
+ /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4TransportationManager.hh
+ /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4TransportationManager.icc
  /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4VoxelNavigation.hh
  /home/daq/geant4.10.03.p01/source/geometry/navigation/include/G4VoxelNavigation.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/Boolean/include/G4MultiUnion.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/Boolean/include/G4UMultiUnion.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Box.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Box.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4CSGSolid.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Cons.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Cons.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Orb.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Orb.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Para.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Para.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Sphere.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Sphere.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Torus.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Torus.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Trap.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Trap.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Trd.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Trd.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Tubs.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Tubs.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UBox.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UCons.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UOrb.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4USphere.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UTorus.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UTrap.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UTrd.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UTubs.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Ellipsoid.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Ellipsoid.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4ExtrudedSolid.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4ExtrudedSolid.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Hype.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Hype.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Polycone.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Polycone.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4PolyconeHistorical.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4PolyconeSide.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Polyhedra.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Polyhedra.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4PolyhedraHistorical.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4PolyhedraSide.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfBits.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfaceVoxelizer.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfaceVoxelizer.icc
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4TessellatedSolid.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4UExtrudedSolid.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4UPolycone.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4UPolyhedra.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4VCSGface.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4VCSGfaceted.hh
+ /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4VFacet.hh
  /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4GRSSolid.hh
  /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4GRSSolid.icc
  /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4GRSVolume.hh
@@ -182,6 +242,7 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/global/management/include/G4AutoLock.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4DataVector.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4DataVector.icc
+ /home/daq/geant4.10.03.p01/source/global/management/include/G4Evaluator.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4ExceptionSeverity.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4Exp.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4FastVector.hh
@@ -200,6 +261,7 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/global/management/include/G4String.icc
  /home/daq/geant4.10.03.p01/source/global/management/include/G4Threading.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4ThreeVector.hh
+ /home/daq/geant4.10.03.p01/source/global/management/include/G4TwoVector.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4Types.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4VStateDependent.hh
  /home/daq/geant4.10.03.p01/source/global/management/include/G4ios.hh
@@ -209,6 +271,7 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/global/management/include/windefs.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Color.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Colour.hh
+ /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Polyhedron.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VFilter.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VGraphicsScene.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VMarker.hh
@@ -219,6 +282,8 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VisExtent.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Visible.hh
  /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Visible.icc
+ /home/daq/geant4.10.03.p01/source/graphics_reps/include/HepPolyhedron.h
+ /home/daq/geant4.10.03.p01/source/graphics_reps/include/HepPolyhedronProcessor.h
  /home/daq/geant4.10.03.p01/source/intercoms/include/G4UIcommand.hh
  /home/daq/geant4.10.03.p01/source/intercoms/include/G4UIcommandStatus.hh
  /home/daq/geant4.10.03.p01/source/intercoms/include/G4UIdirectory.hh
@@ -254,6 +319,27 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/particles/management/include/G4PrimaryParticle.hh
  /home/daq/geant4.10.03.p01/source/particles/management/include/G4PrimaryVertex.hh
  /home/daq/geant4.10.03.p01/source/particles/management/include/pwdefs.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLAuxStructType.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLEvaluator.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLMessenger.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLParameterisation.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLParser.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLParser.icc
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLRead.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadDefine.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadMaterials.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadParamvol.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadSetup.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadSolids.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLReadStructure.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWrite.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteDefine.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteMaterials.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteParamvol.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteSetup.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteSolids.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4GDMLWriteStructure.hh
+ /home/daq/geant4.10.03.p01/source/persistency/gdml/include/G4STRead.hh
  /home/daq/geant4.10.03.p01/source/processes/cuts/include/G4MCCIndexConversionTable.hh
  /home/daq/geant4.10.03.p01/source/processes/cuts/include/G4MaterialCutsCouple.hh
  /home/daq/geant4.10.03.p01/source/processes/cuts/include/G4ProductionCuts.hh
@@ -360,150 +446,147 @@ CMakeFiles/hpge_import.dir/main.cpp.o
  /home/daq/geant4.10.03.p01/source/visualization/modeling/include/G4VModelFactory.hh
  /home/daq/geant4.10.03.p01/source/visualization/modeling/include/G4VTrajectoryModel.hh
  /home/daq/projects/HPGe_Import/main.cpp
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o
- ../include/DetectorConstruction.hh
- /home/daq/cadmesh/include/CADMesh.hh
- /home/daq/cadmesh/include/assimp/./Compiler/poppack1.h
- /home/daq/cadmesh/include/assimp/./Compiler/pushpack1.h
- /home/daq/cadmesh/include/assimp/Compiler/pstdint.h
- /home/daq/cadmesh/include/assimp/Importer.hpp
- /home/daq/cadmesh/include/assimp/anim.h
- /home/daq/cadmesh/include/assimp/camera.h
- /home/daq/cadmesh/include/assimp/color4.h
- /home/daq/cadmesh/include/assimp/color4.inl
- /home/daq/cadmesh/include/assimp/config.h
- /home/daq/cadmesh/include/assimp/defs.h
- /home/daq/cadmesh/include/assimp/light.h
- /home/daq/cadmesh/include/assimp/material.h
- /home/daq/cadmesh/include/assimp/material.inl
- /home/daq/cadmesh/include/assimp/matrix3x3.h
- /home/daq/cadmesh/include/assimp/matrix3x3.inl
- /home/daq/cadmesh/include/assimp/matrix4x4.h
- /home/daq/cadmesh/include/assimp/matrix4x4.inl
- /home/daq/cadmesh/include/assimp/mesh.h
- /home/daq/cadmesh/include/assimp/metadata.h
- /home/daq/cadmesh/include/assimp/postprocess.h
- /home/daq/cadmesh/include/assimp/quaternion.h
- /home/daq/cadmesh/include/assimp/quaternion.inl
- /home/daq/cadmesh/include/assimp/scene.h
- /home/daq/cadmesh/include/assimp/texture.h
- /home/daq/cadmesh/include/assimp/types.h
- /home/daq/cadmesh/include/assimp/vector2.h
- /home/daq/cadmesh/include/assimp/vector2.inl
- /home/daq/cadmesh/include/assimp/vector3.h
- /home/daq/cadmesh/include/assimp/vector3.inl
- /home/daq/cadmesh/include/tetgen.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Normal3D.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Point3D.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Transform3D.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Transform3D.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Geometry/Vector3D.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Units/PhysicalConstants.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Units/SystemOfUnits.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Utility/defs.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/AxisAngle.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/AxisAngle.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/LorentzVector.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/LorentzVector.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/Rotation.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/Rotation.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationInterfaces.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationInterfaces.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationX.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationX.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationY.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationY.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationZ.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/RotationZ.icc
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h
- /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4GeomSplitter.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4LogicalVolume.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4LogicalVolume.icc
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4Region.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4Region.icc
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4USolid.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VPhysicalVolume.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VPhysicalVolume.icc
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VSolid.hh
- /home/daq/geant4.10.03.p01/source/geometry/management/include/G4VSolid.icc
- /home/daq/geant4.10.03.p01/source/geometry/management/include/geomwdefs.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Box.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4Box.icc
- /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4CSGSolid.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/CSG/include/G4UBox.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfBits.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfaceVoxelizer.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4SurfaceVoxelizer.icc
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4TessellatedSolid.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4Tet.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4TriangularFacet.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4UTet.hh
- /home/daq/geant4.10.03.p01/source/geometry/solids/specific/include/G4VFacet.hh
- /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4AssemblyTriplet.hh
- /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4AssemblyTriplet.icc
- /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4AssemblyVolume.hh
- /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4AssemblyVolume.icc
- /home/daq/geant4.10.03.p01/source/geometry/volumes/include/G4PVPlacement.hh
- /home/daq/geant4.10.03.p01/source/global/HEPGeometry/include/G4Normal3D.hh
- /home/daq/geant4.10.03.p01/source/global/HEPGeometry/include/G4Point3D.hh
- /home/daq/geant4.10.03.p01/source/global/HEPGeometry/include/G4Transform3D.hh
- /home/daq/geant4.10.03.p01/source/global/HEPGeometry/include/geomdefs.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4ApplicationState.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4AutoLock.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4DataVector.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4DataVector.icc
- /home/daq/geant4.10.03.p01/source/global/management/include/G4ExceptionSeverity.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4Exp.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4Log.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4OrderedTable.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4PhysicsOrderedFreeVector.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4PhysicsVector.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4PhysicsVector.icc
- /home/daq/geant4.10.03.p01/source/global/management/include/G4PhysicsVectorType.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4Pow.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4RotationMatrix.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4String.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4String.icc
- /home/daq/geant4.10.03.p01/source/global/management/include/G4SystemOfUnits.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4Threading.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4ThreeVector.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4Types.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/G4ios.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/globals.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/templates.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/tls.hh
- /home/daq/geant4.10.03.p01/source/global/management/include/windefs.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Color.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Colour.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Polyhedron.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VisAttributes.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4VisAttributes.icc
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Visible.hh
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/G4Visible.icc
- /home/daq/geant4.10.03.p01/source/graphics_reps/include/HepPolyhedron.h
- /home/daq/geant4.10.03.p01/source/intercoms/include/G4UIcommand.hh
- /home/daq/geant4.10.03.p01/source/intercoms/include/G4UIparameter.hh
- /home/daq/geant4.10.03.p01/source/intercoms/include/G4UItokenNum.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4Element.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4ElementTable.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4ElementVector.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4IonisParamElm.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4IonisParamMat.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4Isotope.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4IsotopeVector.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4Material.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4MaterialPropertiesTable.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4MaterialPropertiesTable.icc
- /home/daq/geant4.10.03.p01/source/materials/include/G4MaterialPropertyVector.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4MaterialTable.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4NistElementBuilder.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4NistManager.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4NistMaterialBuilder.hh
- /home/daq/geant4.10.03.p01/source/materials/include/G4SandiaTable.hh
- /home/daq/geant4.10.03.p01/source/run/include/G4VUserDetectorConstruction.hh
- /home/daq/projects/HPGe_Import/src/DetectorConstruction.cc
+ /usr/local/include/xercesc/dom/DOM.hpp
+ /usr/local/include/xercesc/dom/DOMAttr.hpp
+ /usr/local/include/xercesc/dom/DOMCDATASection.hpp
+ /usr/local/include/xercesc/dom/DOMCharacterData.hpp
+ /usr/local/include/xercesc/dom/DOMComment.hpp
+ /usr/local/include/xercesc/dom/DOMConfiguration.hpp
+ /usr/local/include/xercesc/dom/DOMDocument.hpp
+ /usr/local/include/xercesc/dom/DOMDocumentFragment.hpp
+ /usr/local/include/xercesc/dom/DOMDocumentRange.hpp
+ /usr/local/include/xercesc/dom/DOMDocumentTraversal.hpp
+ /usr/local/include/xercesc/dom/DOMDocumentType.hpp
+ /usr/local/include/xercesc/dom/DOMElement.hpp
+ /usr/local/include/xercesc/dom/DOMEntity.hpp
+ /usr/local/include/xercesc/dom/DOMEntityReference.hpp
+ /usr/local/include/xercesc/dom/DOMError.hpp
+ /usr/local/include/xercesc/dom/DOMErrorHandler.hpp
+ /usr/local/include/xercesc/dom/DOMException.hpp
+ /usr/local/include/xercesc/dom/DOMImplementation.hpp
+ /usr/local/include/xercesc/dom/DOMImplementationLS.hpp
+ /usr/local/include/xercesc/dom/DOMImplementationList.hpp
+ /usr/local/include/xercesc/dom/DOMImplementationRegistry.hpp
+ /usr/local/include/xercesc/dom/DOMImplementationSource.hpp
+ /usr/local/include/xercesc/dom/DOMLSException.hpp
+ /usr/local/include/xercesc/dom/DOMLSInput.hpp
+ /usr/local/include/xercesc/dom/DOMLSOutput.hpp
+ /usr/local/include/xercesc/dom/DOMLSParser.hpp
+ /usr/local/include/xercesc/dom/DOMLSParserFilter.hpp
+ /usr/local/include/xercesc/dom/DOMLSResourceResolver.hpp
+ /usr/local/include/xercesc/dom/DOMLSSerializer.hpp
+ /usr/local/include/xercesc/dom/DOMLSSerializerFilter.hpp
+ /usr/local/include/xercesc/dom/DOMLocator.hpp
+ /usr/local/include/xercesc/dom/DOMNamedNodeMap.hpp
+ /usr/local/include/xercesc/dom/DOMNode.hpp
+ /usr/local/include/xercesc/dom/DOMNodeFilter.hpp
+ /usr/local/include/xercesc/dom/DOMNodeIterator.hpp
+ /usr/local/include/xercesc/dom/DOMNodeList.hpp
+ /usr/local/include/xercesc/dom/DOMNotation.hpp
+ /usr/local/include/xercesc/dom/DOMPSVITypeInfo.hpp
+ /usr/local/include/xercesc/dom/DOMProcessingInstruction.hpp
+ /usr/local/include/xercesc/dom/DOMRange.hpp
+ /usr/local/include/xercesc/dom/DOMRangeException.hpp
+ /usr/local/include/xercesc/dom/DOMStringList.hpp
+ /usr/local/include/xercesc/dom/DOMText.hpp
+ /usr/local/include/xercesc/dom/DOMTreeWalker.hpp
+ /usr/local/include/xercesc/dom/DOMTypeInfo.hpp
+ /usr/local/include/xercesc/dom/DOMUserDataHandler.hpp
+ /usr/local/include/xercesc/dom/DOMXPathEvaluator.hpp
+ /usr/local/include/xercesc/dom/DOMXPathException.hpp
+ /usr/local/include/xercesc/dom/DOMXPathExpression.hpp
+ /usr/local/include/xercesc/dom/DOMXPathNSResolver.hpp
+ /usr/local/include/xercesc/dom/DOMXPathNamespace.hpp
+ /usr/local/include/xercesc/dom/DOMXPathResult.hpp
+ /usr/local/include/xercesc/framework/LocalFileFormatTarget.hpp
+ /usr/local/include/xercesc/framework/MemoryManager.hpp
+ /usr/local/include/xercesc/framework/ValidationContext.hpp
+ /usr/local/include/xercesc/framework/XMLAttDef.hpp
+ /usr/local/include/xercesc/framework/XMLAttDefList.hpp
+ /usr/local/include/xercesc/framework/XMLAttr.hpp
+ /usr/local/include/xercesc/framework/XMLBuffer.hpp
+ /usr/local/include/xercesc/framework/XMLBufferMgr.hpp
+ /usr/local/include/xercesc/framework/XMLContentModel.hpp
+ /usr/local/include/xercesc/framework/XMLDocumentHandler.hpp
+ /usr/local/include/xercesc/framework/XMLElementDecl.hpp
+ /usr/local/include/xercesc/framework/XMLEntityDecl.hpp
+ /usr/local/include/xercesc/framework/XMLEntityHandler.hpp
+ /usr/local/include/xercesc/framework/XMLErrorReporter.hpp
+ /usr/local/include/xercesc/framework/XMLFormatter.hpp
+ /usr/local/include/xercesc/framework/XMLNotationDecl.hpp
+ /usr/local/include/xercesc/framework/psvi/PSVIHandler.hpp
+ /usr/local/include/xercesc/framework/psvi/XSConstants.hpp
+ /usr/local/include/xercesc/framework/psvi/XSObject.hpp
+ /usr/local/include/xercesc/framework/psvi/XSSimpleTypeDefinition.hpp
+ /usr/local/include/xercesc/framework/psvi/XSTypeDefinition.hpp
+ /usr/local/include/xercesc/internal/XProtoType.hpp
+ /usr/local/include/xercesc/internal/XSerializable.hpp
+ /usr/local/include/xercesc/internal/XSerializationException.hpp
+ /usr/local/include/xercesc/internal/XSerializeEngine.hpp
+ /usr/local/include/xercesc/parsers/AbstractDOMParser.hpp
+ /usr/local/include/xercesc/parsers/XercesDOMParser.hpp
+ /usr/local/include/xercesc/sax/DTDHandler.hpp
+ /usr/local/include/xercesc/sax/DocumentHandler.hpp
+ /usr/local/include/xercesc/sax/EntityResolver.hpp
+ /usr/local/include/xercesc/sax/ErrorHandler.hpp
+ /usr/local/include/xercesc/sax/HandlerBase.hpp
+ /usr/local/include/xercesc/sax/SAXException.hpp
+ /usr/local/include/xercesc/sax/SAXParseException.hpp
+ /usr/local/include/xercesc/util/ArrayIndexOutOfBoundsException.hpp
+ /usr/local/include/xercesc/util/BaseRefVectorOf.c
+ /usr/local/include/xercesc/util/BaseRefVectorOf.hpp
+ /usr/local/include/xercesc/util/EmptyStackException.hpp
+ /usr/local/include/xercesc/util/Hashers.hpp
+ /usr/local/include/xercesc/util/IllegalArgumentException.hpp
+ /usr/local/include/xercesc/util/Janitor.c
+ /usr/local/include/xercesc/util/Janitor.hpp
+ /usr/local/include/xercesc/util/KVStringPair.hpp
+ /usr/local/include/xercesc/util/Mutexes.hpp
+ /usr/local/include/xercesc/util/NameIdPool.c
+ /usr/local/include/xercesc/util/NameIdPool.hpp
+ /usr/local/include/xercesc/util/NoSuchElementException.hpp
+ /usr/local/include/xercesc/util/NullPointerException.hpp
+ /usr/local/include/xercesc/util/PanicHandler.hpp
+ /usr/local/include/xercesc/util/PlatformUtils.hpp
+ /usr/local/include/xercesc/util/QName.hpp
+ /usr/local/include/xercesc/util/RefArrayVectorOf.c
+ /usr/local/include/xercesc/util/RefArrayVectorOf.hpp
+ /usr/local/include/xercesc/util/RefHashTableOf.c
+ /usr/local/include/xercesc/util/RefHashTableOf.hpp
+ /usr/local/include/xercesc/util/RefVectorOf.c
+ /usr/local/include/xercesc/util/RefVectorOf.hpp
+ /usr/local/include/xercesc/util/RuntimeException.hpp
+ /usr/local/include/xercesc/util/SecurityManager.hpp
+ /usr/local/include/xercesc/util/ValueStackOf.c
+ /usr/local/include/xercesc/util/ValueStackOf.hpp
+ /usr/local/include/xercesc/util/ValueVectorOf.c
+ /usr/local/include/xercesc/util/ValueVectorOf.hpp
+ /usr/local/include/xercesc/util/XMLEnumerator.hpp
+ /usr/local/include/xercesc/util/XMLExceptMsgs.hpp
+ /usr/local/include/xercesc/util/XMLException.hpp
+ /usr/local/include/xercesc/util/XMLFileMgr.hpp
+ /usr/local/include/xercesc/util/XMLMutexMgr.hpp
+ /usr/local/include/xercesc/util/XMLString.hpp
+ /usr/local/include/xercesc/util/XMLUni.hpp
+ /usr/local/include/xercesc/util/XMLUniDefs.hpp
+ /usr/local/include/xercesc/util/XMemory.hpp
+ /usr/local/include/xercesc/util/XercesDefs.hpp
+ /usr/local/include/xercesc/util/XercesVersion.hpp
+ /usr/local/include/xercesc/util/Xerces_autoconf_config.hpp
+ /usr/local/include/xercesc/util/regx/BMPattern.hpp
+ /usr/local/include/xercesc/util/regx/Op.hpp
+ /usr/local/include/xercesc/util/regx/OpFactory.hpp
+ /usr/local/include/xercesc/util/regx/RegularExpression.hpp
+ /usr/local/include/xercesc/util/regx/RegxUtil.hpp
+ /usr/local/include/xercesc/util/regx/Token.hpp
+ /usr/local/include/xercesc/util/regx/TokenFactory.hpp
+ /usr/local/include/xercesc/validators/DTD/DTDAttDef.hpp
+ /usr/local/include/xercesc/validators/DTD/DTDElementDecl.hpp
+ /usr/local/include/xercesc/validators/DTD/DTDEntityDecl.hpp
+ /usr/local/include/xercesc/validators/DTD/DocTypeHandler.hpp
+ /usr/local/include/xercesc/validators/common/Grammar.hpp
+ /usr/local/include/xercesc/validators/datatype/DatatypeValidator.hpp
+ /usr/local/include/xercesc/validators/schema/SchemaSymbols.hpp
 CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o
  ../include/PhysicsList.hh
  /home/daq/geant4.10.03.p01/source/externals/clhep/include/CLHEP/Random/DualRand.h

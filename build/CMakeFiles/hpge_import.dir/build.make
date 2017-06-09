@@ -81,33 +81,9 @@ CMakeFiles/hpge_import.dir/main.cpp.o.provides: CMakeFiles/hpge_import.dir/main.
 CMakeFiles/hpge_import.dir/main.cpp.o.provides.build: CMakeFiles/hpge_import.dir/main.cpp.o
 
 
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o: CMakeFiles/hpge_import.dir/flags.make
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o: ../src/DetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o -c /home/daq/projects/HPGe_Import/src/DetectorConstruction.cc
-
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daq/projects/HPGe_Import/src/DetectorConstruction.cc > CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.i
-
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daq/projects/HPGe_Import/src/DetectorConstruction.cc -o CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.s
-
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.requires:
-
-.PHONY : CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.requires
-
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.provides: CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.requires
-	$(MAKE) -f CMakeFiles/hpge_import.dir/build.make CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.provides.build
-.PHONY : CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.provides
-
-CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.provides.build: CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o
-
-
 CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o: CMakeFiles/hpge_import.dir/flags.make
 CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o: ../src/PhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o -c /home/daq/projects/HPGe_Import/src/PhysicsList.cc
 
 CMakeFiles/hpge_import.dir/src/PhysicsList.cc.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o.provides.build: CMakeFiles/hpge_
 
 CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/hpge_import.dir/flags.make
 CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o: ../src/PrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o -c /home/daq/projects/HPGe_Import/src/PrimaryGeneratorAction.cc
 
 CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.i: cmake_force
@@ -156,7 +132,6 @@ CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o.provides.build: CMake
 # Object files for target hpge_import
 hpge_import_OBJECTS = \
 "CMakeFiles/hpge_import.dir/main.cpp.o" \
-"CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o" \
 "CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o" \
 "CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o"
 
@@ -164,7 +139,6 @@ hpge_import_OBJECTS = \
 hpge_import_EXTERNAL_OBJECTS =
 
 hpge_import: CMakeFiles/hpge_import.dir/main.cpp.o
-hpge_import: CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o
 hpge_import: CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o
 hpge_import: CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o
 hpge_import: CMakeFiles/hpge_import.dir/build.make
@@ -216,7 +190,7 @@ hpge_import: /home/daq/geant4.10.03.p01-build/BuildProducts/lib64/libG4intercoms
 hpge_import: /home/daq/geant4.10.03.p01-build/BuildProducts/lib64/libG4global.so
 hpge_import: /home/daq/geant4.10.03.p01-build/BuildProducts/lib64/libG4clhep.so
 hpge_import: CMakeFiles/hpge_import.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hpge_import"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daq/projects/HPGe_Import/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hpge_import"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hpge_import.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -225,7 +199,6 @@ CMakeFiles/hpge_import.dir/build: hpge_import
 .PHONY : CMakeFiles/hpge_import.dir/build
 
 CMakeFiles/hpge_import.dir/requires: CMakeFiles/hpge_import.dir/main.cpp.o.requires
-CMakeFiles/hpge_import.dir/requires: CMakeFiles/hpge_import.dir/src/DetectorConstruction.cc.o.requires
 CMakeFiles/hpge_import.dir/requires: CMakeFiles/hpge_import.dir/src/PhysicsList.cc.o.requires
 CMakeFiles/hpge_import.dir/requires: CMakeFiles/hpge_import.dir/src/PrimaryGeneratorAction.cc.o.requires
 

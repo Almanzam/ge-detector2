@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //No help, variable specified on the command line.
-CMAKE_PREFIX_PATH:UNINITIALIZED=/home/daq/geant4.10.03.p01-install
+CMAKE_PREFIX_PATH:UNINITIALIZED=/home/geant4.10.03.p01-install
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=hpge_import

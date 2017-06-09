@@ -10,13 +10,18 @@
 //#include "G4UItcsh.hh"
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
+#include "G4GDMLParser.hh"
 
 int main(int argc, char **argv)
 {
+    
+
+    //DetectorConstruction *detector_construction = new DetectorConstruction;
+
+    G4GDMLParser parser;
+
+    parser.Read("../CAD/HPGe.gdml");
     G4RunManager *run_manager = new G4RunManager;
-
-    DetectorConstruction *detector_construction = new DetectorConstruction;
-
 //     if (argc == 3) {
 //      detector_construction->SetCADFilename(argv[2]);
 //     } else if (argc == 4) {
@@ -31,7 +36,7 @@ int main(int argc, char **argv)
 //      return 0;
 //     }
 
-    run_manager->SetUserInitialization(detector_construction);
+    run_manager->SetUserInitialization(new DetectorConstruction(parser.GetWorldVolume()));
 
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);
