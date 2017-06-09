@@ -15161,30 +15161,37 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			<volume name="Copper_Cup_vol_vol" >
 				<materialref ref="G4_Cu" />
 				<solidref ref="Copper_Cup_vol" />
+				<auxiliary auxType="Color" auxvalue="red"/>
 			</volume>
 			<volume name="Ge_B_Layer_vol_vol" >
 				<materialref ref="G4_Ge" />
 				<solidref ref="Ge_B_Layer_vol" />
+				<auxiliary auxType="Color" auxvalue="green"/>
 			</volume>
 			<volume name="Ge_B_Layer_1_vol_vol" >
 				<materialref ref="G4_Ge" />
 				<solidref ref="Ge_B_Layer_1_vol" />
+				<auxiliary auxType="Color" auxvalue="green"/>
 			</volume>
 			<volume name="Ge_Crystal_vol_vol" >
 				<materialref ref="G4_Ge" />
 				<solidref ref="Ge_Crystal_vol" />
+				<auxiliary auxType="Color" auxvalue="yellow"/>
 			</volume>
 			<volume name="Ge_Li_Layer_vol" >
 				<materialref ref="G4_Ge" />
 				<solidref ref="Ge_Li_Layer" />
+				<auxiliary auxType="Color" auxvalue="purple"/>
 			</volume>
 			<volume name="Mylar_Foil_vol" >
 				<materialref ref="G4_MYLAR" />
 				<solidref ref="Mylar_Foil" />
+				<auxiliary auxType="Color" auxvalue="orange"/>
 			</volume>
 			<volume name="Shell_vol_vol" >
 				<materialref ref="G4_Mg" />
 				<solidref ref="Shell_vol" />
+				<auxiliary auxType="Color" auxvalue="gray"/>
 			</volume>
 			<volume name="World" >
 				<materialref ref="vacuum" />
