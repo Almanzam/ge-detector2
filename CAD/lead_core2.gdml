@@ -2,10 +2,30 @@
 <gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" 
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
-	      <solids>
-		      <tube name="steelshellwall" z="625.348" rmin="498.475" rmax = "508" 
-		      startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
-		      <tube name="steelshellend" z="9.525" rmin="0" rmax = "508" 
-		      startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
-	      </solids>
-		
+<define>
+	<position name="top_pos" unit="mm" x="0" y="0" z="95.0565"/>
+	<position name="bot_pos" unit="mm" x="0" y="0" z="-95.0565"/>
+</define>
+<solids>
+	<tube name="steelshellwall" z="606.298" rmin="498.475" rmax = "508" 
+	startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
+	<tube name="steelshellend" z="9.525" rmin="0" rmax = "508" 
+	startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
+	<multiUnion name = "steelshell" >
+		<multiUnionNode name="wall">
+			<solid ref="steelshellwall"/>
+		</multiUnionNode>
+		<multiUnionNode name="top">
+			<solid ref="steelshellend"/>
+			<positionref ref="top_pos"/>
+		</multiUnionNode>
+		<multiUnionNode name="bottom">
+			<solid ref="steelshellend"/>
+			<positionref ref="bot_pos"/>
+		</multiUnionNode>
+	</multiUnion>
+</solids>
+<structure>
+	<volume name="steelshell_vol" >
+		<material/>
+</structure>
