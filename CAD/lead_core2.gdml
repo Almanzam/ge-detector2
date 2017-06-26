@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd" >
+	      <solids>
+		      <tube name="steelshellwall" z="625.348" rmin="498.475" rmax = "508" 
+		      startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
+		      <tube name="steelshellend" z="9.525" rmin="0" rmax = "508" 
+		      startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
+	      </solids>
+		

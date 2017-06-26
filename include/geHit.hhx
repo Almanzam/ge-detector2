@@ -63,6 +63,6 @@ inline void* geHit::operator new(size_t)
 
 inline void geHit::operator delete(void *hit)
 {
-    geHitAllocator->FreeSingle((geHit*) hit)
+    geHitAllocator->FreeSingle((geHit*) hit);
 }
 #endif

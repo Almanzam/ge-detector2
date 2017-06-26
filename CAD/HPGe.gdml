@@ -5047,7 +5047,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			<position name="v5041" unit="mm" x="-34.045515" y="5.581479" z="149" />
 			<position name="v5042" unit="mm" x="-34.29776" y="3.730106" z="149" />
 			<position name="v5043" unit="mm" x="-200.656143188477" y="-139.660797119141" z="615.822998046875" />
-			  <position name="v5044" unit="mm" x="-203.445434570313" y="-135.5654296875" z="615.822998046875" />
+			 <!-- <position name="v5044" unit="mm" x="-203.445434570313" y="-135.5654296875" z="615.822998046875" />
 			  <position name="v5045" unit="mm" x="-203.445434570313" y="-135.5654296875" z="9.52499961853027" />
 			  <position name="v5046" unit="mm" x="-200.656143188477" y="-139.660797119141" z="9.52499961853027" />
 			  <position name="v5047" unit="mm" x="-197.784423828125" y="-143.698806762695" z="615.822998046875" />
@@ -7385,7 +7385,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			  <position name="v7379" unit="mm" x="-208.772171020508" y="-127.209312438965" z="615.822998046875" />
 			  <position name="v7380" unit="mm" x="-208.772171020508" y="-127.209312438965" z="9.52499961853027" />
 			  <position name="v7381" unit="mm" x="-206.151138305664" y="-131.414352416992" z="615.822998046875" />
-			  <position name="v7382" unit="mm" x="-206.151138305664" y="-131.414352416992" z="9.52499961853027" />
+			  <position name="v7382" unit="mm" x="-206.151138305664" y="-131.414352416992" z="9.52499961853027" />-->
 			<position name="t0" unit="mm" x="0" y="0" z="0" />
 			<rotation name="r0" unit="radian" x="0" y="0" z="0" />
 		</define>
@@ -17491,7 +17491,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				<triangular vertex1="v4856"  vertex2="v4857"  vertex3="v4631" />
 				<triangular vertex1="v4642"  vertex2="v4638"  vertex3="v4643" />
 			</tessellated>
-			<tessellated aunit="radian" lunit="mm" name="Lead_Core_vol" >
+			<!--<tessellated aunit="radian" lunit="mm" name="Lead_Core_vol" >
 			   <triangular vertex1="v5043"  vertex2="v5044"  vertex3="v5045" />
 			   <triangular vertex1="v5655"  vertex2="v5044"  vertex3="v5043" />
 			   <triangular vertex1="v5044"  vertex2="v5662"  vertex3="v5045" />
@@ -18728,8 +18728,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			   <triangular vertex1="v5165"  vertex2="v5164"  vertex3="v5161" />
 			   <triangular vertex1="v5169"  vertex2="v5165"  vertex3="v5166" />
 			   <triangular vertex1="v5189"  vertex2="v5185"  vertex3="v5186" />
-		  </tessellated>
-			<tessellated aunit="radian" lunit="mm" name="Steel_Shell_vol">
+		   </tessellated>-->
+			<!--<tessellated aunit="radian" lunit="mm" name="Steel_Shell_vol">
 				<triangular vertex1="v6131"  vertex2="v6132"  vertex3="v6133" />
 				   <triangular vertex1="v6759"  vertex2="v6132"  vertex3="v6131" />
 				   <triangular vertex1="v6132"  vertex2="v6762"  vertex3="v6133" />
@@ -19990,7 +19990,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				   <triangular vertex1="v6344"  vertex2="v6337"  vertex3="v6341" />
 				   <triangular vertex1="v6346"  vertex2="v6344"  vertex3="v6341" />
 				   <triangular vertex1="v6262"  vertex2="v6259"  vertex3="v6261" />
-			</tessellated>
+			   </tessellated>-->
 		</solids>
 		<structure>
 			<volume name="Al_Foil_vol" >
@@ -20017,6 +20017,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				<materialref ref="G4_Ge" />
 				<solidref ref="Ge_Crystal_vol" />
 				<auxiliary auxType="Color" auxvalue="yellow"/>
+				<auxiliary auxType="SensDet" auxvalue="Tracker"/>
 			</volume>
 			<volume name="Ge_Li_Layer_vol" >
 				<materialref ref="G4_Ge" />
@@ -20033,16 +20034,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				<solidref ref="Shell_vol" />
 				<auxiliary auxType="Color" auxvalue="gray"/>
 			</volume>
-			<volume name="Lead_Core_vol_vol" >
+			<!--<volume name="Lead_Core_vol_vol" >
 				<materialref ref="G4_Pb" />
 				<solidref ref="Lead_Core_vol" />
 				<auxiliary auxType="Color" auxvalue="purple"/>
-			</volume>
-			<volume name="Steel_Shell_vol_vol" >
-				<materialref ref="G4_STAINLESS_STEEL" />
+			</volume>-->
+			<!--<volume name="Steel_Shell_vol_vol" >
+				<materialref ref="G4_Fe" />
 				<solidref ref="Steel_Shell_vol" />
 				<auxiliary auxType="Color" auxvalue="cyan"/>
-			</volume>
+			</volume>-->
 			<volume name="World" >
 				<materialref ref="vacuum" />
 				<solidref ref="WorldBox" />
@@ -20086,6 +20087,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 					<positionref ref="t0" />
 					<rotationref ref="r0" />
 				</physvol>
+				<!--<physvol>
+					<volumeref ref="Steel_Shell_vol_vol" />
+					<positionref ref="t0" />
+					<rotationref ref="r0" />
+				</physvol>
+				<physvol>
+					<volumeref ref="Lead_Core_vol_vol" />
+					<positionref ref="t0" />
+					<rotationref ref="r0" />
+				</physvol>-->
 			</volume>
 		</structure>
 		<setup name="Default" version="1.0" >
