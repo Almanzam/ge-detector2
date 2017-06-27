@@ -11,21 +11,20 @@
 	startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
 	<tube name="steelshellend" z="9.525" rmin="0" rmax = "508" 
 	startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
-	<multiUnion name = "steelshell" >
-		<multiUnionNode name="wall">
-			<solid ref="steelshellwall"/>
-		</multiUnionNode>
-		<multiUnionNode name="top">
-			<solid ref="steelshellend"/>
-			<positionref ref="top_pos"/>
-		</multiUnionNode>
-		<multiUnionNode name="bottom">
-			<solid ref="steelshellend"/>
-			<positionref ref="bot_pos"/>
-		</multiUnionNode>
-	</multiUnion>
+	<union name = "steelshell1">
+		<first ref="steelshellwall"/>
+		<second ref ="steelshellend"/>
+		<positionref ref="top_pos"/>
+	</union>
+	<union name = "steelshell" >
+		<first ref="steelshell1"/>
+		<second ref ="steelshellend"/>
+		<positionref ref="bot_pos"/>
+	</union>
 </solids>
 <structure>
-	<volume name="steelshell_vol" >
-		<material/>
+	<volume name="steelshell2" >
+		<materialref ref="G4_Fe"/>
+		<solidref ref="steelshell"/>
+	</volume>
 </structure>
