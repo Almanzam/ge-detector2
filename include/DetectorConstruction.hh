@@ -24,5 +24,5 @@ public:
 
 private:
     const G4GDMLParser& fParser;
-
+};
 #endif
