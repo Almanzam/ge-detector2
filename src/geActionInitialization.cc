@@ -55,7 +55,7 @@ void geActionInitialization::BuildForMaster() const
 
 void geActionInitialization::Build() const
 {
-  SetUserAction(new gePrimaryGeneratorAction);
+  SetUserAction(new PrimaryGeneratorAction);
   SetUserAction(new geRunAction);
   SetUserAction(new geEventAction);
 }  
