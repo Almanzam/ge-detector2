@@ -86,7 +86,7 @@ G4bool geTrackerSD::ProcessHits(G4Step* aStep,
 
   fHitsCollection->insert( newHit );
 
-  //newHit->Print();
+  newHit->Print();
 
   return true;
 }
