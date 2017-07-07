@@ -11,15 +11,17 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 #include "G4GDMLParser.hh"
+#include "geColorReader.hh"
 
 int main(int argc, char **argv)
 {
     
 
     //DetectorConstruction *detector_construction = new DetectorConstruction;
-
-    G4GDMLParser parser;
-
+    G4GDMLReadStructure* fReader;
+    fReader = new geColorReader();
+    G4GDMLParser parser(fReader);
+    
     parser.Read("../CAD/HPGe.gdml");
     G4RunManager *run_manager = new G4RunManager;
 //     if (argc == 3) {
@@ -36,7 +38,7 @@ int main(int argc, char **argv)
 //      return 0;
 //     }
 
-    run_manager->SetUserInitialization(new DetectorConstruction(parser.GetWorldVolume()));
+    run_manager->SetUserInitialization(new DetectorConstruction(parser));
 
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);

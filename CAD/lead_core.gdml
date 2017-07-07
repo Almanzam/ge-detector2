@@ -2358,15 +2358,15 @@
   </tessellated>
  </solids>
  <structure>
-  <volume name="steel shell_vol" >
-   <materialref ref="G4_Al" />
-   <solidref ref="steel shell" />
+  <volume name="lead core_vol" >
+   <materialref ref="G4_Pb" />
+   <solidref ref="lead core" />
   </volume>
   <volume name="World" >
    <materialref ref="vacuum" />
    <solidref ref="WorldBox" />
    <physvol>
-    <volumeref ref="steel shell_vol" />
+    <volumeref ref="lead core_vol" />
     <positionref ref="t0" />
     <rotationref ref="r0" />
    </physvol>

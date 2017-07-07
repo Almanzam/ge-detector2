@@ -16,6 +16,8 @@
 		<color name="Blue-Green"  R="0"  G="0.4"  B="0.4"  A="0.2" />
 	</extension>
 	<define>
+		<position name="core_top" unit="mm" x="0" y="0" z="252.349" />
+		<position name="core_bot" unit="mm" x="0" y="0" z="-252.349" />
 		<position name="v0" unit="mm" x="22.9712924957275" y="-17.5365238189697" z="145.329999999329" />
 		<position name="v1" unit="mm" x="21.8920745849609" y="-18.8665599822998" z="145.329999999329" />
 		<position name="v2" unit="mm" x="21.8920745849609" y="-18.8665599822998" z="145.3" />
@@ -7402,27 +7404,67 @@
 		<position name="t0" unit="mm" x="0" y="0" z="0" />
 		<rotation name="r0" unit="radian" x="0" y="0" z="0" />
 		<position name="shelloffset" unit="mm" x="0" y="0" z="-250"/>
+		<position name="coreoffset" unit="mm" x="0" y="0" z="60"/>
 	</define>
 	<materials>
 		<define>
 			<quantity type="density" name="universe_mean_density" value="1.e-25" unit="g/cm3" />
 		</define>
-		<element Z="8" formula="O" name="Oxygen" >
-			<atom value="16" />
-		</element>
-		<element Z="7" formula="N" name="Nitrogen" >
-			<atom value="14.01" />
-		</element>
-		<material formula="noFormula" name="Air" >
-			<D value="1.29" />
-			<fraction n="0.3" ref="Oxygen" />
-			<fraction n="0.7" ref="Nitrogen" />
+		<material Z="12" name="Magnesium" >
+			<atom value="24.305" />
+			<D value="1.74"/>
 		</material>
+		<material Z="29" name="Copper" >
+			<atom value="63.546"/>
+			<D value="8.96"/>
+		</material>
+		<element Z="26" name="Iron" >
+			<atom value="55.845"/>
+		</element>
+		<material Z="82" name="Lead" >
+			<atom value="207.2"/>
+			<D value="11.35"/>
+		</material>
+		<material Z="13" name="Aluminum" >
+			<atom value="26.982"/>
+			<D value="2.699"/>
+		</material>
+		<material Z="32" name="Germanium" >
+			<atom value="72.630"/>
+			<D value="5.323"/>
+		</material>
+		<element Z="1" formula="H" name="Hydrogen" >
+			<atom value="1.008"/>
+		</element>
+		<element Z="6" formula="C" name="Carbon" >
+			<atom value="12.011"/>
+		</element>
+		<element Z="8" formula="O" name="Oxygen" >
+			<atom value="15.999"/>
+		</element>
+		<element Z="24" formula="Cr" name="Chromium" >
+			<atom value="51.996"/>
+		</element>
+		<element Z="28" formula="Ni" name="Nickel" >
+			<atom value="58.693"/>
+		</element>
 		<material Z="1" name="vacuum" >
 			<T value="2.73" />
 			<P value=" 3.0E-18" unit="pascal" />
 			<Dref ref="universe_mean_density" />
 			<atom value="1.01" />
+		</material>
+		<material formula="noFormula" name="Steel" >
+			<D value="8" />
+			<fraction n="0.74" ref="Iron" />
+			<fraction n="0.18" ref="Chromium" />
+			<fraction n="0.08" ref="Nickel" />
+		</material>
+		<material formula="noFormula" name="Mylar" >
+			<D value="1.4" />
+			<fraction n="0.041959" ref="Hydrogen" />
+			<fraction n="0.625016" ref="Carbon" />
+			<fraction n="0.333025" ref="Oxygen" />
 		</material>
 	</materials>
 	<solids>
@@ -17505,7 +17547,7 @@
 			<triangular vertex1="v4856"  vertex2="v4857"  vertex3="v4631" />
 			<triangular vertex1="v4642"  vertex2="v4638"  vertex3="v4643" />
 		</tessellated>
-		<tessellated aunit="radian" lunit="mm" name="Lead_Core_vol" >
+		<!--<tessellated aunit="radian" lunit="mm" name="Lead_Core_vol" >
 			<triangular vertex1="v5043"  vertex2="v5044"  vertex3="v5045" />
 			<triangular vertex1="v5655"  vertex2="v5044"  vertex3="v5043" />
 			<triangular vertex1="v5044"  vertex2="v5662"  vertex3="v5045" />
@@ -18743,6 +18785,18 @@
 			<triangular vertex1="v5169"  vertex2="v5165"  vertex3="v5166" />
 			<triangular vertex1="v5189"  vertex2="v5185"  vertex3="v5186" />
 		</tessellated>-->
+		<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<union name="core1">
+			<first ref="core_wall" />
+			<second ref="core_end" />
+			<positionref ref="core_top" />
+		</union>
+		<union name="Lead_Core_vol">
+			<first ref="core1" />
+			<second ref="core_end" />
+			<positionref ref="core_bot" />
+		</union>
 		<tessellated aunit="radian" lunit="mm" name="Steel_Shell_vol">
 			<triangular vertex1="v6131"  vertex2="v6132"  vertex3="v6133" />
 				<triangular vertex1="v6759"  vertex2="v6132"  vertex3="v6131" />
@@ -20008,54 +20062,54 @@
 	</solids>
 	<structure>
 		<volume name="Al_Foil_vol" >
-			<materialref ref="G4_Al" />
+			<materialref ref="Aluminum" />
 			<solidref ref="Al_Foil" />
 			<colorref ref="Blue"/>
 		</volume>
 		<volume name="Copper_Cup_vol_vol" >
-			<materialref ref="G4_Cu" />
+			<materialref ref="Copper" />
 			<solidref ref="Copper_Cup_vol" />
 			<colorref ref="Red"/>
 		</volume>
 		<volume name="Ge_B_Layer_vol_vol" >
-			<materialref ref="G4_Ge" />
+			<materialref ref="Germanium" />
 			<solidref ref="Ge_B_Layer_vol" />
 			<colorref ref="Green"/>
 		</volume>
 		<volume name="Ge_B_Layer_1_vol_vol" >
-			<materialref ref="G4_Ge" />
+			<materialref ref="Germanium" />
 			<solidref ref="Ge_B_Layer_1_vol" />
 			<colorref ref="Green"/>
 		</volume>
 		<volume name="Ge_Crystal_vol_vol" >
-			<materialref ref="G4_Ge" />
+			<materialref ref="Germanium" />
 			<solidref ref="Ge_Crystal_vol" />
 			<colorref ref="Yellow"/>
 			<auxiliary auxType="SensDet" auxvalue="Tracker"/>
 		</volume>
 		<volume name="Ge_Li_Layer_vol" >
-			<materialref ref="G4_Ge" />
+			<materialref ref="Germanium" />
 			<solidref ref="Ge_Li_Layer" />
 			<colorref ref="Purple"/>
 		</volume>
 		<volume name="Mylar_Foil_vol" >
-			<materialref ref="G4_MYLAR" />
+			<materialref ref="Mylar" />
 			<solidref ref="Mylar_Foil" />
 			<colorref ref="Orange"/>
 			<auxiliary auxType="Color" auxvalue="orange"/>
 		</volume>
 		<volume name="Shell_vol_vol" >
-			<materialref ref="G4_Mg" />
+			<materialref ref="Magnesium" />
 			<solidref ref="Shell_vol" />
 			<colorref ref="Grey"/>
 		</volume>
 		<volume name="Lead_Core_vol_vol" >
-			<materialref ref="G4_Pb" />
-			<solidref ref="Lead_Core_vol" />
+			<materialref ref="Lead" />
+			<solidref ref="Lead_Core_vol" /><position name="shelloffset" unit="mm" x="0" y="0" z="-250"/>
 			<colorref ref="Violet"/>
 		</volume>
 		<volume name="Steel_Shell_vol_vol" >
-			<materialref ref="G4_Fe" />
+			<materialref ref="Steel" />
 			<solidref ref="Steel_Shell_vol" />
 			<colorref ref="Blue-Green"/>
 		</volume>
@@ -20110,7 +20164,7 @@
 			</physvol>
 			<physvol>
 				<volumeref ref="Lead_Core_vol_vol" />
-				<positionref ref="shelloffset" />
+				<positionref ref="coreoffset" />
 				<rotationref ref="r0" />
 			</physvol>
 		</volume>
