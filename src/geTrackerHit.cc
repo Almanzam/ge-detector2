@@ -34,6 +34,7 @@
 #include "G4Circle.hh"
 #include "G4Colour.hh"
 #include "G4VisAttributes.hh"
+#include "G4ios.hh"
 
 #include <iomanip>
 
@@ -62,6 +63,7 @@ geTrackerHit::geTrackerHit(const geTrackerHit& right)
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
   fPos       = right.fPos;
+  G4cout << "geTH TH" << G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -72,7 +74,7 @@ const geTrackerHit& geTrackerHit::operator=(const geTrackerHit& right)
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
   fPos       = right.fPos;
-
+  G4cout << "geTH THo" << G4endl;
   return *this;
 }
 

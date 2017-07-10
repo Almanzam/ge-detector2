@@ -33,7 +33,7 @@
 
 #include "G4VUserActionInitialization.hh"
 
-class B4DetectorConstruction;
+class PrimaryGeneratorAction;
 
 /// Action initialization class.
 ///

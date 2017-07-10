@@ -32,6 +32,7 @@
 #include "PrimaryGeneratorAction.hh"
 #include "geRunAction.hh"
 #include "geEventAction.hh"
+#include "G4ios.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -58,6 +59,7 @@ void geActionInitialization::Build() const
   SetUserAction(new PrimaryGeneratorAction);
   SetUserAction(new geRunAction);
   SetUserAction(new geEventAction);
+  G4cout << "geAI Build" << G4endl;
 }  
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

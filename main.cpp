@@ -2,9 +2,14 @@
 #include "DetectorConstruction.hh"
 #include "PhysicsList.hh"
 #include "PrimaryGeneratorAction.hh"
+#include "geActionInitialization.hh"
 
 // GEANT4 //
+#ifdef G4MULTITHREADED
+#include "G4MTRunManager.hh"
+#else
 #include "G4RunManager.hh"
+#endif
 #include "G4UImanager.hh"
 //#include "G4UIterminal.hh"
 //#include "G4UItcsh.hh"
@@ -23,7 +28,12 @@ int main(int argc, char **argv)
     G4GDMLParser parser(fReader);
     
     parser.Read("../CAD/HPGe.gdml");
-    G4RunManager *run_manager = new G4RunManager;
+    #ifdef G4MULTITHREADED  
+    G4MTRunManager* run_manager = new G4MTRunManager;
+    run_manager->SetNumberOfThreads(4);
+    #else
+    G4RunManager* run_manager = new G4RunManager;
+    #endif
 //     if (argc == 3) {
 //      detector_construction->SetCADFilename(argv[2]);
 //     } else if (argc == 4) {
@@ -43,8 +53,9 @@ int main(int argc, char **argv)
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);
 
-    PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
-    run_manager->SetUserAction(primary_generator);
+//     PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
+    geActionInitialization *ge_action = new geActionInitialization();
+    run_manager->SetUserInitialization(ge_action);
 
     run_manager->Initialize();
 
@@ -57,6 +68,7 @@ int main(int argc, char **argv)
                              G4String(argv[1]));
     ui->SessionStart();
     delete ui;
-
+    delete vis_manager;
+    delete run_manager;
     return 0;
 }

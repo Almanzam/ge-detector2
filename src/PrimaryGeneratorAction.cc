@@ -13,9 +13,11 @@
 #include "G4ParticleGun.hh"
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
+#include "G4ios.hh"
 
 
 PrimaryGeneratorAction::PrimaryGeneratorAction()
+ : G4VUserPrimaryGeneratorAction()
 {
     particle_gun = new G4ParticleGun();
 
@@ -25,7 +27,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     
     particle_gun->SetParticleDefinition(particle);
     
-    particle_gun->SetParticleEnergy(1. * MeV);
+    particle_gun->SetParticleEnergy(100. * MeV);
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
@@ -35,12 +37,13 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
-    double xdir = .75*G4UniformRand()*(G4UniformRand()-.5);
-    double ydir = .75*G4UniformRand()*(G4UniformRand()-.5);
+    double xdir = .25*G4UniformRand()*(G4UniformRand()-.5);
+    double ydir = .25*G4UniformRand()*(G4UniformRand()-.5);
+    double zdir = .25*G4UniformRand()*(G4UniformRand()-.5);
     
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
-            (xdir, ydir, -.5));
+            (xdir, ydir, zdir));
     particle_gun->SetParticlePosition(G4ThreeVector
-                                      (0,0, 20 * cm));
+                                      (0,0, 0 * cm));
     particle_gun->GeneratePrimaryVertex(event);
 }
