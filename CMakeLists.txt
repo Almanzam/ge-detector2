@@ -17,7 +17,7 @@ add_executable(ge-detector main.cpp ${sources} ${headers})
 target_link_libraries(ge-detector ${Geant4_LIBRARIES})
 
 #target_link_libraries(hpge_import cadmesh)
-target_link_libraries(hpge_import ${cadmesh_LIBRARIES})
+#target_link_libraries(hpge_import ${cadmesh_LIBRARIES})
 
 
 #add_executable(hpge_import main.cpp)
