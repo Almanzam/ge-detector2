@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gdml_simple_extension xmlns:gdml_simple_extension="http://www.example.org"
 		       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"          
-		       xs:noNamespaceSchemaLocation="/raid5/almanzam/projects/ge-detector/SimpleExtensionSchema/SimpleExtension.xsd" > 
+		       xs:noNamespaceSchemaLocation="$HOME/projects/ge-detector/SimpleExtensionSchema/SimpleExtension.xsd" > 
 		       <!-- TODO make portable by using local filename instead of full path -->
 	<extension>
 		<color name="Blue"  R="0"  G="0"  B="1"  A="0.5" />
