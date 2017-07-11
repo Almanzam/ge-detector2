@@ -13,13 +13,14 @@
 /run/verbose 2
 /vis/verbose 2
 
-/vis/open OGL 500x500-500-500
+#/vis/open OGL 500x500-500-500
+/vis/open DAWNFILE
 /vis/drawVolume
 /vis/scene/add/axes      0 0 0 30 mm
 
-/vis/multithreading/actionOnEventQueueFull wait
+#/vis/multithreading/actionOnEventQueueFull wait
 #:  Discard events, or wait for events to finish when the event queue for drawing gets full.
-/vis/multithreading/maxEventQueueSize 50
+#/vis/multithreading/maxEventQueueSize 50
 #: define maximum event queue size to be <N> (0 for infinite).
 
 /vis/viewer/set/style surface
@@ -34,13 +35,8 @@
 /vis/viewer/set/upVector 0 0 1
 #/vis/viewer/set/targetPoint 0 0 -8 cm
 
-#/gps/direction 0 0 1
-#/gps/pos/centre 0. 0. 40. cm
-#/gps/ang/type cos
-#/gps/ang/maxtheta 15. deg
 
-#/gps/particle gamma
-#/gps/energy 100. keV
-
-#/run/beamOn 100
+#/vis/viewer/flush
+/vis/scene/add/hits
+/run/beamOn 100
 

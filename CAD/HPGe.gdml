@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gdml_simple_extension xmlns:gdml_simple_extension="http://www.example.org"
 		       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"          
-		       xs:noNamespaceSchemaLocation="/home/daq/projects/git_projects/ge-detector/SimpleExtensionSchema/SimpleExtension.xsd" > 
+		       xs:noNamespaceSchemaLocation="/raid5/almanzam/projects/ge-detector/SimpleExtensionSchema/SimpleExtension.xsd" > 
 		       <!-- TODO make portable by using local filename instead of full path -->
 	<extension>
 		<color name="Blue"  R="0"  G="0"  B="1"  A="0.5" />
@@ -118,24 +118,24 @@
 			<second ref="Ge_hole"/>
 			<positionref ref="hole_offset"/>
 		</subtraction>
-		<scaledSolid name="Ge_Li_Layer1">
+		<!--<scaledSolid name="Ge_Li_Layer1">
 			<solidref ref="Ge_nohole"/>
 			<scale name="Liscale" x="1.0250896057348" y="1.0250896057348" z="1.0092470277411"/>
-		</scaledSolid>
-		<subtraction name="Ge_Li_Layer">
+		</scaledSolid>-->
+		<!--<subtraction name="Ge_Li_Layer">
 			<first ref="Ge_Li_Layer1"/>
 			<second ref="Ge_nohole"/>
 			<positionref ref="t0"/>
-		</subtraction>
-		<scaledSolid name="Ge_B_Layer1">
+		</subtraction>-->
+		<!--scaledSolid name="Ge_B_Layer1">
 			<solidref ref="Ge_hole"/>
 			<scale name="Bscale" x="0.998" y="0.998" z="0.998"/>
-		</scaledSolid>
-		<subtraction name="Ge_B_Layer_vol">
+		</scaledSolid>-->
+		<!--<subtraction name="Ge_B_Layer_vol">
 			<first ref="Ge_hole"/>
 			<second ref="Ge_B_Layer1"/>
 			<positionref ref="t0"/>
-		</subtraction>
+		</subtraction>-->
 		<tube name="Al_Foil" rmin="0" rmax="30" z="0.003" deltaphi="360" aunit="deg" lunit="mm"/>
 		<tube name="Mylar_Foil" rmin="0" rmax="30" z="0.003" deltaphi="360" aunit="deg" lunit="mm"/>
 		<tube name="Cu_end" rmin="4.55" rmax="30" z="3" deltaphi="360" aunit="deg" lunit="mm"/>
@@ -192,11 +192,11 @@
 			<colorref ref="Blue"/>
 		</volume>
 		
-		<volume name="Ge_B_Layer_vol_vol" >
+		<!--<volume name="Ge_B_Layer_vol_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_B_Layer_vol" />
 			<colorref ref="Green"/>
-		</volume>
+		</volume>-->
 		<!--<volume name="Ge_B_Layer_1_vol_vol" >
 			<materialref ref="Germanium" />
 			<solidref ref="Ge_B_Layer_1_vol" />
@@ -210,12 +210,12 @@
 			<colorref ref="Yellow"/>
 			
 		</volume>
-		<volume name="Ge_Li_Layer_vol" >
+		<!--<volume name="Ge_Li_Layer_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_Li_Layer" />
 			
 			<colorref ref="Purple"/>			
-		</volume>
+		</volume>-->
 		<volume name="Mylar_Foil_vol" >
 			<materialref ref="G4_MYLAR" />
 			<solidref ref="Mylar_Foil" />
@@ -292,21 +292,21 @@
 				<position name="mylpos" x="0" y="0" z="45.5" />
 				<rotationref ref="r0" />
 			</physvol>
-			<physvol name="Ge_Li_phys" >
+			<!--<physvol name="Ge_Li_phys" >
 				<volumeref ref="Ge_Li_Layer_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>
+			</physvol>-->
 			<physvol name="Ge_phys" >
 				<volumeref ref="Ge_Crystal_vol_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
 			</physvol>
-			<physvol name="Ge_B_phys" >
+			<!--<physvol name="Ge_B_phys" >
 				<volumeref ref="Ge_B_Layer_vol_vol" />
 				<positionref ref="hole_offset"/>
 				<rotationref ref="r0" />
-			</physvol>
+			</physvol>-->
 			
 		</volume>
 	</structure>
