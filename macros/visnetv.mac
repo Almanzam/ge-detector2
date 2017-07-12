@@ -14,7 +14,7 @@
 /vis/verbose 2
 
 #/vis/open OGL 500x500-500-500
-/vis/open VRML2FILE
+/vis/open VRML2
 /vis/drawVolume
 /vis/scene/add/axes      0 0 0 30 mm
 
