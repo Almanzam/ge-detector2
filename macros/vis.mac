@@ -13,8 +13,8 @@
 /run/verbose 2
 /vis/verbose 2
 
-#/vis/open OGL 500x500-500-500
-/vis/open DAWNFILE
+/vis/open OGL 500x500-500-500
+#/vis/open DAWNFILE
 /vis/drawVolume
 /vis/scene/add/axes      0 0 0 30 mm
 
