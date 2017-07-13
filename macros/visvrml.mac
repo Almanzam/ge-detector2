@@ -41,5 +41,5 @@
 
 /gun/energy 1.3 MeV
 
-/run/beamOn 500
+/run/beamOn 100000
 
