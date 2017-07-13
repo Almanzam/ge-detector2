@@ -29,9 +29,14 @@ int main(int argc, char **argv)
     G4GDMLParser parser(fReader);
     
     parser.Read("../CAD/HPGe.gdml");
+    G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
     #ifdef G4MULTITHREADED  
     G4MTRunManager* run_manager = new G4MTRunManager;
-    run_manager->SetNumberOfThreads(4);
+    if(numCPU > 10){
+        run_manager->SetNumberOfThreads(10);
+    }else{
+        run_manager->SetNumberOfThreads(4);
+    }
     #else
     G4RunManager* run_manager = new G4RunManager;
     #endif
