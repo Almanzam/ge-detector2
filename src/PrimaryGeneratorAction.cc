@@ -44,6 +44,6 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
             (xdir, ydir, -1));
     particle_gun->SetParticlePosition(G4ThreeVector
-                                      (1,1, 6 * cm));
+                                      (1*cm,3*cm, 6 * cm));
     particle_gun->GeneratePrimaryVertex(event);
 }
