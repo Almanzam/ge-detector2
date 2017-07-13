@@ -39,7 +39,7 @@
 #/vis/viewer/flush
 /vis/scene/add/hits
 
-/gun/energy 0.5 MeV
+/gun/energy 1.3 MeV
 
-/run/beamOn 100
+/run/beamOn 500
 
