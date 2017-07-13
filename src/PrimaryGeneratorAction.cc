@@ -39,11 +39,11 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
     double xdir = .25*G4UniformRand()*(G4UniformRand()-.5);
     double ydir = .25*G4UniformRand()*(G4UniformRand()-.5);
-    double zdir = .25*G4UniformRand()*(G4UniformRand()-.5);
+    //double zdir = .25*G4UniformRand()*(G4UniformRand()-.5);
     
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
-            (xdir, ydir, zdir));
+            (xdir, ydir, -1));
     particle_gun->SetParticlePosition(G4ThreeVector
-                                      (0,0, 0 * cm));
+                                      (0,0, 6 * cm));
     particle_gun->GeneratePrimaryVertex(event);
 }
