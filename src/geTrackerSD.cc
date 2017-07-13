@@ -38,32 +38,38 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 geTrackerSD::geTrackerSD(const G4String& name,
-                         const G4String& hitsCollectionName) 
+                         const G4String& hitsCollectionName,
+                         DetectorConstruction* det
+                        ) 
  : G4VSensitiveDetector(name),
    fHitsCollection(NULL)
 {
   collectionName.insert(hitsCollectionName);
+  HitHPGeID = new G4int[500];
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 geTrackerSD::~geTrackerSD() 
-{}
+{
+    delete [] HitHPGeID;
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geTrackerSD::Initialize(G4HCofThisEvent* hce)
 {
   // Create hits collection
+    if(hce){
+    fHitsCollection 
+        = new geTrackerHitsCollection(SensitiveDetectorName, collectionName[0]); 
 
-  fHitsCollection 
-    = new geTrackerHitsCollection(SensitiveDetectorName, collectionName[0]); 
+    // Add this collection in hce
 
-  // Add this collection in hce
-
-  G4int hcID 
-    = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
-  hce->AddHitsCollection( hcID, fHitsCollection ); 
+    G4int hcID 
+        = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
+    hce->AddHitsCollection( hcID, fHitsCollection ); 
+    }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -81,8 +87,8 @@ G4bool geTrackerSD::ProcessHits(G4Step* aStep,
   newHit->SetTrackID  (aStep->GetTrack()->GetTrackID());
   newHit->SetChamberNb(aStep->GetPreStepPoint()->GetTouchableHandle()
                                                ->GetCopyNumber());
-  newHit->SetEdep(edep);
-  newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
+  newHit->AddEnergy(edep);
+  //newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
 
   fHitsCollection->insert( newHit );
 
@@ -93,8 +99,13 @@ G4bool geTrackerSD::ProcessHits(G4Step* aStep,
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void geTrackerSD::EndOfEvent(G4HCofThisEvent*)
+void geTrackerSD::EndOfEvent(G4HCofThisEvent* hce)
 {
+  static G4int hcID =-1;
+  if(hcID<0){
+      hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
+      hce->AddHitsCollection(hcID,fHitsCollection);
+  }
   if ( verboseLevel>1 ) { 
      G4int nofHits = fHitsCollection->entries();
      G4cout << G4endl

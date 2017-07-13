@@ -56,6 +56,7 @@ class geTrackerHit : public G4VHit
 
     inline void* operator new(size_t);
     inline void  operator delete(void*);
+    inline void AddEnergy(G4double de)    {EdepTot += de;};
 
     // methods from base class
     virtual void Draw();
@@ -65,20 +66,21 @@ class geTrackerHit : public G4VHit
     void SetTrackID  (G4int track)      { fTrackID = track; };
     void SetChamberNb(G4int chamb)      { fChamberNb = chamb; };
     void SetEdep     (G4double de)      { fEdep = de; };
-    void SetPos      (G4ThreeVector xyz){ fPos = xyz; };
+    //void SetPos      (G4ThreeVector xyz){ fPos = xyz; };
 
     // Get methods
     G4int GetTrackID() const     { return fTrackID; };
     G4int GetChamberNb() const   { return fChamberNb; };
     G4double GetEdep() const     { return fEdep; };
     G4ThreeVector GetPos() const { return fPos; };
-
+    G4double GetEdepTot() const  { return EdepTot; };
   private:
 
       G4int         fTrackID;
       G4int         fChamberNb;
       G4double      fEdep;
       G4ThreeVector fPos;
+      G4double      EdepTot;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

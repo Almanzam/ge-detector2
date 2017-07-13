@@ -47,7 +47,7 @@ geTrackerHit::geTrackerHit()
    fTrackID(-1),
    fChamberNb(-1),
    fEdep(0.),
-   fPos(G4ThreeVector())
+   EdepTot(0)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -62,7 +62,7 @@ geTrackerHit::geTrackerHit(const geTrackerHit& right)
   fTrackID   = right.fTrackID;
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
-  fPos       = right.fPos;
+  EdepTot       = right.EdepTot;
   G4cout << "geTH TH" << G4endl;
 }
 
@@ -73,7 +73,7 @@ const geTrackerHit& geTrackerHit::operator=(const geTrackerHit& right)
   fTrackID   = right.fTrackID;
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
-  fPos       = right.fPos;
+  EdepTot       = right.EdepTot;
   G4cout << "geTH THo" << G4endl;
   return *this;
 }
@@ -109,9 +109,9 @@ void geTrackerHit::Print()
   G4cout
      << "  trackID: " << fTrackID << " chamberNb: " << fChamberNb
      << "Edep: "
-     << std::setw(7) << G4BestUnit(fEdep,"Energy")
-     << " Position: "
-     << std::setw(7) << G4BestUnit( fPos,"Length")
+     << std::setw(7) << G4BestUnit(EdepTot,"Energy")
+//      << " Position: "
+//      << std::setw(7) << G4BestUnit( fPos,"Length")
      << G4endl;
 }
 

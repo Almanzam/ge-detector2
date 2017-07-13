@@ -29,12 +29,15 @@
 /// \brief Implementation of the B2EventAction class
 
 #include "geEventAction.hh"
+#include "geTrackerHit.hh"
 
 #include "G4Event.hh"
 #include "G4EventManager.hh"
 #include "G4TrajectoryContainer.hh"
 #include "G4Trajectory.hh"
 #include "G4ios.hh"
+#include "G4SDManager.hh"
+#include "G4UnitsTable.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -65,15 +68,44 @@ void geEventAction::EndOfEventAction(const G4Event* event)
   // periodic printing
 
   G4int eventID = event->GetEventID();
-  if ( eventID < 100 || eventID % 100 == 0) {
+  //if ( eventID < 100 || eventID % 100 == 0) {
     G4cout << ">>> Event: " << eventID  << G4endl;
     if ( trajectoryContainer ) {
       G4cout << "    " << n_trajectories
              << " trajectories stored in this event." << G4endl;
     }
     G4VHitsCollection* hc = event->GetHCofThisEvent()->GetHC(0);
+    
+    G4HCofThisEvent* HCE = event->GetHCofThisEvent();
+    
+    geTrackerHitsCollection* HPGeHC = 0;
+    G4int n_hit = 0;
+    G4double totEnergy=0.;// energyD=0.;
+    
+    G4SDManager * SDman = G4SDManager::GetSDMpointer();
+    HPGeCollID = SDman->GetCollectionID("TrackerHitsCollectionName");
+    
+    if (HCE) HPGeHC = 
+      (geTrackerHitsCollection*)(HCE->GetHC(HPGeCollID));
+
+    if(HPGeHC)            
+      {
+        n_hit = HPGeHC->entries();
+    
+        for (G4int i=0;i<n_hit;i++)
+          {
+            totEnergy += (*HPGeHC)[i]->GetEdepTot(); 
+//             energyD = detectorType->ResponseFunction(totEnergy);            
+//             XrayFluoAnalysisManager* analysis = XrayFluoAnalysisManager::getInstance();
+//             analysis->analyseEnergyDep(energyD);
+//             totEnergyDetect += energyD;             
+          }
+      
+    
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
+    G4cout << "    Total energy deposited:  "  
+    <<  G4BestUnit(totEnergy, "Energy") << G4endl;
   }
 }  
 

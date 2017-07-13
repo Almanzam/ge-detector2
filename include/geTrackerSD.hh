@@ -39,6 +39,7 @@
 
 class G4Step;
 class G4HCofThisEvent;
+class DetectorConstruction;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -52,16 +53,18 @@ class geTrackerSD : public G4VSensitiveDetector
 {
   public:
     geTrackerSD(const G4String& name, 
-                const G4String& hitsCollectionName);
+                const G4String& hitsCollectionName,
+                DetectorConstruction*);
     virtual ~geTrackerSD();
   
     // methods from base class
     virtual void   Initialize(G4HCofThisEvent* hitCollection);
     virtual G4bool ProcessHits(G4Step* step, G4TouchableHistory* history);
-    virtual void   EndOfEvent(G4HCofThisEvent* hitCollection);
+    virtual void   EndOfEvent(G4HCofThisEvent *hce);
 
   private:
     geTrackerHitsCollection* fHitsCollection;
+    G4int*                   HitHPGeID;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

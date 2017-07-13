@@ -48,7 +48,10 @@ void DetectorConstruction::ConstructSDandField()
   
   G4String trackerChamberSDname = "Tracker";
   geTrackerSD* aTrackerSD = 
-    new geTrackerSD(trackerChamberSDname,"TrackerHitsCollectionName");
+    new geTrackerSD(trackerChamberSDname,
+                    "TrackerHitsCollectionName",
+                    this
+                   );
   SDman->AddNewDetector( aTrackerSD );
    
   ///////////////////////////////////////////////////////////////////////
