@@ -1,7 +1,7 @@
 #include "PhysicsList.hh"
 
 // GEANT4 //
-#include "G4EmStandardPhysics.hh"
+#include "G4EmStandardPhysics_option4.hh"
 #include "G4UnitsTable.hh"
 
 #include "G4ParticleDefinition.hh"
@@ -32,7 +32,7 @@
 
 PhysicsList::PhysicsList()
 {
-    RegisterPhysics(new G4EmStandardPhysics());
+    RegisterPhysics(new G4EmStandardPhysics_option4());
 }
 
 PhysicsList::~PhysicsList()
