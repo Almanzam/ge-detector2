@@ -27,7 +27,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     
     particle_gun->SetParticleDefinition(particle);
     
-    particle_gun->SetParticleEnergy(100. * MeV);
+    
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
@@ -39,8 +39,8 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
     double xdir = .25*G4UniformRand()*(G4UniformRand()-.5);
     double ydir = .25*G4UniformRand()*(G4UniformRand()-.5);
-    //double zdir = .25*G4UniformRand()*(G4UniformRand()-.5);
-    
+    double engvar = .25*G4UniformRand()*(G4UniformRand()-.5);
+    particle_gun->SetParticleEnergy((1.3+engvar) * MeV);
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
             (xdir, ydir, -1));
     particle_gun->SetParticlePosition(G4ThreeVector
