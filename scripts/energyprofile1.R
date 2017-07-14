@@ -1,5 +1,9 @@
-filename <- readline(prompt="Enter File name: ")
-data <- readLines(filename,n=-1)
+#filename=""
+#while(filename==""){
+#	filename <- readline(prompt="Enter File name: ")
+#	if(is.na(filename)){break}
+#}
+data <- readLines("energies.txt",n=-1)
 
 data1 <- gsub(pattern="Total energy deposited: ",
 	      replacement="",
@@ -22,15 +26,7 @@ data1 <- gsub(pattern="[[:space:]]",
 data2 <- as.data.frame(as.numeric(data1))
 colnames(data2) <- "Energy (keV)"
 
-# png(filename="./hist.png")
-# hist(data1)
-# dev.off()
-library(ggplot2)
-hist<-ggplot(data2) +
-    geom_histogram(aes(x=data2$`Energy (keV)`), stat="bin",binwidth = 1)
-
-histlog<-ggplot(data2) +
-    geom_histogram(aes(x=data2$`Energy (keV)`), stat="bin",binwidth = 1)+scale_y_log10()
-file <- paste("hist",Sys.time(),".png",sep = "")
-ggsave(hist,filename = file,device = "png")
+png(filename="./hist.png")
+hist(data2$`Energy (keV)`,breaks=1500,include.lowest=T)
+dev.off()
 
