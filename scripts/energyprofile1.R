@@ -3,7 +3,7 @@
 #	filename <- readline(prompt="Enter File name: ")
 #	if(is.na(filename)){break}
 #}
-data <- readLines("energies.txt",n=-1)
+data <- readLines(file("stdin"),n=-1)
 
 data1 <- gsub(pattern="Total energy deposited: ",
 	      replacement="",
