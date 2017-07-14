@@ -3,7 +3,8 @@
 #	filename <- readline(prompt="Enter File name: ")
 #	if(is.na(filename)){break}
 #}
-data <- readLines(file("stdin"),n=-1)
+args <- commandArgs()
+data <- readLines(args[1],n=-1)
 
 data1 <- gsub(pattern="Total energy deposited: ",
 	      replacement="",
@@ -23,10 +24,12 @@ data1 <- gsub(pattern=" MeV",
 data1 <- gsub(pattern="[[:space:]]",
               replacement="",
               x=data1)
-data2 <- as.data.frame(as.numeric(data1))
-colnames(data2) <- "Energy (keV)"
+data2 <- as.numeric(data1)
+#colnames(data2) <- "Energy (keV)"
 
-png(filename="./hist.png")
-hist(data2$`Energy (keV)`,breaks=1500,include.lowest=T)
+file <- paste("hist",Sys.time(),".png",sep="")
+
+png(filename=file)
+hist(data2,breaks=1500,include.lowest=T)
 dev.off()
 
