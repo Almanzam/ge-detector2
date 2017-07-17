@@ -34,6 +34,7 @@
 #include "G4VUserActionInitialization.hh"
 
 class PrimaryGeneratorAction;
+class DetectorConstruction;
 
 /// Action initialization class.
 ///
@@ -41,7 +42,7 @@ class PrimaryGeneratorAction;
 class geActionInitialization : public G4VUserActionInitialization
 {
   public:
-    geActionInitialization();
+    geActionInitialization(DetectorConstruction* detector);
     virtual ~geActionInitialization();
 
     virtual void BuildForMaster() const;

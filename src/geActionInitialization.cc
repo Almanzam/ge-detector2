@@ -29,6 +29,7 @@
 /// \brief Implementation of the B2ActionInitialization class
 
 #include "geActionInitialization.hh"
+#include "HistoManager.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "geRunAction.hh"
 #include "geEventAction.hh"
