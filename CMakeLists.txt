@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 project(ge-detector)
 
 find_package(Geant4 REQUIRED ui_all vis_all)
+find_package(ROOT REQUIRED)
 include(${Geant4_USE_FILE})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
