@@ -30,7 +30,8 @@
 
 #include "geEventAction.hh"
 #include "geTrackerHit.hh"
-
+#include "geRunAction.hh"
+#include "HistoManager.hh"
 #include "G4Event.hh"
 #include "G4EventManager.hh"
 #include "G4TrajectoryContainer.hh"
@@ -41,8 +42,10 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geEventAction::geEventAction()
-: G4UserEventAction()
+geEventAction::geEventAction(geRunAction* run, HistoManager* histo)
+: G4UserEventAction(),
+ fRunAct(run),fHistoManager(histo),
+ Edep(0.)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -53,7 +56,9 @@ geEventAction::~geEventAction()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geEventAction::BeginOfEventAction(const G4Event*)
-{}
+{
+    Edep=0;
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -107,6 +112,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
     G4cout << "    Total energy deposited:  "  
     <<  G4BestUnit(totEnergy, "Energy") << G4endl;
   }
+  fHistoManager->FillHisto(0, Edep);
 }  
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

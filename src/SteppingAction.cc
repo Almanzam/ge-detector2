@@ -23,36 +23,53 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-// $Id: B2RunAction.hh 68058 2013-03-13 14:47:43Z gcosmo $
+/// \file SteppingAction.cc
+/// \brief Implementation of the SteppingAction class
 //
-/// \file B2RunAction.hh
-/// \brief Definition of the B2RunAction class
+//
+// $Id: SteppingAction.cc 98242 2016-07-04 16:57:39Z gcosmo $
+//
+// 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#ifndef geRunAction_h
-#define geRunAction_h 1
+#include "SteppingAction.hh"
 
-#include "G4UserRunAction.hh"
-#include "globals.hh"
+#include "DetectorConstruction.hh"
+#include "geEventAction.hh"
+
+#include "G4Step.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class G4Run;
-class Histomanager;
+SteppingAction::SteppingAction(DetectorConstruction* det,
+                                         geEventAction* evt)
+: G4UserSteppingAction(), 
+  fDetector(det), fEventAction(evt)                                         
+{ }
 
-/// Run action class
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class geRunAction : public G4UserRunAction
+SteppingAction::~SteppingAction()
+{ }
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void SteppingAction::UserSteppingAction(const G4Step* aStep)
 {
-  public:
-    geRunAction(Histomanager*);
-    virtual ~geRunAction();
-
-    virtual void BeginOfRunAction(const G4Run* run);
-    virtual void   EndOfRunAction(const G4Run* run);
-  private:
-      Histomanager* fHistomanager;
-};
+  // get volume of the current step
+  G4LogicalVolume* volume 
+  = aStep->GetPreStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume();
+  
+  // collect energy and track length step by step
+  G4double edep = aStep->GetTotalEnergyDeposit();
+  
+//   G4double stepl = 0.;
+//   if (aStep->GetTrack()->GetDefinition()->GetPDGCharge() != 0.)
+//     stepl = aStep->GetStepLength();
+      
+  if (volume == fDetector->GetSensDet()) fEventAction->AddAbs(edep);
+  //if (volume == fDetector->GetGap())      fEventAction->AddGap(edep,stepl);
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-#endif

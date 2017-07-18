@@ -23,34 +23,38 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-// $Id: B2RunAction.hh 68058 2013-03-13 14:47:43Z gcosmo $
+/// \file SteppingAction.hh
+/// \brief Definition of the SteppingAction class
 //
-/// \file B2RunAction.hh
-/// \brief Definition of the B2RunAction class
+//
+// $Id: SteppingAction.hh 98242 2016-07-04 16:57:39Z gcosmo $
+//
+// 
 
-#ifndef geRunAction_h
-#define geRunAction_h 1
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#include "G4UserRunAction.hh"
-#include "globals.hh"
+#ifndef SteppingAction_h
+#define SteppingAction_h 1
+
+#include "G4UserSteppingAction.hh"
+
+class DetectorConstruction;
+class geEventAction;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class G4Run;
-class Histomanager;
-
-/// Run action class
-
-class geRunAction : public G4UserRunAction
+class SteppingAction : public G4UserSteppingAction
 {
-  public:
-    geRunAction(Histomanager*);
-    virtual ~geRunAction();
+public:
+  SteppingAction(DetectorConstruction*, geEventAction*);
+  virtual ~SteppingAction();
 
-    virtual void BeginOfRunAction(const G4Run* run);
-    virtual void   EndOfRunAction(const G4Run* run);
-  private:
-      Histomanager* fHistomanager;
+  virtual void UserSteppingAction(const G4Step*);
+    
+private:
+  DetectorConstruction* fDetector;
+  geEventAction*          fEventAction;  
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

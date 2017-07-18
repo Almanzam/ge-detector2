@@ -70,7 +70,7 @@ void HistoManager::Book()
   // Creating a tree container to handle histograms and ntuples.
   // This tree is associated to an output file.
   //
-  G4String fileName = "AnaEx02.root";
+  G4String fileName = "ge-detector"+CurrentDateTime()+".root";
   fRootFile = new TFile(fileName,"RECREATE");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
@@ -80,13 +80,8 @@ void HistoManager::Book()
   }
   
   // id = 0
-  fHisto[0] = new TH1D("EAbs", "Edep in absorber (MeV)", 100, 0., 800*CLHEP::MeV);
-  // id = 1
-  fHisto[1] = new TH1D("EGap", "Edep in gap (MeV)", 100, 0., 100*CLHEP::MeV);
-  // id = 2
-  fHisto[2] = new TH1D("LAbs", "trackL in absorber (mm)", 100, 0., 1*CLHEP::m);
-  // id = 3
-  fHisto[3] = new TH1D("LGap", "trackL in gap (mm)", 100, 0., 50*CLHEP::cm);
+  fHisto[0] = new TH1D("EAbs", "Edep in Crystal (MeV)", 100, 0., 800*CLHEP::MeV);
+  
 
   for ( G4int i=0; i<kMaxHisto; ++i ) {
     if (! fHisto[i]) G4cout << "\n can't create histo " << i << G4endl;
@@ -97,10 +92,7 @@ void HistoManager::Book()
   fNtuple1->Branch("Eabs", &fEabs, "Eabs/D");
   fNtuple1->Branch("Egap", &fEgap, "Egap/D");
 
-  // create 2nd ntuple 
-  fNtuple2 = new TTree("Ntuple2", "TrackL");
-  fNtuple2->Branch("Labs", &fLabs, "Labs/D");
-  fNtuple2->Branch("Lgap", &fLgap, "Lgap/D");
+
  
   G4cout << "\n----> Output file is open in " << fileName << G4endl;
 }
@@ -175,7 +167,15 @@ void HistoManager::PrintStatistic()
            << G4endl;
   }
 }
+const G4String currentDateTime() {
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 
+    return buf;
+}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 
