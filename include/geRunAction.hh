@@ -37,20 +37,20 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 class G4Run;
-class Histomanager;
+class HistoManager;
 
 /// Run action class
 
 class geRunAction : public G4UserRunAction
 {
   public:
-    geRunAction(Histomanager*);
+    geRunAction(HistoManager*);
     virtual ~geRunAction();
 
     virtual void BeginOfRunAction(const G4Run* run);
     virtual void   EndOfRunAction(const G4Run* run);
   private:
-      Histomanager* fHistomanager;
+      HistoManager* fHistomanager;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

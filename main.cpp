@@ -17,6 +17,7 @@
 #include "G4UIExecutive.hh"
 #include "G4GDMLParser.hh"
 #include "geColorReader.hh"
+#include "HistoManager.hh"
 
 
 int main(int argc, char **argv)
@@ -53,14 +54,16 @@ int main(int argc, char **argv)
 //          << G4endl;
 //      return 0;
 //     }
-
-    run_manager->SetUserInitialization(new DetectorConstruction(parser));
+    DetectorConstruction* detector = new DetectorConstruction(parser);
+    run_manager->SetUserInitialization(detector);
 
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);
+    
+    HistoManager* histo = new HistoManager();
 
 //     PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
-    geActionInitialization *ge_action = new geActionInitialization();
+    geActionInitialization *ge_action = new geActionInitialization(detector);
     run_manager->SetUserInitialization(ge_action);
 
     run_manager->Initialize();

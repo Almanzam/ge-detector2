@@ -47,6 +47,8 @@ class geActionInitialization : public G4VUserActionInitialization
 
     virtual void BuildForMaster() const;
     virtual void Build() const;
+  private:
+      DetectorConstruction* fDetector;
 };
 
 #endif

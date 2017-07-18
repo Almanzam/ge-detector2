@@ -33,12 +33,14 @@
 #include "PrimaryGeneratorAction.hh"
 #include "geRunAction.hh"
 #include "geEventAction.hh"
+#include "SteppingAction.hh"
 #include "G4ios.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geActionInitialization::geActionInitialization()
- : G4VUserActionInitialization()
+geActionInitialization::geActionInitialization(DetectorConstruction* detector)
+ : G4VUserActionInitialization(),
+   fDetector(detector)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -49,17 +51,23 @@ geActionInitialization::~geActionInitialization()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geActionInitialization::BuildForMaster() const
-{
-  SetUserAction(new geRunAction);
+{ 
+  HistoManager* histo = new HistoManager();
+  SetUserAction(new geRunAction(histo));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geActionInitialization::Build() const
 {
+  HistoManager*  histo = new HistoManager();  
   SetUserAction(new PrimaryGeneratorAction);
-  SetUserAction(new geRunAction);
-  SetUserAction(new geEventAction);
+  geRunAction* runAction = new geRunAction(histo);  
+  SetUserAction(runAction);
+  geEventAction* eventAction = new geEventAction(runAction, histo);
+  SetUserAction(eventAction);
+  SteppingAction* steppingAction = new SteppingAction(fDetector, eventAction);
+  SetUserAction(steppingAction);
   G4cout << "geAI Build" << G4endl;
 }  
 
