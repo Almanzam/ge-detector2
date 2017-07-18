@@ -52,22 +52,27 @@ geActionInitialization::~geActionInitialization()
 
 void geActionInitialization::BuildForMaster() const
 { 
-  HistoManager* histo = new HistoManager();
-  SetUserAction(new geRunAction(histo));
+  //HistoManager* histo = new HistoManager();
+  SetUserAction(new geRunAction());
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geActionInitialization::Build() const
 {
-  HistoManager*  histo = new HistoManager();  
+  HistoManager*  histo = new HistoManager();
+  
   SetUserAction(new PrimaryGeneratorAction);
-  geRunAction* runAction = new geRunAction(histo);  
+  
+  geRunAction* runAction = new geRunAction();  
   SetUserAction(runAction);
+  
   geEventAction* eventAction = new geEventAction(runAction, histo);
   SetUserAction(eventAction);
+  
   SteppingAction* steppingAction = new SteppingAction(fDetector, eventAction);
   SetUserAction(steppingAction);
+  
   G4cout << "geAI Build" << G4endl;
 }  
 

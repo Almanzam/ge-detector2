@@ -36,7 +36,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geRunAction::geRunAction(HistoManager* histo)
+geRunAction::geRunAction()
  : G4UserRunAction()
 { 
   // set printing event number per each 100 events

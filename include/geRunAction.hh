@@ -44,13 +44,13 @@ class HistoManager;
 class geRunAction : public G4UserRunAction
 {
   public:
-    geRunAction(HistoManager*);
+    geRunAction();
     virtual ~geRunAction();
 
     virtual void BeginOfRunAction(const G4Run* run);
     virtual void   EndOfRunAction(const G4Run* run);
   private:
-      HistoManager* fHistomanager;
+      //HistoManager* fHistomanager;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

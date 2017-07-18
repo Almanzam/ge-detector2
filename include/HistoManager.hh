@@ -59,7 +59,7 @@ class HistoManager
                     G4double trackLAbs, G4double trackLGap);
     
     void PrintStatistic();
-    G4String CurrentDateTime();
+    G4String currentDateTime();
         
   private:
     TFile*   fRootFile;

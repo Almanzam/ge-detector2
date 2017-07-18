@@ -64,19 +64,24 @@ int main(int argc, char **argv)
     run_manager->SetUserInitialization(physics_list);
     
     HistoManager* histo = new HistoManager();
-    geRunAction* run_action = new geRunAction(histo);  
-    run_manager->SetUserAction(run_action);
-    //
-    geEventAction* event_action = new geEventAction(run_action,histo);
-    run_manager->SetUserAction(event_action);
-    //
-    SteppingAction* stepping_action =
-                    new SteppingAction(detector, event_action);
-  run_manager->SetUserAction(stepping_action);
+    
+//     PrimaryGeneratorAction* gen_action = 
+//                           new PrimaryGeneratorAction();
+//     run_manager->SetUserAction(gen_action);
+    
+//     geRunAction* run_action = new geRunAction();  
+//     run_manager->SetUserAction(run_action);
+//     //
+//     geEventAction* event_action = new geEventAction(run_action,histo);
+//     run_manager->SetUserAction(event_action);
+//     //
+//     SteppingAction* stepping_action =
+//                     new SteppingAction(detector, event_action);
+//     run_manager->SetUserAction(stepping_action);
 
 //     PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
-    geActionInitialization *ge_action = new geActionInitialization(detector);
-    run_manager->SetUserInitialization(ge_action);
+//     geActionInitialization *ge_action = new geActionInitialization(detector);
+//     run_manager->SetUserInitialization(ge_action);
 
     run_manager->Initialize();
 

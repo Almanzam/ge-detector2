@@ -35,6 +35,8 @@
 
 class PrimaryGeneratorAction;
 class DetectorConstruction;
+class SteppingAction;
+
 
 /// Action initialization class.
 ///

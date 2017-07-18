@@ -32,9 +32,9 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#include "/usr/include/root/TH1D.h"
-#include "/usr/include/root/TFile.h"
-#include "/usr/include/root/TTree.h"
+#include "TH1D.h"
+#include "TFile.h"
+#include "TTree.h"
 #include "CLHEP/Units/SystemOfUnits.h"
 
 #include "HistoManager.hh"
@@ -70,7 +70,7 @@ void HistoManager::Book()
   // Creating a tree container to handle histograms and ntuples.
   // This tree is associated to an output file.
   //
-  G4String fileName = "ge-detector"+CurrentDateTime()+".root";
+  G4String fileName = "ge-detector"+currentDateTime()+".root";
   fRootFile = new TFile(fileName,"RECREATE");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
@@ -167,7 +167,7 @@ void HistoManager::PrintStatistic()
            << G4endl;
   }
 }
-const G4String currentDateTime() {
+G4String HistoManager::currentDateTime() {
     time_t     now = time(0);
     struct tm  tstruct;
     char       buf[80];

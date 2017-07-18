@@ -21,7 +21,7 @@ public:
     DetectorConstruction(const G4GDMLParser& parser);
     virtual G4VPhysicalVolume *Construct();
     virtual void ConstructSDandField();
-    const G4LogicalVolume* GetSensDet();
+    G4LogicalVolume* GetSensDet() {return myvol;};
 
 private:
     const G4GDMLParser& fParser;
