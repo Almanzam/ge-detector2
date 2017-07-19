@@ -65,24 +65,24 @@ int main(int argc, char **argv)
     
     HistoManager* histo = new HistoManager();
     
-//     PrimaryGeneratorAction* gen_action = 
-//                           new PrimaryGeneratorAction();
-//     run_manager->SetUserAction(gen_action);
     
-//     geRunAction* run_action = new geRunAction();  
-//     run_manager->SetUserAction(run_action);
-//     //
-//     geEventAction* event_action = new geEventAction(run_action,histo);
-//     run_manager->SetUserAction(event_action);
-//     //
-//     SteppingAction* stepping_action =
-//                     new SteppingAction(detector, event_action);
-//     run_manager->SetUserAction(stepping_action);
 
-//     PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
-//     geActionInitialization *ge_action = new geActionInitialization(detector);
-//     run_manager->SetUserInitialization(ge_action);
-
+    //PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
+    geActionInitialization *ge_action = new geActionInitialization(detector);
+    run_manager->SetUserInitialization(ge_action);
+    PrimaryGeneratorAction* gen_action = 
+                          new PrimaryGeneratorAction();
+    run_manager->SetUserAction(gen_action);
+    
+    geRunAction* run_action = new geRunAction();  
+    run_manager->SetUserAction(run_action);
+    //
+    geEventAction* event_action = new geEventAction(run_action,histo);
+    run_manager->SetUserAction(event_action);
+    //
+    SteppingAction* stepping_action =
+                    new SteppingAction(detector, event_action);
+    run_manager->SetUserAction(stepping_action);
     run_manager->Initialize();
 
     G4VisManager *vis_manager = new G4VisExecutive;
