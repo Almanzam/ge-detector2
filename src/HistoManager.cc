@@ -73,7 +73,9 @@ void HistoManager::Book()
   // Creating a tree container to handle histograms and ntuples.
   // This tree is associated to an output file.
   //
+
   G4String fileName = "ge-detector.root";
+
   fRootFile = new TFile(fileName,"RECREATE");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
@@ -83,7 +85,9 @@ void HistoManager::Book()
   }
   
   // id = 0
-  fHisto[0] = new TH1D("EAbs", "Edep in detector (MeV)", 100, 0., 800*CLHEP::MeV);
+
+  fHisto[0] = new TH1D("EAbs", "Edep in detector (MeV)", 100, 0., 3000*CLHEP::keV);
+
   
 
   for ( G4int i=0; i<kMaxHisto; ++i ) {
@@ -95,10 +99,12 @@ void HistoManager::Book()
   fNtuple1->Branch("Eabs", &fEabs, "Eabs/D");
   fNtuple1->Branch("Egap", &fEgap, "Egap/D");
 
+
   // create 2nd ntuple 
   fNtuple2 = new TTree("Ntuple2", "TrackL");
   fNtuple2->Branch("Labs", &fLabs, "Labs/D");
   fNtuple2->Branch("Lgap", &fLgap, "Lgap/D");
+
  
   G4cout << "\n----> Output file is open in " << fileName << G4endl;
 }

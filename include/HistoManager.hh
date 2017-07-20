@@ -22,10 +22,7 @@
 // * use  in  resulting  scientific  publications,  and indicate your *
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
-//
-/// \file analysis/AnaEx02/include/HistoManager.hh
-/// \brief Definition of the HistoManager class
-//
+
 // $Id: HistoManager.hh 98060 2016-07-01 16:24:08Z gcosmo $
 // GEANT4 tag $Name: geant4-09-04 $
 //
@@ -63,6 +60,7 @@ class HistoManager
                     G4double trackLAbs, G4double trackLGap);
     
     void PrintStatistic();
+
         
   private:
     TFile*   fRootFile;

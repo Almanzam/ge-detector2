@@ -18,6 +18,8 @@
 #include "G4GDMLParser.hh"
 #include "geColorReader.hh"
 #include "HistoManager.hh"
+#include "geEventAction.hh"
+
 
 int main(int argc, char **argv)
 {
@@ -54,15 +56,29 @@ int main(int argc, char **argv)
 //      return 0;
 //     }
 
-    run_manager->SetUserInitialization(new DetectorConstruction(parser));
+    DetectorConstruction* detector = new DetectorConstruction(parser);
+    run_manager->SetUserInitialization(detector);
     HistoManager* histo = new HistoManager();
+
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);
+    
+    
+    
+    
 
-//     PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
-    geActionInitialization *ge_action = new geActionInitialization();
+    //PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
+    geActionInitialization *ge_action = new geActionInitialization(detector,histo);
     run_manager->SetUserInitialization(ge_action);
-
+//     PrimaryGeneratorAction* gen_action = 
+//                           new PrimaryGeneratorAction();
+//     run_manager->SetUserAction(gen_action);
+//     
+    
+    //
+//     geEventAction* event_action = new geEventAction(histo);
+//     run_manager->SetUserAction(event_action);
+    
     run_manager->Initialize();
 
     G4VisManager *vis_manager = new G4VisExecutive;

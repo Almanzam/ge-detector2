@@ -6,6 +6,7 @@ find_package(ROOT REQUIRED)
 
 
 
+
 include(${Geant4_USE_FILE})
 include_directories(${PROJECT_SOURCE_DIR}/include
                     ${Geant4_INCLUDE_DIR}
@@ -18,10 +19,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ROOT_CXX_FLAGS}")
 #find_package(cadmesh)
 #include_directories(${CADMESH_INCLUDE_DIRS})
 
+
 # User code
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
 file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
-
 
 
 EXECUTE_PROCESS(COMMAND root-config --libs OUTPUT_VARIABLE ROOT_LD_FLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)

@@ -38,21 +38,28 @@
 #include "G4UserEventAction.hh"
 
 #include "globals.hh"
+
 #include "HistoManager.hh"
+
 
 /// Event action class
 
 class geEventAction : public G4UserEventAction
 {
   public:
+
     geEventAction(HistoManager* histo);
+
     virtual ~geEventAction();
 
     virtual void  BeginOfEventAction(const G4Event* );
     virtual void    EndOfEventAction(const G4Event* );
+    //void AddAbs(G4double de) {Edep += de;};
   private:
+
     G4int           HPGeCollID; 
     HistoManager* fhisto;
+
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

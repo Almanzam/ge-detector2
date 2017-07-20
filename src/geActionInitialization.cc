@@ -29,16 +29,20 @@
 /// \brief Implementation of the B2ActionInitialization class
 
 #include "geActionInitialization.hh"
+#include "HistoManager.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "geRunAction.hh"
 #include "geEventAction.hh"
+//#include "SteppingAction.hh"
 #include "G4ios.hh"
 #include "HistoManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geActionInitialization::geActionInitialization()
- : G4VUserActionInitialization()
+geActionInitialization::geActionInitialization(DetectorConstruction* detector,HistoManager* histo)
+ : G4VUserActionInitialization(),
+   fDetector(detector),
+   fhisto(histo)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -49,18 +53,21 @@ geActionInitialization::~geActionInitialization()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geActionInitialization::BuildForMaster() const
-{
-  SetUserAction(new geRunAction);
+{ 
+  //HistoManager* histo = new HistoManager();
+  SetUserAction(new geRunAction());
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void geActionInitialization::Build() const
 {
-  HistoManager* histo = new HistoManager();
+
+//   HistoManager* histo = new HistoManager();
   SetUserAction(new PrimaryGeneratorAction);
   SetUserAction(new geRunAction);
-  SetUserAction(new geEventAction(histo));
+  SetUserAction(new geEventAction(fhisto));
+
   G4cout << "geAI Build" << G4endl;
 }  
 

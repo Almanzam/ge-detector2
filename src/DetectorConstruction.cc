@@ -99,7 +99,7 @@ void DetectorConstruction::ConstructSDandField()
           SDman->FindSensitiveDetector((*vit).value);
         if(mydet) 
         {
-          G4LogicalVolume* myvol = (*iter).first;
+          /*G4LogicalVolume*/ myvol = (*iter).first;
           myvol->SetSensitiveDetector(mydet);
         }
         else
