@@ -1,7 +1,3 @@
-#include "HistoManager.hh"
-#include "HistoManager.hh"
-#include "HistoManager.hh"
-#include "HistoManager.hh"
 //
 // ********************************************************************
 // * License and Disclaimer                                           *
@@ -27,34 +23,60 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-// $Id: B2EventAction.hh 75214 2013-10-29 16:04:42Z gcosmo $
+/// \file analysis/AnaEx02/include/HistoManager.hh
+/// \brief Definition of the HistoManager class
 //
-/// \file B2EventAction.hh
-/// \brief Definition of the B2EventAction class
+// $Id: HistoManager.hh 98060 2016-07-01 16:24:08Z gcosmo $
+// GEANT4 tag $Name: geant4-09-04 $
+//
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#ifndef geEventAction_h
-#define geEventAction_h 1
-
-#include "G4UserEventAction.hh"
+#ifndef HistoManager_h
+#define HistoManager_h 1
 
 #include "globals.hh"
-#include "HistoManager.hh"
 
-/// Event action class
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class geEventAction : public G4UserEventAction
+class TFile;
+class TTree;
+class TH1D;
+
+const G4int kMaxHisto = 1;
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+class HistoManager
 {
   public:
-    geEventAction(HistoManager* histo);
-    virtual ~geEventAction();
+    HistoManager();
+   ~HistoManager();
+   
+    void Book();
+    void Save();
 
-    virtual void  BeginOfEventAction(const G4Event* );
-    virtual void    EndOfEventAction(const G4Event* );
+    void FillHisto(G4int id, G4double bin, G4double weight = 1.0);
+    void Normalize(G4int id, G4double fac);    
+
+    void FillNtuple(G4double energyAbs, G4double energyGap,
+                    G4double trackLAbs, G4double trackLGap);
+    
+    void PrintStatistic();
+        
   private:
-    G4int           HPGeCollID; 
-    HistoManager* fhisto;
+    TFile*   fRootFile;
+    TH1D*    fHisto[kMaxHisto];            
+    TTree*   fNtuple1;    
+    TTree*   fNtuple2;    
+
+    G4double fEabs;
+    G4double fEgap;
+    G4double fLabs;
+    G4double fLgap;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
+

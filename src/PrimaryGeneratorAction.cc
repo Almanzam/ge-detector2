@@ -39,7 +39,7 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
 {
     double xdir = .25*G4UniformRand()*(G4UniformRand()-.5);
     double ydir = .25*G4UniformRand()*(G4UniformRand()-.5);
-    double engvar = 0//.25*G4UniformRand()*(G4UniformRand()-.5);
+    double engvar = 0;//.25*G4UniformRand()*(G4UniformRand()-.5);
     particle_gun->SetParticleEnergy((1.332+engvar) * MeV);
     particle_gun->SetParticleMomentumDirection(G4ThreeVector
             (xdir, ydir, -1));

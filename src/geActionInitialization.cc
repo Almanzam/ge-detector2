@@ -33,6 +33,7 @@
 #include "geRunAction.hh"
 #include "geEventAction.hh"
 #include "G4ios.hh"
+#include "HistoManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -56,9 +57,10 @@ void geActionInitialization::BuildForMaster() const
 
 void geActionInitialization::Build() const
 {
+  HistoManager* histo = new HistoManager();
   SetUserAction(new PrimaryGeneratorAction);
   SetUserAction(new geRunAction);
-  SetUserAction(new geEventAction);
+  SetUserAction(new geEventAction(histo));
   G4cout << "geAI Build" << G4endl;
 }  
 

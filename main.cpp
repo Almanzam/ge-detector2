@@ -17,7 +17,7 @@
 #include "G4UIExecutive.hh"
 #include "G4GDMLParser.hh"
 #include "geColorReader.hh"
-
+#include "HistoManager.hh"
 
 int main(int argc, char **argv)
 {
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 //     }
 
     run_manager->SetUserInitialization(new DetectorConstruction(parser));
-
+    HistoManager* histo = new HistoManager();
     PhysicsList *physics_list = new PhysicsList;
     run_manager->SetUserInitialization(physics_list);
 
@@ -70,9 +70,12 @@ int main(int argc, char **argv)
 
     G4UImanager *ui_manager = G4UImanager::GetUIpointer();
     G4UIExecutive *ui = new G4UIExecutive(argc, argv);
+    
+    histo->Book();
     ui_manager->ApplyCommand(G4String("/control/execute ") +
                              G4String(argv[1]));
     ui->SessionStart();
+    histo->Save();
     delete ui;
     delete vis_manager;
     delete run_manager;

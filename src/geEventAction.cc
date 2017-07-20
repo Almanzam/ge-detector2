@@ -38,11 +38,12 @@
 #include "G4ios.hh"
 #include "G4SDManager.hh"
 #include "G4UnitsTable.hh"
-
+#include "HistoManager.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geEventAction::geEventAction()
-: G4UserEventAction()
+geEventAction::geEventAction(HistoManager* histo)
+: G4UserEventAction(),
+fhisto(histo)
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -84,6 +85,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
     
     G4SDManager * SDman = G4SDManager::GetSDMpointer();
     HPGeCollID = SDman->GetCollectionID("TrackerHitsCollectionName");
+//     HistoManager* histo = new HistoManager();
     
     if (HCE) HPGeHC = 
       (geTrackerHitsCollection*)(HCE->GetHC(HPGeCollID));
@@ -100,7 +102,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
 //             analysis->analyseEnergyDep(energyD);
 //             totEnergyDetect += energyD;             
           }
-      
+      fhisto->FillHisto(0,totEnergy);
     
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
