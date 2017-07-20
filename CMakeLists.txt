@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 2.6)
 project(ge-detector)
 
 find_package(Geant4 REQUIRED ui_all vis_all)
-find_package(ROOT REQUIRED)
-
+#find_package(ROOT REQUIRED)
+list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
 
 
 
