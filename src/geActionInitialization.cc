@@ -55,7 +55,7 @@ geActionInitialization::~geActionInitialization()
 void geActionInitialization::BuildForMaster() const
 { 
   //HistoManager* histo = new HistoManager();
-  SetUserAction(new geRunAction());
+  SetUserAction(new geRunAction(fhisto));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,7 +65,7 @@ void geActionInitialization::Build() const
 
 //   HistoManager* histo = new HistoManager();
   SetUserAction(new PrimaryGeneratorAction);
-  SetUserAction(new geRunAction);
+  SetUserAction(new geRunAction(fhisto));
   SetUserAction(new geEventAction(fhisto));
 
   G4cout << "geAI Build" << G4endl;

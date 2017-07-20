@@ -50,7 +50,7 @@ class HistoManager
     HistoManager();
    ~HistoManager();
    
-    void Book();
+    void Book(G4int thread);
     void Save();
 
     void FillHisto(G4int id, G4double bin, G4double weight = 1.0);

@@ -42,6 +42,7 @@
 
 #include "HistoManager.hh"
 #include "G4UnitsTable.hh"
+#include "G4UIcommand.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -68,15 +69,15 @@ HistoManager::~HistoManager()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void HistoManager::Book()
+void HistoManager::Book(G4int thread)
 { 
   // Creating a tree container to handle histograms and ntuples.
   // This tree is associated to an output file.
   //
 
-  G4String fileName = "ge-detector.root";
+  G4String fileName = "ge-detector"+G4UIcommand::ConvertToString(thread)+".root";
 
-  fRootFile = new TFile(fileName,"RECREATE");
+  fRootFile = new TFile(fileName,"NEW");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
            << " problem creating the ROOT TFile "
@@ -114,8 +115,9 @@ void HistoManager::Book()
 void HistoManager::Save()
 { 
   if (! fRootFile) return;
-  
+  G4cout << "\n---->Saving\n" << G4endl;
   fRootFile->Write();       // Writing the histograms to the file
+  G4cout << "\n----> Written \n" << G4endl;
   fRootFile->Close();       // and closing the tree (and the file)
   
   G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;
