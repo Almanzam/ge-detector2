@@ -77,7 +77,7 @@ void HistoManager::Book(G4int thread)
 
   G4String fileName = "ge-detector"+G4UIcommand::ConvertToString(thread)+".root";
 
-  fRootFile = new TFile(fileName,"NEW");
+  fRootFile = new TFile(fileName,"UPDATE");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
            << " problem creating the ROOT TFile "
