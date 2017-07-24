@@ -5,11 +5,11 @@
 #include "geActionInitialization.hh"
 
 // GEANT4 //
-//#ifdef G4MULTITHREADED
-//#include "G4MTRunManager.hh"
-//#else
+#ifdef G4MULTITHREADED
+#include "G4MTRunManager.hh"
+#else
 #include "G4RunManager.hh"
-//#endif
+#endif
 #include "G4UImanager.hh"
 //#include "G4UIterminal.hh"
 //#include "G4UItcsh.hh"
@@ -32,16 +32,16 @@ int main(int argc, char **argv)
     
     parser.Read("../CAD/HPGe.gdml");
     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
-//     #ifdef G4MULTITHREADED  
-//     G4MTRunManager* run_manager = new G4MTRunManager;
-//     if(numCPU > 10){
-//         run_manager->SetNumberOfThreads(10);
-//     }else{
-//         run_manager->SetNumberOfThreads(4);
-//     }
-    //#else
+    #ifdef G4MULTITHREADED  
+    G4MTRunManager* run_manager = new G4MTRunManager;
+    if(numCPU > 10){
+        run_manager->SetNumberOfThreads(10);
+    }else{
+        run_manager->SetNumberOfThreads(4);
+    }
+    #else
     G4RunManager* run_manager = new G4RunManager;
-    //#endif
+    #endif
 //     if (argc == 3) {
 //      detector_construction->SetCADFilename(argv[2]);
 //     } else if (argc == 4) {
@@ -85,14 +85,27 @@ int main(int argc, char **argv)
     vis_manager->Initialize();
 
     G4UImanager *ui_manager = G4UImanager::GetUIpointer();
-    G4UIExecutive *ui = new G4UIExecutive(argc, argv);
-    
-    //histo->Book();
+    G4UIExecutive* ui = 0;
+    if ( argc == 1 ) {
+        ui = new G4UIExecutive(argc, argv);
+    }
+    if ( ! ui ) { 
+    // batch mode
+    G4String command = "/control/execute ";
+    G4String fileName = argv[1];
     ui_manager->ApplyCommand(G4String("/control/execute ") +
                              G4String(argv[1]));
+    }else { 
+    // interactive mode
+    
     ui->SessionStart();
-    //histo->Save();
     delete ui;
+  }
+
+        
+    //histo->Book();
+    
+    
     delete vis_manager;
     delete run_manager;
     return 0;
