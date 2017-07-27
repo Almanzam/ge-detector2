@@ -117,12 +117,12 @@ void HistoManager::Save()
 { 
   if (! fRootFile) return;
   G4cout << "\n---->Saving\n" << G4endl;
-  if(G4Threading::IsMasterThread()){
+  if(! G4Threading::IsWorkerThread()){
     fRootFile->Write();       // Writing the histograms to the file
   }
   
   G4cout << "\n----> Written \n" << G4endl;
-  if(G4Threading::IsMasterThread()){
+  if(! G4Threading::IsWorkerThread()){
     fRootFile->Close();       // and closing the tree (and the file)
   }
   G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;
