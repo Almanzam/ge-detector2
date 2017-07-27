@@ -58,7 +58,7 @@ geRunAction::~geRunAction()
 void geRunAction::BeginOfRunAction(const G4Run*)
 { 
   //inform the runManager to save random number seed
-    TThread::Initialize();
+  TThread::Initialize();
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
   if(G4Threading::IsWorkerThread()){
   G4int id = G4Threading::G4GetThreadId();

@@ -76,8 +76,8 @@ void HistoManager::Book(G4int thread)
   // This tree is associated to an output file.
   //
 
-  //G4String fileName = "ge-detector"+G4UIcommand::ConvertToString(thread)+".root";
-  G4String fileName = "ge-detector.root";
+  G4String fileName = "ge-detector"+G4UIcommand::ConvertToString(thread)+".root";
+  //G4String fileName = "ge-detector.root";
   fRootFile = new TFile(fileName,"UPDATE");
   if (! fRootFile) {
     G4cout << " HistoManager::Book :" 
