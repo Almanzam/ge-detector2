@@ -60,6 +60,6 @@
 /gps/ene/sigma 0.951 keV
 
 
-/run/beamOn 100000
+/run/beamOn 100
 
 exit

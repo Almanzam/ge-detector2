@@ -11,6 +11,7 @@
 #include "G4Box.hh"
 #include "G4RunManager.hh"
 #include "G4ParticleGun.hh"
+#include "G4GeneralParticleSource.hh"
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 #include "G4ios.hh"
@@ -44,6 +45,6 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
     //particle_gun->SetParticleMomentumDirection(G4ThreeVector
     //        (xdir, ydir, -1));
     //particle_gun->SetParticlePosition(G4ThreeVector
-                                      (1*cm,1*cm, 6 * cm));
+    //                                  (1*cm,1*cm, 6 * cm));
     particle_gun->GeneratePrimaryVertex(event);
 }
