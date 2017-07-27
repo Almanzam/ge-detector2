@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.8)
 project(ge-detector)
 
 find_package(Geant4 REQUIRED ui_all vis_all)
