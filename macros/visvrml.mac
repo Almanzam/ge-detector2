@@ -16,7 +16,7 @@
 #/vis/open OGL 500x500-500-500
 /vis/open VRML2FILE
 /vis/drawVolume
-/vis/scene/add/axes      0 0 0 30 mm
+#/vis/scene/add/axes      0 0 0 30 mm
 
 #/vis/multithreading/actionOnEventQueueFull wait
 #:  Discard events, or wait for events to finish when the event queue for drawing gets full.
@@ -38,8 +38,9 @@
 
 #/vis/viewer/flush
 /vis/scene/add/hits
+/gps/source/multiplevertex true
 #Co-60 high peak
-/gps/source/intensity 100
+/gps/source/intensity 1
 /gps/pos/type Volume
 /gps/pos/shape Cylinder
 /gps/pos/radius .25 cm
@@ -62,6 +63,6 @@
 /gps/ang/type cos
 
 
-/run/beamOn 10000
+/run/beamOn 50000
 
 
