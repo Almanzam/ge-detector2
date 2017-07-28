@@ -128,15 +128,15 @@ void HistoManager::Save()
         if(!G4Threading::IsWorkerThread()){
             fRootFile->Close();       // and closing the tree (and the file)
   }
-  }else{
-      if (! fRootFile) return;
-        G4cout << "\n---->Saving\n" << G4endl;
-        if(G4Threading::IsMasterThread()){
-            fRootFile->Write();       // Writing the histograms to the file
-        }
+  }//else{
+  //    if (! fRootFile) return;
+  //      G4cout << "\n---->Saving\n" << G4endl;
+  //      if(G4Threading::IsMasterThread()){
+  //          fRootFile->Write();       // Writing the histograms to the file
+  //      }
         
         G4cout << "\n----> Written \n" << G4endl;
-        if(G4Threading::IsMasterThread()){
+        if(!G4Threading::IsWorkerThread()){
             fRootFile->Close();       // and closing the tree (and the file)
         }
   }
