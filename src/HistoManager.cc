@@ -116,19 +116,19 @@ void HistoManager::Book(G4int thread)
 
 void HistoManager::Save()
 { 
-  G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
-  if(numCPU>10){
-      if (! fRootFile) return;
-        G4cout << "\n---->Saving\n" << G4endl;
-        if(!G4Threading::IsWorkerThread()){
-            fRootFile->Write();       // Writing the histograms to the file
-        }
-        
-        G4cout << "\n----> Written \n" << G4endl;
-        if(!G4Threading::IsWorkerThread()){
-            fRootFile->Close();       // and closing the tree (and the file)
-  }
- }else{
+//   G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
+//   if(numCPU>10){
+//       if (! fRootFile) return;
+//         G4cout << "\n---->Saving\n" << G4endl;
+//         if(!G4Threading::IsWorkerThread()){
+//             fRootFile->Write();       // Writing the histograms to the file
+//         }
+//         
+//         G4cout << "\n----> Written \n" << G4endl;
+//         if(!G4Threading::IsWorkerThread()){
+//             fRootFile->Close();       // and closing the tree (and the file)
+//   }
+//  }else{
      if (! fRootFile) return;
        G4cout << "\n---->Saving\n" << G4endl;
        if(G4Threading::IsMasterThread()){
@@ -139,7 +139,7 @@ void HistoManager::Save()
         if(G4Threading::IsMasterThread()){
             fRootFile->Close();       // and closing the tree (and the file)
         }
-  }
+//   }
   
   G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;
 }
