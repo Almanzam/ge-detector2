@@ -41,6 +41,6 @@
 
 /gun/energy 1.3 MeV
 
-/run/beamOn 100000
+/run/beamOn 10000
 
 exit
