@@ -38,9 +38,29 @@
 
 #/vis/viewer/flush
 /vis/scene/add/hits
+#Co-60 high peak
+/gps/source/intensity 100
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius .25 cm
+/gps/pos/halfz .125 cm
+/gps/pos/centre 0 0 6.3903 cm
+/gps/ene/type Mono
+/gps/ene/mono 1.332 MeV
+/gps/ene/sigma 0.985 keV
+/gps/ang/type cos
+#Co-60 low peak
+/gps/source/add 110
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius .25 cm
+/gps/pos/halfz .125 cm
+/gps/pos/centre 0 0 6.3903 cm
+/gps/ene/type Mono
+/gps/ene/mono 1.173 MeV
+/gps/ene/sigma 0.951 keV
+/gps/ang/type cos
 
-/gun/energy 1.3 MeV
+/run/beamOn 90000
 
-/run/beamOn 10000
 
-exit

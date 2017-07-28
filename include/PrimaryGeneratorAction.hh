@@ -5,6 +5,7 @@
 #include "globals.hh"
 
 class G4ParticleGun;
+class G4GeneralParticleSource;
 class G4Event;
 // class G4Double;
 
@@ -20,6 +21,7 @@ public:
         return particle_gun;
     } private:
     G4ParticleGun *particle_gun;
+    G4GeneralParticleSource *particle_source;
 //     G4Double *xdir;
 //     G4Double *zdir;
 };

@@ -44,6 +44,7 @@
 #include "G4UnitsTable.hh"
 #include "G4UIcommand.hh"
 #include "G4Threading.hh"
+#include "G4Version.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -88,7 +89,7 @@ void HistoManager::Book(G4int thread)
   
   // id = 0
 
-  fHisto[0] = new TH1D("EAbs", "Edep in detector (MeV)", 3000, -50*CLHEP::keV, 3000*CLHEP::keV);
+  fHisto[0] = new TH1D("EAbs", "Edep in detector (MeV)", 8192, 20*CLHEP::keV, 3000*CLHEP::keV);
 
   
 
@@ -115,16 +116,31 @@ void HistoManager::Book(G4int thread)
 
 void HistoManager::Save()
 { 
-  if (! fRootFile) return;
-  G4cout << "\n---->Saving\n" << G4endl;
-  if(! G4Threading::IsWorkerThread()){
-    fRootFile->Write();       // Writing the histograms to the file
+  G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
+  if(numCPU>10){
+      if (! fRootFile) return;
+        G4cout << "\n---->Saving\n" << G4endl;
+        if(!G4Threading::IsWorkerThread()){
+            fRootFile->Write();       // Writing the histograms to the file
+        }
+        
+        G4cout << "\n----> Written \n" << G4endl;
+        if(!G4Threading::IsWorkerThread()){
+            fRootFile->Close();       // and closing the tree (and the file)
+  }
+  }else{
+      if (! fRootFile) return;
+        G4cout << "\n---->Saving\n" << G4endl;
+        if(G4Threading::IsMasterThread()){
+            fRootFile->Write();       // Writing the histograms to the file
+        }
+        
+        G4cout << "\n----> Written \n" << G4endl;
+        if(G4Threading::IsMasterThread()){
+            fRootFile->Close();       // and closing the tree (and the file)
+        }
   }
   
-  G4cout << "\n----> Written \n" << G4endl;
-  if(! G4Threading::IsWorkerThread()){
-    fRootFile->Close();       // and closing the tree (and the file)
-  }
   G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;
 }
 
