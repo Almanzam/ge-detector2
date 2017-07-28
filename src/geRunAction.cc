@@ -73,7 +73,7 @@ void geRunAction::BeginOfRunAction(const G4Run*)
 
 void geRunAction::EndOfRunAction(const G4Run* )
 {
-    fHistomanager->Save();
+    if(G4Threading::IsMasterThread()){fHistomanager->Save();}
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
