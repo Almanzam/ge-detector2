@@ -43,8 +43,8 @@
 #include "HistoManager.hh"
 #include "G4UnitsTable.hh"
 #include "G4UIcommand.hh"
-#include "G4Threading.hh"
-#include "G4Version.hh"
+//#include "G4Threading.hh"
+//#include "G4Version.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -77,7 +77,7 @@ void HistoManager::Book(G4int thread)
   // This tree is associated to an output file.
   //
 
-  G4String fileName = "ge-detector"+G4UIcommand::ConvertToString(thread)+".root";
+  G4String fileName = "ge-detector.root";
   //G4String fileName = "ge-detector.root";
   fRootFile = new TFile(fileName,"UPDATE");
   if (! fRootFile) {
@@ -131,14 +131,14 @@ void HistoManager::Save()
 //  }else{
      if (! fRootFile) return;
        G4cout << "\n---->Saving\n" << G4endl;
-       if(G4Threading::IsMasterThread()){
+//        if(G4Threading::IsMasterThread()){
            fRootFile->Write();       // Writing the histograms to the file
-       }
+//        }
         
         G4cout << "\n----> Written \n" << G4endl;
-        if(G4Threading::IsMasterThread()){
+//         if(G4Threading::IsMasterThread()){
             fRootFile->Close();       // and closing the tree (and the file)
-        }
+//         }
 //   }
   
   G4cout << "\n----> Histograms and ntuples are saved\n" << G4endl;

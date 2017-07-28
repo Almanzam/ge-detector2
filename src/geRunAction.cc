@@ -34,8 +34,8 @@
 #include "G4RunManager.hh"
 #include "G4ios.hh"
 #include "HistoManager.hh"
-#include "G4Threading.hh"
-#include "TThread.h"
+//#include "G4Threading.hh"
+//#include "TThread.h"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -58,14 +58,14 @@ geRunAction::~geRunAction()
 void geRunAction::BeginOfRunAction(const G4Run*)
 { 
   //inform the runManager to save random number seed
-  TThread::Initialize();
+//   TThread::Initialize();
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
-  if(G4Threading::IsWorkerThread()){
-  G4int id = G4Threading::G4GetThreadId();
-  fHistomanager->Book(id);
+//   if(G4Threading::IsWorkerThread()){
+//   G4int id = G4Threading::G4GetThreadId();
+  fHistomanager->Book(0);
   
-  G4cout << "geRA begin" << id << G4endl;
-  }
+//   G4cout << "geRA begin" << id << G4endl;
+//   }
   G4cout << "geRA begin" << G4endl;
 }
 
