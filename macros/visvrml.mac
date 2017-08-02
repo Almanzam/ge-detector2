@@ -38,29 +38,31 @@
 
 #/vis/viewer/flush
 /vis/scene/add/hits
-/gps/source/multiplevertex true
+#/gps/source/multiplevertex true
 #Co-60 high peak
-/gps/source/intensity 1
+#/gps/source/intensity 1
+/gps/ion 27 60
 /gps/pos/type Volume
 /gps/pos/shape Cylinder
 /gps/pos/radius .25 cm
 /gps/pos/halfz .125 cm
 /gps/pos/centre 0 0 6.3903 cm
-/gps/ene/type Mono
-/gps/ene/mono 1.332 MeV
-/gps/ene/sigma 0.985 keV
-/gps/ang/type iso
+/gps/ene/type mono
+/gps/ene/mono 0 MeV
+
+#/gps/ene/sigma 0.985 keV
+#/gps/ang/type iso
 #Co-60 low peak
-/gps/source/add 110
-/gps/pos/type Volume
-/gps/pos/shape Cylinder
-/gps/pos/radius .25 cm
-/gps/pos/halfz .125 cm
-/gps/pos/centre 0 0 6.3903 cm
-/gps/ene/type Mono
-/gps/ene/mono 1.173 MeV
-/gps/ene/sigma 0.951 keV
-/gps/ang/type iso
+#/gps/source/add 110
+#/gps/pos/type Volume
+#/gps/pos/shape Cylinder
+#/gps/pos/radius .25 cm
+#/gps/pos/halfz .125 cm
+#/gps/pos/centre 0 0 6.3903 cm
+#/gps/ene/type Gauss
+#/gps/ene/mono 1.173 MeV
+#/gps/ene/sigma 0.951 keV
+#/gps/ang/type iso
 
 
 /run/beamOn 50000

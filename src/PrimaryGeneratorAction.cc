@@ -23,10 +23,10 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     //particle_gun = new G4ParticleGun();
     particle_source = new G4GeneralParticleSource();
     G4ParticleTable *particle_table = G4ParticleTable::GetParticleTable();
-    G4ParticleDefinition *particle = particle_table->FindParticle("gamma");
+    //G4ParticleDefinition *particle = particle_table->FindParticle("gamma");
 
     
-    particle_source->SetParticleDefinition(particle);
+    //particle_source->SetParticleDefinition(particle);
     
     
 }
