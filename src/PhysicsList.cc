@@ -29,6 +29,7 @@
 #include "G4MesonConstructor.hh"
 #include "G4BaryonConstructor.hh"
 #include "G4IonConstructor.hh"
+#include "G4RadioactiveDecay.hh"
 
 PhysicsList::PhysicsList()
 {
@@ -76,6 +77,28 @@ void PhysicsList::ConstructParticle()
 void PhysicsList::ConstructProcess()
 {
     G4VModularPhysicsList::ConstructProcess();
+	AddTransportation();
+
+  G4RadioactiveDecay* radioactiveDecay = new G4RadioactiveDecay();
+
+  radioactiveDecay->SetARM(false);               //Atomic Rearangement
+  
+  G4PhysicsListHelper* ph = G4PhysicsListHelper::GetPhysicsListHelper();  
+  ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+
+  // Need to initialize atomic deexcitation outside of radioactive decay
+  G4LossTableManager* theManager = G4LossTableManager::Instance();
+  G4VAtomDeexcitation* p = theManager->AtomDeexcitation();
+  if (!p) {
+     G4UAtomicDeexcitation* atomDeex = new G4UAtomicDeexcitation();
+     theManager->SetAtomDeexcitation(atomDeex);
+     atomDeex->InitialiseAtomicDeexcitation();
+  }
+  //
+  // mandatory for G4NuclideTable
+  //
+  G4NuclideTable::GetInstance()->SetThresholdOfHalfLife(0.1*picosecond);
+  G4NuclideTable::GetInstance()->SetLevelTolerance(1.0*eV);  
 }
 
 
