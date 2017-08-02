@@ -3,9 +3,19 @@
 // GEANT4 //
 #include "G4EmStandardPhysics_option4.hh"
 #include "G4UnitsTable.hh"
+#include "G4SystemOfUnits.hh"
 
 #include "G4ParticleDefinition.hh"
 #include "G4ProcessManager.hh"
+
+#include "G4ParticleTypes.hh"
+#include "G4IonConstructor.hh"
+#include "G4PhysicsListHelper.hh"
+#include "G4NuclideTable.hh"
+#include "G4LossTableManager.hh"
+#include "G4UAtomicDeexcitation.hh"
+#include "G4NuclearLevelData.hh"
+#include "G4DeexPrecoParameters.hh"
 
 // Bosons
 #include "G4ChargedGeantino.hh"
