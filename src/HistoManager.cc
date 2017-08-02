@@ -77,7 +77,7 @@ void HistoManager::Book(G4int thread)
   // This tree is associated to an output file.
   //
 
-  G4String fileName = "ge-detector.root";
+  G4String fileName = "ge-detector"+std::ctime(std::chrono::system_clock::now())+".root";
   //G4String fileName = "ge-detector.root";
   fRootFile = new TFile(fileName,"UPDATE");
   if (! fRootFile) {
