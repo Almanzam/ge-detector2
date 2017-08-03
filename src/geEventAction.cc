@@ -108,7 +108,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
 //             totEnergyDetect += energyD;             
           }
 	  if(totEnergy > 0){
-		fhisto->FillHisto(0,totEnergy);
+		fhisto->FillHisto(0,totEnergy*1000);
       }
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
