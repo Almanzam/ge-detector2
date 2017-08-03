@@ -81,7 +81,7 @@ void HistoManager::Book(G4int thread)
   std::chrono::time_point<std::chrono::system_clock> time;
   time = std::chrono::system_clock::now();
   std::time_t s_time = std::chrono::system_clock::to_time_t(time);
-  std::string date = std::string(std::ctime(&s_time))
+  std::string date = std::string(std::ctime(&s_time));
   date.erase(std::remove(date.begin(), date.end(), ' '), date.end());
   G4String fileName = "ge-detector"+date+".root";
   //G4String fileName = "ge-detector.root";
