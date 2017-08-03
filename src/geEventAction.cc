@@ -107,8 +107,9 @@ void geEventAction::EndOfEventAction(const G4Event* event)
 //             analysis->analyseEnergyDep(energyD);
 //             totEnergyDetect += energyD;             
           }
-      fhisto->FillHisto(0,totEnergy);
-    
+	  if(totEnergy > 0){
+		fhisto->FillHisto(0,totEnergy);
+      }
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
     G4cout << "    Total energy deposited:  "  
