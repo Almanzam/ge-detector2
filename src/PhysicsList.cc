@@ -61,10 +61,10 @@ void PhysicsList::ConstructParticle()
     G4Gamma::GammaDefinition();
 
     // leptons
-    // G4Electron::ElectronDefinition();
-    // G4Positron::PositronDefinition();
-    // G4MuonPlus::MuonPlusDefinition();
-    // G4MuonMinus::MuonMinusDefinition();
+    G4Electron::ElectronDefinition();
+    G4Positron::PositronDefinition();
+    G4MuonPlus::MuonPlusDefinition();
+    G4MuonMinus::MuonMinusDefinition();
 
     G4NeutrinoE::NeutrinoEDefinition();
     G4AntiNeutrinoE::AntiNeutrinoEDefinition();
