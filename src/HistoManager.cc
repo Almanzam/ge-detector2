@@ -96,7 +96,7 @@ void HistoManager::Book(G4int thread)
   
   // id = 0
 
-  fHisto[0] = new TH1D("EAbs", "Edep in detector (keV)", 8192, 20*CLHEP::keV, 3000*CLHEP::keV);
+  fHisto[0] = new TH1D("EAbs", "Edep in detector (keV)", 8192, 20, 3000);
 
   
 
