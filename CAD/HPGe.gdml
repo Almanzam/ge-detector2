@@ -205,7 +205,11 @@
 		<volume name="Ge_Crystal_vol_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_Crystal_Vol" />
-			
+			<physvol name="Ge_B_phys" >
+				<volumeref ref="Ge_B_Layer_vol_vol" />
+				<positionref ref="hole_offset"/>
+				<rotationref ref="r0" />
+			</physvol>
 			<auxiliary auxtype="SensDet" auxvalue="Tracker"/>
 			<colorref ref="Yellow"/>
 			
@@ -213,7 +217,11 @@
 		<volume name="Ge_Li_Layer_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_Li_Layer" />
-			
+			<physvol name="Ge_phys" >
+				<volumeref ref="Ge_Crystal_vol_vol" />
+				<positionref ref="t0" />
+				<rotationref ref="r0" />
+			</physvol>
 			<colorref ref="Purple"/>			
 		</volume>
 		<volume name="Mylar_Foil_vol" >
@@ -292,21 +300,17 @@
 				<position name="mylpos" x="0" y="0" z="45.5" />
 				<rotationref ref="r0" />
 			</physvol>
-			<!--<physvol name="Ge_Li_phys" >
+			<physvol name="Ge_Li_phys" >
 				<volumeref ref="Ge_Li_Layer_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>-->
-			<physvol name="Ge_phys" >
+			</physvol>
+			<!--<physvol name="Ge_phys" >
 				<volumeref ref="Ge_Crystal_vol_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>
-			<!--<physvol name="Ge_B_phys" >
-				<volumeref ref="Ge_B_Layer_vol_vol" />
-				<positionref ref="hole_offset"/>
-				<rotationref ref="r0" />
 			</physvol>-->
+			<!---->
 			
 		</volume>
 	</structure>
