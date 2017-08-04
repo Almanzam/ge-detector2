@@ -228,11 +228,11 @@
 			
 			<colorref ref="Red"/>
 			
-			<physvol name="Ge_B_1_phys" >
+			<!--<physvol name="Ge_B_1_phys" >
 				<volumeref ref="Ge_B_Layer_1_vol_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>
+			</physvol>-->
 			
 			
 		</volume>
