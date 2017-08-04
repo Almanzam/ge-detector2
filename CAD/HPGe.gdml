@@ -192,11 +192,11 @@
 			<colorref ref="Blue"/>
 		</volume>
 		
-		<volume name="Ge_B_Layer_vol_vol" >
+		<!--<volume name="Ge_B_Layer_vol_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_B_Layer_vol" />
 			<colorref ref="Green"/>
-		</volume>
+		</volume>-->
 		<!--<volume name="Ge_B_Layer_1_vol_vol" >
 			<materialref ref="Germanium" />
 			<solidref ref="Ge_B_Layer_1_vol" />
