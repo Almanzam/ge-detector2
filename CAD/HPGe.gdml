@@ -214,7 +214,7 @@
 			<colorref ref="Yellow"/>
 			
 		</volume>
-		<!--<volume name="Ge_Li_Layer_vol" >
+		<volume name="Ge_Li_Layer_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_Li_Layer" />
 			<physvol name="Ge_phys" >
@@ -223,7 +223,7 @@
 				<rotationref ref="r0" />
 			</physvol>
 			<colorref ref="Purple"/>			
-		</volume>-->
+		</volume>
 		<volume name="Mylar_Foil_vol" >
 			<materialref ref="G4_MYLAR" />
 			<solidref ref="Mylar_Foil" />
@@ -300,16 +300,16 @@
 				<position name="mylpos" x="0" y="0" z="45.5" />
 				<rotationref ref="r0" />
 			</physvol>
-			<!--<physvol name="Ge_Li_phys" >
+			<physvol name="Ge_Li_phys" >
 				<volumeref ref="Ge_Li_Layer_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>-->
-			<physvol name="Ge_phys" >
+			</physvol>
+			<!--<physvol name="Ge_phys" >
 				<volumeref ref="Ge_Crystal_vol_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>
+			</physvol>-->
 			<!---->
 			
 		</volume>
