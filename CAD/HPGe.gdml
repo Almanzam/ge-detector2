@@ -205,7 +205,7 @@
 		<volume name="Ge_Crystal_vol_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_Crystal_Vol" />
-			<<!--physvol name="Ge_B_phys" >
+			<!--<physvol name="Ge_B_phys" >
 				<volumeref ref="Ge_B_Layer_vol_vol" />
 				<positionref ref="hole_offset"/>
 				<rotationref ref="r0" />
