@@ -233,7 +233,7 @@
 		<volume name="Copper_Cup_vol_vol" >
 			<materialref ref="G4_Cu" />
 			<solidref ref="Copper_Cup_vol" />
-			
+			<auxiliary auxtype="Target" auxvalue="target"/>
 			<colorref ref="Red"/>
 			
 			<!--<physvol name="Ge_B_1_phys" >
