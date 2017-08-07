@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     fReader = new geColorReader();
     G4GDMLParser parser(fReader);
     parser.SetStripFlag(false);
-	parser->SetAddPointerToName(false);
+	parser.SetAddPointerToName(false);
     parser.Read("../CAD/HPGe.gdml");
 	//parser.StripNamePointers();
 //     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
