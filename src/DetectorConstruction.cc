@@ -107,6 +107,10 @@ void DetectorConstruction::ConstructSDandField()
           G4cout << (*vit).value << " detector not found" << G4endl;
         }
       }
+	  if ((*vit).type=="target")
+      {
+        
+      }
     }
   }
 }
