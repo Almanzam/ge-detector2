@@ -31,6 +31,7 @@ int main(int argc, char **argv)
     G4GDMLParser parser(fReader);
     parser.SetStripFlag(FALSE);
     parser.Read("../CAD/HPGe.gdml");
+	parser.StripNamePointers();
 //     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
 //     #ifdef G4MULTITHREADED  
 //     G4MTRunManager* run_manager = new G4MTRunManager;
