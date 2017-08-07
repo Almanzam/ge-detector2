@@ -29,8 +29,8 @@ int main(int argc, char **argv)
     G4GDMLReadStructure* fReader;
     fReader = new geColorReader();
     G4GDMLParser parser(fReader);
-    
-    parser.Read("../CAD/HPGe.gdml",dostrip=FALSE);
+    parser.SetStripFlag(FALSE);
+    parser.Read("../CAD/HPGe.gdml");
 //     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
 //     #ifdef G4MULTITHREADED  
 //     G4MTRunManager* run_manager = new G4MTRunManager;
