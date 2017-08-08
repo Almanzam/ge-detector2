@@ -233,22 +233,19 @@
 		<volume name="Copper_Cup_vol_vol" >
 			<materialref ref="G4_Cu" />
 			<solidref ref="Copper_Cup_vol" />
-			<auxiliary auxtype="Target" auxvalue="target"/>
+			
 			<colorref ref="Red"/>
 			
-			<!--<physvol name="Ge_B_1_phys" >
-				<volumeref ref="Ge_B_Layer_1_vol_vol" />
-				<positionref ref="t0" />
-				<rotationref ref="r0" />
-			</physvol>-->
+			
 			
 			
 		</volume>
 		<volume name="Shell_vol_vol" >
 			<materialref ref="G4_Mg" />
 			<solidref ref="Shell_vol" />
-			
+			<auxiliary auxtype="Target" auxvalue="target"/>
 			<colorref ref="Grey"/>
+			
 			
 		</volume>
 		<volume name="Lead_Core_vol_vol" >
@@ -305,11 +302,7 @@
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
 			</physvol>
-			<!--<physvol name="Ge_phys" >
-				<volumeref ref="Ge_Crystal_vol_vol" />
-				<positionref ref="t0" />
-				<rotationref ref="r0" />
-			</physvol>-->
+			
 			<!---->
 			
 		</volume>
