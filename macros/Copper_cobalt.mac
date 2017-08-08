@@ -66,6 +66,6 @@
 #/gps/ang/type iso
 
 
-/run/beamOn 5000000
+/run/beamOn 500
 
 
