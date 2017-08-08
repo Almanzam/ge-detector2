@@ -25,6 +25,8 @@ public:
 
 private:
     const G4GDMLParser& fParser;
-    G4LogicalVolume* myvol; 
+    G4LogicalVolume* myvol;
+    G4LogicalVolume* shell;
+    G4bool kh;
 };
 #endif

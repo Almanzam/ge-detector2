@@ -46,8 +46,8 @@
 #/gps/pos/shape Cylinder
 #/gps/pos/radius .25 cm
 #/gps/pos/halfz .125 cm
-#/gps/pos/centre 0 0 6.3903 cm
-/gps/pos/confine "Copper_phys"
+/gps/pos/centre 0 0 0 cm
+/gps/pos/confine Copper_phys
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
 
@@ -66,6 +66,6 @@
 #/gps/ang/type iso
 
 
-/run/beamOn 50000
+/run/beamOn 5000000
 
 

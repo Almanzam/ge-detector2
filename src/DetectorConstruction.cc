@@ -21,6 +21,8 @@
 #include "geTrackerSD.hh"
 #include "G4SDManager.hh"
 #include "G4GDMLParser.hh"
+#include "G4PhysicalVolumeStore.hh"
+#include "G4Types.hh"
  
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -107,10 +109,21 @@ void DetectorConstruction::ConstructSDandField()
           G4cout << (*vit).value << " detector not found" << G4endl;
         }
       }
-	  if ((*vit).type=="target")
-      {
-        
-      }
+// 	  if ((*vit).type=="Target")
+//       {
+//             shell = (*iter).first;
+//             G4cout << shell->GetMaterial()->GetName() << G4endl;
+//             G4VPhysicalVolume* cup = shell->GetDaughter(1);
+//             G4cout << cup->GetName()<<"======"<<cup->GetLogicalVolume()->GetName() << G4endl;
+//             cup->SetName("Copper_phys");
+//             G4cout << cup->GetName() << G4endl;
+//             G4PhysicalVolumeStore* PVS = G4PhysicalVolumeStore::GetInstance();
+//             for(G4int i = 0; i < G4int(PVS->size());i++){
+//                 G4String t = (*PVS)[i]->GetName();
+//                 kh = (t == "Copper_phys");
+//                 G4cout << G4UIcommand::ConvertToString(kh) << G4endl;
+//             }
+//       }
     }
   }
 }
