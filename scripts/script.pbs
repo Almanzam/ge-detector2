@@ -1,0 +1,36 @@
+##### READ ME ######
+
+#Author: M Almanza
+
+#almanzam@vt.edu
+
+
+#
+
+#To submit the job do: qsub example1.pbs 
+#in the shell
+
+##### END OF README #####
+
+
+#!/bin/bash
+
+#PBS -m abe
+
+#PBS -M almanzam@vt.edu
+
+#PBS -l walltime=01:00:00
+
+#PBS -e /raid5/almanzam/out/error/examplePBS.e
+
+#PBS -o /raid5/almanzam/out/out/examplePBS.o
+
+source /raid5/almanzam/.bashrc.sh
+
+echo "HOST IS " $HOSTNAME
+
+printenv
+
+#actually run the root macro
+
+/raid5/almanzam/projects/ge-detector/build/ge-detector /raid5/almanzam/projects/ge-detector/macros/Copper_cobalt.mac
