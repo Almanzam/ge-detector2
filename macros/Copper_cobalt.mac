@@ -42,10 +42,10 @@
 #Co-60 high peak
 #/gps/source/intensity 1
 /gps/ion 27 60
-#/gps/pos/type Volume
-#/gps/pos/shape Cylinder
-#/gps/pos/radius .25 cm
-#/gps/pos/halfz .125 cm
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius 15 cm
+/gps/pos/halfz 20 cm
 /gps/pos/centre 0 0 0 cm
 /gps/pos/confine Copper_phys
 /gps/ene/type Mono
@@ -66,7 +66,7 @@
 #/gps/ang/type iso
 
 
-/run/beamOn 500000
+/run/beamOn 500
 
 
 
