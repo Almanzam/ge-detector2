@@ -19,12 +19,17 @@
 #include "geColorReader.hh"
 #include "HistoManager.hh"
 #include "geEventAction.hh"
-
+#include "Randomize.hh"
+#include "time.h"
 
 int main(int argc, char **argv)
 {
     
-
+    //choose the Random engine
+    CLHEP::HepRandom::setTheEngine(new CLHEP::RanecuEngine());
+    //set random seed with system time
+    G4long seed = time(NULL);
+    CLHEP::HepRandom::setTheSeed(seed);
     //DetectorConstruction *detector_construction = new DetectorConstruction;
     G4GDMLReadStructure* fReader;
     fReader = new geColorReader();
