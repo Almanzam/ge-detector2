@@ -23,6 +23,7 @@
 #include "G4GDMLParser.hh"
 #include "G4PhysicalVolumeStore.hh"
 #include "G4Types.hh"
+#include "G4UnitsTable.hh"
  
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -91,6 +92,8 @@ void DetectorConstruction::ConstructSDandField()
     for (G4GDMLAuxListType::const_iterator vit=(*iter).second.begin();
          vit!=(*iter).second.end();vit++)
     {
+        G4cout << (*iter).first->GetName() << ":  "<<
+            G4BestUnit((*iter).first->GetMass(),"Mass") << G4endl;
       if ((*vit).type=="SensDet")
       {
         G4cout << "Attaching sensitive detector " << (*vit).value

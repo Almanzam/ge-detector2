@@ -233,7 +233,7 @@
 		<volume name="Copper_Cup_vol_vol" >
 			<materialref ref="G4_Cu" />
 			<solidref ref="Copper_Cup_vol" />
-			
+			<auxiliary auxtype="color" auxvalue="red"/>
 			<colorref ref="Red"/>
 			
 			
