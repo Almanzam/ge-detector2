@@ -31,12 +31,12 @@
 /gps/pos/halfy 24 cm
 /gps/pos/halfz 24 cm
 /gps/pos/centre 0 0 0 cm
-#/gps/pos/confine Copper_phys
+/gps/pos/confine World_PV
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
 
 
-/run/beamOn 900000
+/run/beamOn 900
 
 
 
