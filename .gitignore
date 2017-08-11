@@ -4,4 +4,5 @@ build/**
 *.wrl
 *.png
 *.root
-
+*.out
+*.txt
