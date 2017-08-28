@@ -21,11 +21,15 @@
 
 #PBS -l walltime=01:00:00
 
-#PBS -e /raid5/almanzam/out/error/examplePBS.e
+#PBS -e /home/almanzam/projects/ge-detector/out/error/examplePBS.e
 
-#PBS -o /raid5/almanzam/out/out/examplePBS.o
+#PBS -o /home/almanzam/projects/ge-detector/out/out/examplePBS.o
 
-source /raid5/almanzam/.bashrc.sh
+#PBS -d /home/almanzam/projects/ge-detector/pbs_test
+
+#PBS -D /home/almanzam/
+
+source /home/almanzam/.bashrc.sh
 
 echo "HOST IS " $HOSTNAME
 
@@ -33,4 +37,7 @@ printenv
 
 #actually run the root macro
 
-/raid5/almanzam/projects/ge-detector/build/ge-detector /raid5/almanzam/projects/ge-detector/macros/Copper_cobalt.mac
+cd $PBS_O_WORKDIR
+
+/home/almanzam/projects/ge-detector/build/ge-detector /home/almanzam/projects/ge-detector/macros/Copper_cobalt.mac
+
