@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(ge-detector)
 
 find_package(Geant4 REQUIRED COMPONENTS static)
-find_package(Xerces-C REQUIRED)
+#find_package(Xerces-C REQUIRED)
 #find_package(ROOT REQUIRED)
 list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
 
@@ -36,11 +36,8 @@ add_executable(ge-detector main.cpp ${sources} ${headers})
 file(GLOB staticlibs
   "/home/almanzam/geant_static.a"
 )
-file(GLOB rootstaticlibs
-  "/home/almanzam/ROOT/root_static.a"
-)
 
-target_link_libraries(ge-detector ${staticlibs} /home/almanzam/ROOT/root-build/lib/root/libRoot.a)
+target_link_libraries(ge-detector ${staticlibs} /home/almanzam/Xerces/xerces-build/lib/libxerces-c.a /home/almanzam/ROOT/root-build/lib/root/libRoot.a)
 #target_link_libraries(hpge_import cadmesh)
 #target_link_libraries(hpge_import ${cadmesh_LIBRARIES})
 #CPPFLAGS += $(shell $(ROOTSYS)/bin/root-config --cflags)
