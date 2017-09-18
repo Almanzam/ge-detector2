@@ -35,8 +35,11 @@ add_executable(ge-detector main.cpp ${sources} ${headers})
 file(GLOB staticlibs
   "/home/almanzam/geant_static.a"
 )
+file(GLOB rootstaticlibs
+  "/home/almanzam/ROOT/root_static.a"
+)
 
-target_link_libraries(ge-detector ${staticlibs} /home/almanzam/ROOT/root-build/lib/root/libRoot.a)
+target_link_libraries(ge-detector ${staticlibs} ${rootstaticlibs} /home/almanzam/ROOT/root-build/lib/root/libRoot.a)
 #target_link_libraries(hpge_import cadmesh)
 #target_link_libraries(hpge_import ${cadmesh_LIBRARIES})
 #CPPFLAGS += $(shell $(ROOTSYS)/bin/root-config --cflags)
