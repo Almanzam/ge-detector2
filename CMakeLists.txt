@@ -33,7 +33,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 add_executable(ge-detector main.cpp ${sources} ${headers})
 file(GLOB staticlibs
-  "/home/almanzam/geant4/lib64/*.a"
+  "/home/almanzam/geant_static.a"
 )
 
 target_link_libraries(ge-detector ${staticlibs} /home/almanzam/ROOT/root-build/lib/root/libRoot.a)
