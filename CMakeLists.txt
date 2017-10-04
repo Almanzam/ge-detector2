@@ -27,7 +27,7 @@
  file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
  file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
  file(GLOB staticlibs /home/almanzam/geant-build/geant_static.a)
- file(GLOB rootstaticlibs /home/almanzam/ROOT/root-build/root_static.a)
+ file(GLOB rootstaticlibs /home/almanzam/ROOT/root-build/lib/*.a /home/almanzam/ROOT/root/lib/libmathtext.a /home/almanzam/ROOT/root-build/lib/*.a /home/almanzam/ROOT/root-build/interpreter/llvm/src/lib/*.a /home/almanzam/ROOT/root-build/root_static.a)
  EXECUTE_PROCESS(COMMAND root-config --libs OUTPUT_VARIABLE ROOT_LD_FLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)
  EXECUTE_PROCESS(COMMAND /home/almanzam/geant4/bin/geant4-config --libs OUTPUT_VARIABLE GEANT_LD_FLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)
  set(CMAKE_EXE_LINKER_FLAGS "${ROOT_LD_FLAGS} ${GEANT_LD_FLAGS} -lcurl -lboost_regex -lcurl -licuuc")
