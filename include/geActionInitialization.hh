@@ -32,7 +32,7 @@
 #define geActionInitialization_h 1
 
 #include "G4VUserActionInitialization.hh"
-#include "HistoManager.hh"
+//#include "HistoManager.hh"
 
 class PrimaryGeneratorAction;
 class DetectorConstruction;
@@ -45,14 +45,14 @@ class DetectorConstruction;
 class geActionInitialization : public G4VUserActionInitialization
 {
   public:
-    geActionInitialization(DetectorConstruction* detector,HistoManager* histo);
+    geActionInitialization(DetectorConstruction* detector);
     virtual ~geActionInitialization();
 
     virtual void BuildForMaster() const;
     virtual void Build() const;
   private:
       DetectorConstruction* fDetector;
-      HistoManager* fhisto;
+//       HistoManager* fhisto;
 };
 
 #endif
