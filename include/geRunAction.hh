@@ -33,7 +33,7 @@
 
 #include "G4UserRunAction.hh"
 #include "globals.hh"
-#include "HistoManager.hh"
+// #include "HistoManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -45,13 +45,14 @@ class HistoManager;
 class geRunAction : public G4UserRunAction
 {
   public:
-    geRunAction(HistoManager* histo);
+//     geRunAction(HistoManager* histo);
+    geRunAction();
     virtual ~geRunAction();
 
     virtual void BeginOfRunAction(const G4Run* run);
     virtual void   EndOfRunAction(const G4Run* run);
   private:
-      HistoManager* fHistomanager;
+//       HistoManager* fHistomanager;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

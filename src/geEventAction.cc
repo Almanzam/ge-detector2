@@ -44,8 +44,8 @@
 
 
 geEventAction::geEventAction(HistoManager* histo)
-: G4UserEventAction(),
-fhisto(histo)
+: G4UserEventAction()//,
+// fhisto(histo)
 
 {}
 
@@ -66,7 +66,7 @@ void geEventAction::BeginOfEventAction(const G4Event*)
 void geEventAction::EndOfEventAction(const G4Event* event)
 {
   // get number of stored trajectories
-
+  auto analysisManager = G4AnalysisManager::Instance();
   G4TrajectoryContainer* trajectoryContainer = event->GetTrajectoryContainer();
   G4int n_trajectories = 0;
   if (trajectoryContainer) n_trajectories = trajectoryContainer->entries();
@@ -108,7 +108,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
 //             totEnergyDetect += energyD;             
           }
 	  if(totEnergy > 0){
-		fhisto->FillHisto(0,totEnergy);
+		analysisManager->FillH1(0,totEnergy);
       }
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;

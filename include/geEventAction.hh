@@ -39,7 +39,7 @@
 
 #include "globals.hh"
 
-#include "HistoManager.hh"
+// #include "HistoManager.hh"
 
 
 /// Event action class
@@ -48,7 +48,7 @@ class geEventAction : public G4UserEventAction
 {
   public:
 
-    geEventAction(HistoManager* histo);
+    geEventAction();
 
     virtual ~geEventAction();
 
@@ -58,7 +58,7 @@ class geEventAction : public G4UserEventAction
   private:
 
     G4int           HPGeCollID; 
-    HistoManager* fhisto;
+//     HistoManager* fhisto;
 
 };
 

@@ -36,43 +36,39 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class TFile;
-class TTree;
-class TH1D;
-
-const G4int kMaxHisto = 1;
+#include "g4root.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-class HistoManager
-{
-  public:
-    HistoManager();
-   ~HistoManager();
-   
-    void Book(G4int thread);
-    void Save();
-
-    void FillHisto(G4int id, G4double bin, G4double weight = 1.0);
-    void Normalize(G4int id, G4double fac);    
-
-    void FillNtuple(G4double energyAbs, G4double energyGap,
-                    G4double trackLAbs, G4double trackLGap);
-    
-    void PrintStatistic();
-
-        
-  private:
-    TFile*   fRootFile;
-    TH1D*    fHisto[kMaxHisto];            
-    TTree*   fNtuple1;    
-    TTree*   fNtuple2;    
-
-    G4double fEabs;
-    G4double fEgap;
-    G4double fLabs;
-    G4double fLgap;
-};
+// class HistoManager
+// {
+//   public:
+//     HistoManager();
+//    ~HistoManager();
+//    
+//     void Book(G4int thread);
+//     void Save();
+// 
+//     void FillHisto(G4int id, G4double bin, G4double weight = 1.0);
+//     void Normalize(G4int id, G4double fac);    
+// 
+//     void FillNtuple(G4double energyAbs, G4double energyGap,
+//                     G4double trackLAbs, G4double trackLGap);
+//     
+//     void PrintStatistic();
+// 
+//         
+//   private:
+//     TFile*   fRootFile;
+//     TH1D*    fHisto[kMaxHisto];            
+//     TTree*   fNtuple1;    
+//     TTree*   fNtuple2;    
+// 
+//     G4double fEabs;
+//     G4double fEgap;
+//     G4double fLabs;
+//     G4double fLgap;
+// };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

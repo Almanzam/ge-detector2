@@ -34,17 +34,38 @@
 #include "G4RunManager.hh"
 #include "G4ios.hh"
 #include "HistoManager.hh"
+#include <chrono>
+#include <ctime>
 //#include "G4Threading.hh"
 //#include "TThread.h"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geRunAction::geRunAction(HistoManager* histo)
- : G4UserRunAction(),
- fHistomanager(histo)
-{ 
+geRunAction::geRunAction()
+//  fHistomanager(histo)
+{ #include <chrono>
+#include <ctime>
   // set printing event number per each 100 events
   G4RunManager::GetRunManager()->SetPrintProgress(1000);
+  auto analysisManager = G4AnalysisManager::Instance();
+  G4cout << "Using " << analysisManager->GetType() << G4endl;
+
+  // Create directories 
+  //analysisManager->SetHistoDirectoryName("histograms");
+  //analysisManager->SetNtupleDirectoryName("ntuple");
+  analysisManager->SetVerboseLevel(1);
+  analysisManager->SetNtupleMerging(true);
+    // Note: merging ntuples is available only with Root output
+
+  // Book histograms, ntuple
+  //
+  
+  // Creating histograms
+  analysisManager->CreateH1("Eabs","Edep in absorber", 8192, 0*CLHEP::keV, 3000*CLHEP::keV);
+  
+  // Creating ntuple
+  //
+  
   G4cout << "geAI runaction" << G4endl;
 }
 
@@ -62,8 +83,19 @@ void geRunAction::BeginOfRunAction(const G4Run*)
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
 //   if(G4Threading::IsWorkerThread()){
 //   G4int id = G4Threading::G4GetThreadId();
-  fHistomanager->Book(0);
-  
+//   fHistomanager->Book(0);
+  auto analysisManager = G4AnalysisManager::Instance();
+
+  // Open an output file
+  //
+  std::chrono::time_point<std::chrono::system_clock> time;
+  time = std::chrono::system_clock::now();
+  std::time_t s_time = std::chrono::system_clock::to_time_t(time);
+  std::string date = std::string(std::ctime(&s_time));
+  date.erase(std::remove(date.begin(), date.end(), ' '), date.end());
+  date.erase(std::remove(date.begin(), date.end(), '\n'), date.end());
+  G4String fileName = "ge-detector"+date+".root";
+  analysisManager->OpenFile(fileName);
 //   G4cout << "geRA begin" << id << G4endl;
 //   }
   G4cout << "geRA begin" << G4endl;
@@ -73,7 +105,29 @@ void geRunAction::BeginOfRunAction(const G4Run*)
 
 void geRunAction::EndOfRunAction(const G4Run* )
 {
-    fHistomanager->Save();
+//     fHistomanager->Save();
+  auto analysisManager = G4AnalysisManager::Instance();
+  if ( analysisManager->GetH1(0) ) {
+    G4cout << G4endl << " ----> print histograms statistic ";
+    if(isMaster) {
+      G4cout << "for the entire run " << G4endl << G4endl; 
+    }
+    else {
+      G4cout << "for the local thread " << G4endl << G4endl; 
+    }
+    
+    G4cout << " EAbs : mean = " 
+       << G4BestUnit(analysisManager->GetH1(0)->mean(), "Energy") 
+       << " rms = " 
+       << G4BestUnit(analysisManager->GetH1(0)->rms(),  "Energy") << G4endl;
+    
+    
+  }
+
+  // save histograms & ntuple
+  //
+  analysisManager->Write();
+  analysisManager->CloseFile();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

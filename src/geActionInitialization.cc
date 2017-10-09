@@ -35,14 +35,14 @@
 #include "geEventAction.hh"
 //#include "SteppingAction.hh"
 #include "G4ios.hh"
-#include "HistoManager.hh"
+// #include "HistoManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 geActionInitialization::geActionInitialization(DetectorConstruction* detector,HistoManager* histo)
  : G4VUserActionInitialization(),
-   fDetector(detector),
-   fhisto(histo)
+   fDetector(detector)/*,
+   fhisto(histo)*/
 {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -55,7 +55,7 @@ geActionInitialization::~geActionInitialization()
 void geActionInitialization::BuildForMaster() const
 { 
   //HistoManager* histo = new HistoManager();
-  SetUserAction(new geRunAction(fhisto));
+  SetUserAction(new geRunAction());
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,8 +65,8 @@ void geActionInitialization::Build() const
 
 //   HistoManager* histo = new HistoManager();
   SetUserAction(new PrimaryGeneratorAction);
-  SetUserAction(new geRunAction(fhisto));
-  SetUserAction(new geEventAction(fhisto));
+  SetUserAction(new geRunAction());
+  SetUserAction(new geEventAction());
 
   G4cout << "geAI Build" << G4endl;
 }  
