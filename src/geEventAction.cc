@@ -43,7 +43,7 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 
-geEventAction::geEventAction(HistoManager* histo)
+geEventAction::geEventAction()
 : G4UserEventAction()//,
 // fhisto(histo)
 
