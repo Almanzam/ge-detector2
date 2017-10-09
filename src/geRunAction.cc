@@ -36,6 +36,7 @@
 #include "HistoManager.hh"
 #include <chrono>
 #include <ctime>
+#include "G4UnitsTable.hh"
 //#include "G4Threading.hh"
 //#include "TThread.h"
 
@@ -43,8 +44,7 @@
 
 geRunAction::geRunAction()
 //  fHistomanager(histo)
-{ #include <chrono>
-#include <ctime>
+{
   // set printing event number per each 100 events
   G4RunManager::GetRunManager()->SetPrintProgress(1000);
   auto analysisManager = G4AnalysisManager::Instance();
