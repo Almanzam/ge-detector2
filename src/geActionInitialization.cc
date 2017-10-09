@@ -39,7 +39,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-geActionInitialization::geActionInitialization(DetectorConstruction* detector,HistoManager* histo)
+geActionInitialization::geActionInitialization(DetectorConstruction* detector)
  : G4VUserActionInitialization(),
    fDetector(detector)/*,
    fhisto(histo)*/
