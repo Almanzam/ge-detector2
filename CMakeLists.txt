@@ -28,7 +28,7 @@
 #file(GLOB rootstaticlibs /home/almanzam/ROOT/root-build/lib/*.a /home/almanzam/ROOT/root/lib/libmathtext.a /home/almanzam/ROOT/root-build/lib/*.a /home/almanzam/ROOT/root-build/interpreter/llvm/src/lib/*.a /home/almanzam/ROOT/root-build/root_static.a)
 #EXECUTE_PROCESS(COMMAND root-config --libs OUTPUT_VARIABLE ROOT_LD_FLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)
  EXECUTE_PROCESS(COMMAND /home/almanzam/geant4/bin/geant4-config --libs OUTPUT_VARIABLE GEANT_LD_FLAGS OUTPUT_STRIP_TRAILING_WHITESPACE)
- set(CMAKE_EXE_LINKER_FLAGS "${GEANT_LD_FLAGS} -lcurl -lboost_regex -lcurl -licuuc")
+ set(CMAKE_EXE_LINKER_FLAGS "${GEANT_LD_FLAGS} -lcurl -lcurl -licuuc")
  add_executable(ge-detector main.cpp ${sources} ${headers})
  target_link_libraries(ge-detector ${staticlibs} /home/almanzam/Xerces/xerces-install/lib/libxerces-c.a /home/almanzam/Expat/expat/lib/libexpat.a )
  #target_link_libraries(hpge_import cadmesh)
