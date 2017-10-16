@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml_simple_extension xmlns:gdml_simple_extension="http://www.example.org"
+		       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"          
+		       xs:noNamespaceSchemaLocation="../SimpleExtensionSchema/SimpleExtension.xsd" > 
+		       <!-- TODO make portable by using local filename instead of full path -->
+	<extension>
+		<color name="Blue"  R="0"  G="0"  B="1"  A="0.5" />
+		<color name="Red"  R="1"  G="0"  B="0"  A="0.5" />
+		<color name="Green"  R="0"  G="1"  B="1"  A="0.5" />
+		<color name="Yellow"  R="1"  G="1"  B="0"  A="0.5" />
+		<color name="Orange"  R="1"  G="0.6"  B="0.2"  A="0.5" />
+		<color name="Purple"  R="0.4"  G="0"  B="0.8"  A="0.5" />
+		<color name="Yellow-Green"  R="0.6"  G="1"  B="0.2"  A="0.5" />
+		<color name="Grey"  R="0.5"  G="0.5"  B="0.5"  A="0.5" />
+		<color name="Violet"  R="0.3"  G="0"  B="0.6"  A="0.2" />
+		<color name="Blue-Green"  R="0"  G="0.4"  B="0.4"  A="0.2" />
+	</extension>
+	<define>
+		<quantity type="density" name="universe_mean_density" value="1.e-25" unit="g/cm3" />
+		<position name="core_top" unit="mm" x="0" y="0" z="252.349" />
+		<position name="core_bot" unit="mm" x="0" y="0" z="-252.349" />
+		<position name="shell_top" unit="mm" x="0" y="0" z="307.912" />
+		<position name="shell_bot" unit="mm" x="0" y="0" z="-307.912" />
+		<position name="bultop_offset" unit="mm" x="0" y="0" z="33.3"/>
+		<position name="holesphere_offset" unit="mm" x="0" y="0" z="28"/>
+		<position name="hole_offset" unit="mm" x="0" y="0" z="-3.61" />
+		<position name="crystal_offset" unit="mm" x="0" y="0" z="3.75" />
+		<position name="t0" unit="mm" x="0" y="0" z="0" />
+		<rotation name="r0" unit="radian" x="0" y="0" z="0" />
+		<position name="shelloffset" unit="mm" x="0" y="0" z="250"/>
+		<position name="coreoffset" unit="mm" x="0" y="0" z="60"/>
+		<position name="cuwalloffset" unit="mm" x="0" y="0" z="-47"/>
+		<position name="mgshell_top" unit="mm" x="0" y="0" z="75.1" />
+		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-75.1" />
+		<position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
+	</define>
+	<materials>
+		<material Z="12" name="Magnesium" >
+			<D value="1.74"/>
+			<atom value="24.305" />
+		</material>
+		<material Z="29" name="Copper" >
+			<D value="8.96"/>
+			<atom value="63.546"/>
+		</material>
+		<element Z="26" name="Iron" >
+			<atom value="55.845"/>
+		</element>
+		<material Z="82" name="Lead" >
+			<D value="11.35"/>
+			<atom value="207.2"/>
+		</material>
+		<material Z="13" name="Aluminum" >
+			<D value="2.699"/>
+			<atom value="26.982"/>
+		</material>
+		<material Z="32" name="Germanium" >
+			<D value="5.323"/>
+			<atom value="72.630"/>
+		</material>
+		<element Z="1" formula="H" name="Hydrogen" >
+			<atom value="1.008"/>
+		</element>
+		<element Z="6" formula="C" name="Carbon" >
+			<atom value="12.011"/>
+		</element>
+		<element Z="8" formula="O" name="Oxygen" >
+			<atom value="15.999"/>
+		</element>
+		<element Z="24" formula="Cr" name="Chromium" >
+			<atom value="51.996"/>
+		</element>
+		<element Z="28" formula="Ni" name="Nickel" >
+			<atom value="58.693"/>
+		</element>
+		<material Z="1" name="vacuum" >
+			<T value="2.73" />
+			<P value=" 3.0E-18" unit="pascal" />
+			<Dref ref="universe_mean_density" />
+			<atom value="1.01" />
+		</material>
+		<material formula="noFormula" name="Steel" >
+			<D value="8" />
+			<fraction n="0.74" ref="Iron" />
+			<fraction n="0.18" ref="Chromium" />
+			<fraction n="0.08" ref="Nickel" />
+		</material>
+		<material formula="noFormula" name="Mylar" >
+			<D value="1.4" />
+			<fraction n="0.041959" ref="Hydrogen" />
+			<fraction n="0.625016" ref="Carbon" />
+			<fraction n="0.333025" ref="Oxygen" />
+		</material>
+	</materials>
+	<solids>
+		<box aunit="radian" lunit="mm" name="WorldBox" x="1000" y="1000" z="1000"/>
+		<torus name="Ge_tor" rmin="0" rmax="8" rtor="19.9" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+		<tube name ="Ge_topcyl" rmin="0" rmax="19.9" z="15.9" deltaphi="360" aunit="deg" lunit="mm"/>
+		<union name="Ge_bultop">
+			<first ref="Ge_tor"/>
+			<second ref="Ge_topcyl"/>
+			<positionref ref="t0"/>
+		</union>
+		<tube name="Ge_body" rmin="0" rmax="27.9" z="67.7" deltaphi="360" aunit="deg" lunit="mm"/>
+		<union name="Ge_nohole">
+			<first ref="Ge_body"/>
+			<second ref="Ge_bultop"/>
+			<positionref ref="bultop_offset"/>
+		</union>
+		<tube name="Ge_hole_cyl" rmin="0" rmax="4.55" z="60.273041244163" deltaphi="360" aunit="deg" lunit="mm"/>
+		<sphere name="Ge_hole_sphere" rmax="5" deltaphi="360" deltatheta="65.50535152858" aunit="deg" lunit="mm"/>
+		<union name="Ge_hole">
+			<first ref="Ge_hole_cyl"/>
+			<second ref="Ge_hole_sphere"/>
+			<positionref ref="holesphere_offset"/>
+		</union>
+		<subtraction name="Ge_Crystal_Vol">
+			<first ref="Ge_nohole"/>
+			<second ref="Ge_hole"/>
+			<positionref ref="hole_offset"/>
+		</subtraction>
+		<scaledSolid name="Ge_Li_Layer">
+			<solidref ref="Ge_nohole"/>
+			<scale name="Liscale" x="1.0250896057348" y="1.0250896057348" z="1.0092470277411"/>
+		</scaledSolid>
+		<!--<subtraction name="Ge_Li_Layer">
+			<first ref="Ge_Li_Layer1"/>
+			<second ref="Ge_nohole"/>
+			<positionref ref="t0"/>
+		</subtraction>-->
+		<!--<scaledSolid name="Ge_B_Layer1">
+			<solidref ref="Ge_hole"/>
+			<scale name="Bscale" x="0.998" y="0.998" z="0.998"/>
+		</scaledSolid>-->
+		<!--<subtraction name="Ge_B_Layer_vol">
+			<first ref="Ge_hole"/>
+			<second ref="Ge_B_Layer1"/>
+			<positionref ref="t0"/>
+		</subtraction>-->
+		<tube name="Al_Foil" rmin="0" rmax="30" z="0.003" deltaphi="360" aunit="deg" lunit="mm"/>
+		<tube name="Mylar_Foil" rmin="0" rmax="30" z="0.003" deltaphi="360" aunit="deg" lunit="mm"/>
+		<tube name="Cu_end" rmin="4.55" rmax="30" z="3" deltaphi="360" aunit="deg" lunit="mm"/>
+		<tube name="Cu_wall" rmin="29.2" rmax="30" z="91" deltaphi="360" aunit="deg" lunit="mm"/>
+		<union name="Copper_Cup_vol">
+			<first ref="Cu_wall"/>
+			<second ref="Cu_end"/>
+			<positionref ref="cuwalloffset"/>
+		</union>
+		
+		<tube name="shell_wall" rmin="33" rmax="34.6" z="148.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="shell_end" rmin="0" rmax="34.6" z="1.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<union name="mgshell1">
+			<first ref="shell_wall" />
+			<second ref="shell_end" />
+			<positionref ref="mgshell_top" />
+		</union>
+		<union name="Shell_vol">
+			<first ref="mgshell1" />
+			<second ref="shell_end" />
+			<positionref ref="mgshell_bot" />
+		</union>
+		
+		<box aunit="radian" lunit="in" name="Lead_bottom_plus" x="12" y="12" z="14"/>
+		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/>
+		
+		<subtraction name="Lead_bottom_Vol">
+			<first ref="Lead_bottom_plus"/>
+			<second ref="Lead_bottom_minus"/>
+			<positionref ref="Lead_bottom_offset"/>
+		</subtraction>
+		
+		<box aunit="radian" lunit="in" name="Lead_top_plus" x="8" y="12" z="2"/>
+		<tube name="Lead_top_minus" rmin="0" rmax=".25" z="2" deltaphi="360" aunit="deg" lunit="in"/>
+		<subtraction name="Lead_top_Vol">
+			<first ref="Lead_top_plus"/>
+			<second ref="Lead_top_minus"/>
+			<positionref ref="t0"/>
+		</subtraction>
+		<!--<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<union name="core1">
+			<first ref="core_wall" />
+			<second ref="core_end" />
+			<positionref ref="core_top" />
+		</union>
+		<union name="Lead_Core_vol">
+			<first ref="core1" />
+			<second ref="core_end" />
+			<positionref ref="core_bot" />
+		</union>-->
+		
+		<!--<tube name="Steel_shell_wall" rmax="254" rmin="244.475" z="606.298" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+		<tube name="Steel_shell_end" rmin="0" rmax="254" z="9.525" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<union name="shell1">
+			<first ref="Steel_shell_wall" />
+			<second ref="Steel_shell_end" />
+			<positionref ref="shell_top" />
+		</union>
+		<union name="Steel_Shell_vol">
+			<first ref="shell1" />
+			<second ref="Steel_shell_end" />
+			<positionref ref="shell_bot" />
+		</union>-->
+	</solids>
+	<structure>
+		<volume name="Al_Foil_vol" >
+			<materialref ref="G4_Al" />
+			<solidref ref="Al_Foil" />
+			<colorref ref="Blue"/>
+		</volume>
+		
+		<!--<volume name="Ge_B_Layer_vol_vol" >
+			<materialref ref="G4_Ge" />
+			<solidref ref="Ge_B_Layer_vol" />
+			<colorref ref="Green"/>
+		</volume>-->
+		<!--<volume name="Ge_B_Layer_1_vol_vol" >
+			<materialref ref="Germanium" />
+			<solidref ref="Ge_B_Layer_1_vol" />
+			<colorref ref="Green"/>
+		</volume>-->
+		<volume name="Ge_Crystal_vol_vol" >
+			<materialref ref="G4_Ge" />
+			<solidref ref="Ge_Crystal_Vol" />
+			<!--<physvol name="Ge_B_phys" >
+				<volumeref ref="Ge_B_Layer_vol_vol" />
+				<positionref ref="hole_offset"/>
+				<rotationref ref="r0" />
+			</physvol>-->
+			<auxiliary auxtype="SensDet" auxvalue="Tracker"/>
+			<colorref ref="Yellow"/>
+			
+		</volume>
+		<volume name="Ge_Li_Layer_vol" >
+			<materialref ref="G4_Ge" />
+			<solidref ref="Ge_Li_Layer" />
+			<physvol name="Ge_phys" >
+				<volumeref ref="Ge_Crystal_vol_vol" />
+				<positionref ref="t0" />
+				<rotationref ref="r0" />
+			</physvol>
+			<colorref ref="Purple"/>			
+		</volume>
+		<volume name="Mylar_Foil_vol" >
+			<materialref ref="G4_MYLAR" />
+			<solidref ref="Mylar_Foil" />
+			<auxiliary auxtype="Color" auxvalue="orange"/>
+			<colorref ref="Orange"/>
+		</volume>
+		<volume name="Copper_Cup_vol_vol" >
+			<materialref ref="G4_Cu" />
+			<solidref ref="Copper_Cup_vol" />
+			<auxiliary auxtype="color" auxvalue="red"/>
+			<colorref ref="Red"/>
+			
+			
+			
+			
+		</volume>
+		<volume name="Shell_vol_vol" >
+			<materialref ref="G4_Mg" />
+			<solidref ref="Shell_vol" />
+			<auxiliary auxtype="Target" auxvalue="target"/>
+			<colorref ref="Grey"/>
+			
+			
+		</volume>
+		<!--<volume name="Lead_Core_vol_vol" >
+			<materialref ref="G4_Pb" />
+			<solidref ref="Lead_Core_vol" />
+			
+			<colorref ref="Violet"/>
+			
+		</volume>
+		<volume name="Steel_Shell_vol_vol" >
+			<materialref ref="G4_STAINLESS-STEEL" />
+			<solidref ref="Steel_Shell_vol" />
+			
+ 			<auxiliary auxtype="SensDet" auxvalue="Tracker"/> 
+			<colorref ref="Blue-Green"/>
+			
+		</volume>-->
+		<volume name="World" >
+			<materialref ref="vacuum" />
+			<solidref ref="WorldBox" />
+			
+			<!--<physvol>
+				<volumeref ref="Steel_Shell_vol_vol"/>
+				<file name="/home/daq/projects/git_projects/ge-detector/CAD/steelshell2.gdml"/>
+				<positionref ref="t0" />
+				<rotationref ref="r0" />
+			</physvol>-->
+			<!--<physvol name="Lead_Core_phys">
+				<volumeref ref="Lead_Core_vol_vol"/>
+				<positionref ref="t0"/>
+			</physvol>-->
+			
+			<physvol name="Shell_phys">
+				<volumeref ref="Shell_vol_vol"/>
+				<position name="mgshelloffset" x="0" y="0" z="-24.5" unit="mm" />
+			</physvol>
+			<physvol name="Al_phys" >
+				<volumeref ref="Al_Foil_vol" />
+				<position name="alpos" x="0" y="0" z="45.503" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="Copper_phys" >
+				<volumeref ref="Copper_Cup_vol_vol" />
+				<positionref ref="t0" />
+				<rotationref ref="r0" />
+			</physvol>
+			
+			<physvol name="Mylar_phys" >
+				<volumeref ref="Mylar_Foil_vol" />
+				<position name="mylpos" x="0" y="0" z="45.5" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="Ge_Li_phys" >
+				<volumeref ref="Ge_Li_Layer_vol" />
+				<positionref ref="t0" />
+				<rotationref ref="r0" />
+			</physvol>
+			
+			<!---->
+			
+		</volume>
+	</structure>
+	
+	<setup name="Default" version="1.0">
+		<world ref="World"/>
+	</setup>
+</gdml_simple_extension>
