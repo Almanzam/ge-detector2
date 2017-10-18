@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     G4GDMLParser parser(fReader);
     parser.SetStripFlag(false);
 	parser.SetAddPointerToName(false);
-    parser.Read("/home/almanzam/projects/ge-detector/CAD/HPGe.gdml");
+    parser.Read("/home/almanzam/projects/ge-detector/CAD/HPGe_efficiency.gdml");
 	//parser.StripNamePointers();
 //     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
 //     #ifdef G4MULTITHREADED  
