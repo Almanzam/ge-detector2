@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gdml_simple_extension xmlns:gdml_simple_extension="http://www.example.org"
 		       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"          
-		       xs:noNamespaceSchemaLocation="../SimpleExtensionSchema/SimpleExtension.xsd" > 
+		       xs:noNamespaceSchemaLocation="/home/almanzam/projects/ge-detector/SimpleExtensionSchema/SimpleExtension.xsd" > 
 		       <!-- TODO make portable by using local filename instead of full path -->
 	<extension>
 		<color name="Blue"  R="0"  G="0"  B="1"  A="0.5" />
@@ -32,9 +32,9 @@
 		<position name="cuwalloffset" unit="mm" x="0" y="0" z="-47"/>
 		<position name="mgshell_top" unit="mm" x="0" y="0" z="75.1" />
 		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-75.1" />
-		<position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
-		<position name="Lead_vol_offset" unit="in" x="0.481" y="0" z="0"/>
-		<position name="Lead_top_offset" unit="in" x="0" y="0" z="4"/>
+		<position name="Lead_bottom_offset" unit="mm" x="0" y="0" z="25.4"/>
+		<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="0"/>
+		<position name="Lead_top_offset" unit="mm" x="0" y="0" z="101.6"/>
 	</define>
 	<materials>
 		<material Z="12" name="Magnesium" >
@@ -162,8 +162,8 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
-		<box aunit="radian" lunit="in" name="Lead_bottom_plus" x="12" y="12" z="14"/>
-		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/>
+		<box aunit="radian" lunit="mm" name="Lead_bottom_plus" x="304.8" y="304.8" z="355.6"/>
+		<box aunit="radian" lunit="mm" name="Lead_bottom_minus" x="101.6" y="101.6" z="305.054"/>
 		
 		<subtraction name="Lead_bottom_Vol">
 			<first ref="Lead_bottom_plus"/>
@@ -171,8 +171,8 @@
 			<positionref ref="Lead_bottom_offset"/>
 		</subtraction>
 		
-		<box aunit="radian" lunit="in" name="Lead_top_plus" x="8" y="12" z="2"/>
-		<tube name="Lead_top_minus" rmin="0" rmax=".25" z="2" deltaphi="360" aunit="deg" lunit="in"/>
+		<box aunit="radian" lunit="mm" name="Lead_top_plus" x="203.2" y="304.8" z="50.8"/>
+		<tube name="Lead_top_minus" rmin="0" rmax="6.35" z="50.8" deltaphi="360" aunit="deg" lunit="mm"/>
 		<subtraction name="Lead_top_Vol">
 			<first ref="Lead_top_plus"/>
 			<second ref="Lead_top_minus"/>
