@@ -298,7 +298,7 @@
 			
 			<physvol name="Lead_bottom_phys">
 				<volumeref ref="Lead_bottom_Vol_Vol"/>
-				<positionref ref="Lead_bottom_offset" />
+				<positionref ref="Lead_vol_offset" />
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Lead_top_phys">
