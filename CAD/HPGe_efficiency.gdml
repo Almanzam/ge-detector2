@@ -33,7 +33,7 @@
 		<position name="mgshell_top" unit="mm" x="0" y="0" z="75.1" />
 		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-75.1" />
 		<position name="Lead_bottom_offset" unit="mm" x="0" y="0" z="25.4"/>
-		<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="0"/>
+		<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="-101.9"/>
 		<position name="Lead_top_offset" unit="mm" x="0" y="0" z="101.6"/>
 	</define>
 	<materials>
