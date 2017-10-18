@@ -40,7 +40,7 @@
 		<material Z="12" name="Magnesium" >
 			<D value="1.74"/>
 			<atom value="24.305" />
-		</material>
+		</material>Lead_vol_offset
 		<material Z="29" name="Copper" >
 			<D value="8.96"/>
 			<atom value="63.546"/>
@@ -298,7 +298,7 @@
 			
 			<physvol name="Lead_bottom_phys">
 				<volumeref ref="Lead_bottom_Vol_Vol"/>
-				<positionref ref="Lead_vol_offset" />
+				<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="-101.9"/>
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Lead_top_phys">
