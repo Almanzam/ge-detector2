@@ -93,7 +93,7 @@
 			<fraction n="0.625016" ref="Carbon" />
 			<fraction n="0.333025" ref="Oxygen" />
 		</material>
-	</materials><position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
+	</materials>
 	<solids>
 		<box aunit="radian" lunit="mm" name="WorldBox" x="1000" y="1000" z="1000"/>
 		<torus name="Ge_tor" rmin="0" rmax="8" rtor="19.9" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
@@ -101,7 +101,7 @@
 		<union name="Ge_bultop">
 			<first ref="Ge_tor"/>
 			<second ref="Ge_topcyl"/>
-			<posi481tionref ref="t0"/>
+			<positionref ref="t0"/>
 		</union>
 		<tube name="Ge_body" rmin="0" rmax="27.9" z="67.7" deltaphi="360" aunit="deg" lunit="mm"/>
 		<union name="Ge_nohole">
@@ -163,7 +163,7 @@
 		</union>
 		
 		<box aunit="radian" lunit="in" name="Lead_bottom_plus" x="12" y="12" z="14"/>
-		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/><position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
+		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/>
 		
 		<subtraction name="Lead_bottom_Vol">
 			<first ref="Lead_bottom_plus"/>
