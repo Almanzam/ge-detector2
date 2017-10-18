@@ -172,7 +172,7 @@
 		</subtraction>
 		
 		<box aunit="radian" lunit="mm" name="Lead_top_plus" x="203.2" y="304.8" z="50.8"/>
-		<tube name="Lead_top_minus" rmin="0" rmax="6.35" z="50.8" deltaphi="360" aunit="deg" lunit="mm"/>
+		<tube name="Lead_top_minus" rmin="0" rmax="6.35" z="50.9" deltaphi="360" aunit="deg" lunit="mm"/>
 		<subtraction name="Lead_top_Vol">
 			<first ref="Lead_top_plus"/>
 			<second ref="Lead_top_minus"/>
