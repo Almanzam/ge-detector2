@@ -33,6 +33,8 @@
 		<position name="mgshell_top" unit="mm" x="0" y="0" z="75.1" />
 		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-75.1" />
 		<position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
+		<position name="Lead_vol_offset" unit="in" x="0.481" y="0" z="0"/>
+		<position name="Lead_top_offset" unit="in" x="0" y="0" z="4"/>
 	</define>
 	<materials>
 		<material Z="12" name="Magnesium" >
@@ -91,7 +93,7 @@
 			<fraction n="0.625016" ref="Carbon" />
 			<fraction n="0.333025" ref="Oxygen" />
 		</material>
-	</materials>
+	</materials><position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
 	<solids>
 		<box aunit="radian" lunit="mm" name="WorldBox" x="1000" y="1000" z="1000"/>
 		<torus name="Ge_tor" rmin="0" rmax="8" rtor="19.9" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
@@ -99,7 +101,7 @@
 		<union name="Ge_bultop">
 			<first ref="Ge_tor"/>
 			<second ref="Ge_topcyl"/>
-			<positionref ref="t0"/>
+			<posi481tionref ref="t0"/>
 		</union>
 		<tube name="Ge_body" rmin="0" rmax="27.9" z="67.7" deltaphi="360" aunit="deg" lunit="mm"/>
 		<union name="Ge_nohole">
@@ -161,7 +163,7 @@
 		</union>
 		
 		<box aunit="radian" lunit="in" name="Lead_bottom_plus" x="12" y="12" z="14"/>
-		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/>
+		<box aunit="radian" lunit="in" name="Lead_bottom_minus" x="4" y="4" z="12.01"/><position name="Lead_bottom_offset" unit="in" x="0" y="0" z="1"/>
 		
 		<subtraction name="Lead_bottom_Vol">
 			<first ref="Lead_bottom_plus"/>
@@ -265,6 +267,16 @@
 			
 			
 		</volume>
+		<volume name="Lead_bottom_Vol_Vol" >
+			<materialref ref="G4_Pb"/>
+			<solidref ref="Lead_bottom_Vol" />
+			<colorref ref="Violet"/>
+		</volume>
+		<volume name="Lead_top_Vol_Vol" >
+			<materialref ref="G4_Pb"/>
+			<solidref ref="Lead_top_Vol" />
+			<colorref ref="Violet"/>
+		</volume>
 		<!--<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
 			<solidref ref="Lead_Core_vol" />
@@ -284,16 +296,15 @@
 			<materialref ref="vacuum" />
 			<solidref ref="WorldBox" />
 			
-			<!--<physvol>
-				<volumeref ref="Steel_Shell_vol_vol"/>
-				<file name="/home/daq/projects/git_projects/ge-detector/CAD/steelshell2.gdml"/>
-				<positionref ref="t0" />
+			<physvol name="Lead_bottom_phys">
+				<volumeref ref="Lead_bottom_Vol_Vol"/>
+				<positionref ref="Lead_bottom_offset" />
 				<rotationref ref="r0" />
-			</physvol>-->
-			<!--<physvol name="Lead_Core_phys">
-				<volumeref ref="Lead_Core_vol_vol"/>
-				<positionref ref="t0"/>
-			</physvol>-->
+			</physvol>
+			<physvol name="Lead_top_phys">
+				<volumeref ref="Lead_top_Vol_Vol"/>
+				<positionref ref="Lead_top_offset"/>
+			</physvol>
 			
 			<physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
@@ -321,7 +332,7 @@
 				<rotationref ref="r0" />
 			</physvol>
 			
-			<!---->
+			
 			
 		</volume>
 	</structure>
