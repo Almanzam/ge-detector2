@@ -1,6 +1,6 @@
 #include <iostream>
 #include "DetectorConstruction.hh"
-#include "PhysicsList.hh"
+//#include "PhysicsList.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "geActionInitialization.hh"
 

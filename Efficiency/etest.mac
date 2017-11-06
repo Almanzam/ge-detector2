@@ -31,6 +31,6 @@
 /gps/pos/centre 0 0 12.7403 cm
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
-/run/beamOn 50
+/run/beamOn 500
 
 
