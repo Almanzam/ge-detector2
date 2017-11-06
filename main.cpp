@@ -69,8 +69,8 @@ int main(int argc, char **argv)
     run_manager->SetUserInitialization(detector);
 //     HistoManager* histo = new HistoManager();
 
-    PhysicsList *physics_list = new PhysicsList;
-    run_manager->SetUserInitialization(physics_list);
+//    PhysicsList *physics_list = new PhysicsList;
+//    run_manager->SetUserInitialization(physics_list);
     
     
     
