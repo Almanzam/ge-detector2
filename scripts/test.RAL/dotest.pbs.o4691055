@@ -1,0 +1,2735 @@
+4691055.tbird.phys.vt.edu
+
+compute-111-13.local
+G4GDML: Reading '/home/almanzam/projects/ge-detector/CAD/HPGe_efficiency.gdml'...
+G4GDML: VALIDATION ERROR! no character data is allowed by content model at line: 44
+G4GDML: VALIDATION ERROR! ID value 'Lead_vol_offset' is not unique at line: 301
+G4GDML: VALIDATION ERROR! no declaration found for element 'setup' at line: 340
+G4GDML: VALIDATION ERROR! attribute 'name' is not declared for element 'setup' at line: 340
+G4GDML: VALIDATION ERROR! attribute 'version' is not declared for element 'setup' at line: 340
+G4GDML: VALIDATION ERROR! element 'define' is not allowed for content model '(extension,gdml)' at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Al' is referenced but was never declared at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Ge' is referenced but was never declared at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Mg' is referenced but was never declared at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Cu' is referenced but was never declared at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_Pb' is referenced but was never declared at line: 343
+G4GDML: VALIDATION ERROR! ID attribute 'G4_MYLAR' is referenced but was never declared at line: 343
+G4GDML: Reading GDML extension...
+Color attribute (R,G,B,A) is: 0, 0, 1, 0.5 !
+Color attribute (R,G,B,A) is: 1, 0, 0, 0.5 !
+Color attribute (R,G,B,A) is: 0, 1, 1, 0.5 !
+Color attribute (R,G,B,A) is: 1, 1, 0, 0.5 !
+Color attribute (R,G,B,A) is: 1, 0.6, 0.2, 0.5 !
+Color attribute (R,G,B,A) is: 0.4, 0, 0.8, 0.5 !
+Color attribute (R,G,B,A) is: 0.6, 1, 0.2, 0.5 !
+Color attribute (R,G,B,A) is: 0.5, 0.5, 0.5, 0.5 !
+Color attribute (R,G,B,A) is: 0.3, 0, 0.6, 0.2 !
+Color attribute (R,G,B,A) is: 0, 0.4, 0.4, 0.2 !
+G4GDML: Reading definitions...
+G4GDML: Reading materials...
+G4GDML: Reading solids...
+G4GDML: Reading structure...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+Treating unknown GDML tag in volume 'colorref' as GDML extension...
+G4GDML: Reading setup...
+G4GDML: Reading '/home/almanzam/projects/ge-detector/CAD/HPGe_efficiency.gdml' done!
+
+*************************************************************
+ Geant4 version Name: geant4-10-03-patch-02    (27-July-2017)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Using Root
+geAI runaction
+geAI Build
+Found 4 volume(s) with auxiliary information.
+
+Volume Mylar_Foil_vol has the following list of auxiliary information: 
+
+--> Type: Color Value: orange
+Volume Ge_Crystal_vol_vol has the following list of auxiliary information: 
+
+--> Type: SensDet Value: Tracker
+Volume Copper_Cup_vol_vol has the following list of auxiliary information: 
+
+--> Type: color Value: red
+Volume Shell_vol_vol has the following list of auxiliary information: 
+
+--> Type: Target Value: target
+
+Volume Mylar_Foil_vol has the following list of auxiliary information: 
+
+Mylar_Foil_vol:  11.8752 mg
+Volume Ge_Crystal_vol_vol has the following list of auxiliary information: 
+
+Ge_Crystal_vol_vol:  945.232 g 
+Attaching sensitive detector Tracker to volume Ge_Crystal_vol_vol
+
+Volume Copper_Cup_vol_vol has the following list of auxiliary information: 
+
+Copper_Cup_vol_vol:  195.392 g 
+Volume Shell_vol_vol has the following list of auxiliary information: 
+
+Shell_vol_vol:  108.379 g 
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to B0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bc+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bc+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bc-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bc-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bs0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Bs0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to D0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Ds+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Ds+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Ds-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Ds-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to GenericIon
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to GenericIon
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to He3
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to He3
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to J/psi
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to J/psi
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Upsilon
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to Upsilon
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to alpha
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to alpha
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_B0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_B0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_Bs0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_Bs0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_D0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_D0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_He3
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_He3
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_alpha
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_alpha
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_deuteron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_deuteron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_kaon0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_kaon0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda_b
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda_b
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_lambda_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_neutron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_neutron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_nu_e
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_nu_e
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_nu_mu
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_nu_mu
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_omega_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_proton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_proton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c++
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c++
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_sigma_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_triton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_triton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to anti_xi_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to chargedgeantino
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to chargedgeantino
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to deuteron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to deuteron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to e+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to e+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to e-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to e-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to eta
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to eta
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to eta_prime
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to eta_prime
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to etac
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to etac
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to gamma
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to gamma
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to geantino
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to geantino
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0L
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0L
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0S
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to kaon0S
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda_b
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda_b
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to lambda_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to mu+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to mu+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to mu-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to mu-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to neutron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to neutron
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to nu_e
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to nu_e
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to nu_mu
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to nu_mu
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to omega_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to pi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to proton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to proton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c++
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c++
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to sigma_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to triton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to triton
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_b-
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_b0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_c+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : ProcMan113
+      issued by : G4ProcessManager::SetProcessOrderingToFirst()
+Set Ordering First is invoked twice for Transportation to xi_c0
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+/run/verbose 2
+/vis/verbose 2
+Visualization verbosity changed to errors (2)
+#/vis/open OGL 500x500-500-500
+/vis/open VRML2FILE
+/vis/sceneHandler/create VRML2FILE
+/vis/viewer/create ! ! 600
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world
+/vis/sceneHandler/attach
+#/vis/scene/add/axes      0 0 0 30 mm
+#/vis/multithreading/actionOnEventQueueFull wait
+#:  Discard events, or wait for events to finish when the event queue for drawing gets full.
+#/vis/multithreading/maxEventQueueSize 50
+#: define maximum event queue size to be <N> (0 for infinite).
+/vis/viewer/set/style wireframe
+/vis/viewer/set/hiddenEdge 0
+/vis/scene/add/trajectories
+/tracking/storeTrajectory 1
+Attributes available for modeling and filtering with
+  "/vis/modeling/trajectories/create/drawByAttribute" and
+  "/vis/filtering/trajectories/create/attributeFilter" commands:
+G4TrajectoriesModel:
+  Event ID (EventID): G4int
+  Run ID (RunID): G4int
+G4Trajectory:
+  Charge (Ch): unit: e+ (G4double)
+  Track ID (ID): G4int
+  Initial kinetic energy (IKE): G4BestUnit (G4double)
+  Initial momentum magnitude (IMag): G4BestUnit (G4double)
+  Initial momentum (IMom): G4BestUnit (G4ThreeVector)
+  No. of points (NTP): G4int
+  PDG Encoding (PDG): G4int
+  Parent ID (PID): G4int
+  Particle Name (PN): G4String
+G4TrajectoryPoint:
+  Position (Pos): G4BestUnit (G4ThreeVector)
+/vis/scene/notifyHandlers
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/set/viewpointThetaPhi 60 60
+/vis/viewer/set/upVector 0 0 1
+#/vis/viewer/set/targetPoint 0 0 -8 cm
+#/vis/viewer/flush
+/vis/scene/add/hits
+/vis/scene/notifyHandlers
+#/gps/source/multiplevertex true
+#Co-60 high peak
+#/gps/source/intensity 1
+/gps/ion 27 60
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius .25 cm
+/gps/pos/halfz .125 cm
+/gps/pos/centre 0 0 6.3903 cm
+/gps/ene/type Mono
+/gps/ene/mono 0 MeV
+#/gps/ene/sigma 0.985 keV
+#/gps/ang/type iso
+#Co-60 low peak
+#/gps/source/add 110
+#/gps/pos/type Volume
+#/gps/pos/shape Cylinder
+#/gps/pos/radius .25 cm
+#/gps/pos/halfz .125 cm
+#/gps/pos/centre 0 0 6.3903 cm
+#/gps/ene/type Gauss
+#/gps/ene/mono 1.173 MeV
+#/gps/ene/sigma 0.951 keV
+#/gps/ang/type iso
+/run/beamOn 100
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  0  0
+### ===  Ignore cuts flag:   0
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 10 TeV in 154 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila  FluoActive
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 20 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 10 TeV in 140 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LowEPComptonModel :  Emin=        0 eV    Emax=       20 MeV  FluoActive
+        KleinNishina :  Emin=       20 MeV   Emax=       10 TeV  FluoActive
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PenConversion :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=       10 TeV
+
+Rayl:   for  gamma    SubType= 11  BuildTable= 1
+      Lambda table from 100 eV  to 100 keV, 20 bins per decade, spline: 0
+      LambdaPrime table from 100 keV to 10 TeV in 160 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh :  Emin=        0 eV    Emax=       10 TeV   CullenGenerator
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.02, stepLimitType: 3, latDisplacement: 1, skin= 1, geomFactor= 2.5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 120 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 100 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenIoni :  Emin=        0 eV    Emax=        1 MeV
+        MollerBhabha :  Emin=        1 MeV   Emax=       10 TeV   deltaVI
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGen2BS
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   AngularGen2BS
+
+ePairProd:   for  e-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 0.1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.02, stepLimitType: 3, latDisplacement: 1, skin= 1, geomFactor= 2.5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 120 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 100 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenIoni :  Emin=        0 eV    Emax=        1 MeV
+        MollerBhabha :  Emin=        1 MeV   Emax=       10 TeV   deltaVI
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGen2BS
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   AngularGen2BS
+
+ePairProd:   for  e+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 0.1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.02, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV   deltaVI
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of anti_proton
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+nuclearStopping:   for  proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.001, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+         ParamICRU73 :  Emin=        0 eV    Emax=       10 TeV   deltaVI
+
+nuclearStopping:   for  GenericIon    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=   7.9452 MeV   deltaVI
+          BetheBloch :  Emin=   7.9452 MeV   Emax=       10 TeV   deltaVI
+
+nuclearStopping:   for  alpha    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.02, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV   deltaVI
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  anti_proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  anti_proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+nuclearStopping:   for  anti_proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV   deltaVI
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  kaon+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV   deltaVI
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  kaon-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of kaon+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV   deltaVI
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV   deltaVI
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV   deltaVI
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV   deltaVI
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of mu+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV   deltaVI
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 20 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 220 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV   deltaVI
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV   deltaVI
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 220 bins
+      Lambda tables from threshold to 10 TeV, 20 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of pi+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World_PV> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : vacuum G4_Pb G4_Mg G4_Al G4_Cu G4_MYLAR G4_Ge 
+ Production cuts :   gamma 1 mm      e- 1 mm      e+ 1 mm  proton 1 mm 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 1 mm      e- 1 mm      e+ 1 mm  proton 1 mm 
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : vacuum
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : G4_Pb
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  101.843 keV    e-  1.36749 MeV    e+  1.27862 MeV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : G4_Mg
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  5.3478 keV    e-  448.185 keV    e+  427.59 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : G4_Al
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  6.90363 keV    e-  598.345 keV    e+  570.85 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : G4_Cu
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  24.7508 keV    e-  1.39534 MeV    e+  1.31345 MeV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : G4_MYLAR
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  3.02067 keV    e-  419.056 keV    e+  405.209 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 6     used in the geometry : Yes
+ Material : G4_Ge
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 1 mm 
+ Energy thresholds :  gamma  20.6438 keV    e-  871.74 keV    e+  831.682 keV proton 100 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+Start closing geometry.
+G4GeometryManager::ReportVoxelStats -- Voxel Statistics
+
+    Total memory consumed for geometry optimisation:   1 kByte
+    Total CPU time elapsed for geometry optimisation: 0 seconds
+
+    Voxelisation: top CPU users:
+    Percent   Total CPU    System CPU       Memory  Volume
+    -------   ----------   ----------     --------  ----------
+       0.00         0.00         0.00            2k World
+
+    Voxelisation: top memory users:
+    Percent     Memory      Heads    Nodes   Pointers    Total CPU    Volume
+    -------   --------     ------   ------   --------   ----------    ----------
+     100.00          1k         5       23         54         0.00    World
+/vis/scene/notifyHandlers scene-0
+### Run 0 starts.
+... open Root analysis file : ge-detectorWedOct1814:56:002017.root - done
+geRA begin
+--> Event 0 starts.
+  trackID: 4 chamberNb: 0Edep: 143.772 keV
+>>> Event: 0
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  143.772 keV
+===========================================
+Output VRML 2.0 file: g4_00.wrl
+Maximum number of files in the destination directory: 100
+  (Customizable with the environment variable: G4VRMLFILE_MAX_FILE_NUM) 
+===========================================
+  trackID: 4 chamberNb: 0Edep:  135.73 keV
+  trackID: 4 chamberNb: 0Edep: 62.0572 keV
+>>> Event: 1
+    8 trajectories stored in this event.
+    2 hits stored in this event
+    Total energy deposited:  197.787 keV
+>>> Event: 2
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 19.7554 keV
+>>> Event: 3
+    11 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  19.7554 keV
+>>> Event: 4
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 5
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 6
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 7
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 64.2632 keV
+>>> Event: 8
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  64.2632 keV
+>>> Event: 9
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 8 chamberNb: 0Edep:  1.2554 keV
+  trackID: 8 chamberNb: 0Edep:     6.5 eV 
+  trackID: 8 chamberNb: 0Edep:  1.4023 keV
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:  1.2554 keV
+  trackID: 8 chamberNb: 0Edep:  11.067 keV
+>>> Event: 10
+    15 trajectories stored in this event.
+    6 hits stored in this event
+    Total energy deposited:  15.0248 keV
+>>> Event: 11
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 12
+    11 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 13
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 14
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 15
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 16
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 17
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 18
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 19
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:  1.4023 keV
+  trackID: 8 chamberNb: 0Edep:  11.067 keV
+  trackID: 6 chamberNb: 0Edep:  1.4023 keV
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:  1.4023 keV
+  trackID: 12 chamberNb: 0Edep: 183.379 keV
+  trackID: 12 chamberNb: 0Edep:   176.3 keV
+  trackID: 12 chamberNb: 0Edep: 158.555 keV
+  trackID: 12 chamberNb: 0Edep: 178.979 keV
+  trackID: 12 chamberNb: 0Edep:  136.21 keV
+  trackID: 12 chamberNb: 0Edep: 75.5823 keV
+>>> Event: 20
+    14 trajectories stored in this event.
+    12 hits stored in this event
+    Total energy deposited:  925.572 keV
+>>> Event: 21
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 22
+    9 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 23
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 24
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 25
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 26
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 27
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 28
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 9 chamberNb: 0Edep:  177.46 keV
+  trackID: 9 chamberNb: 0Edep: 144.221 keV
+  trackID: 9 chamberNb: 0Edep:  235.43 keV
+  trackID: 9 chamberNb: 0Edep: 114.286 keV
+>>> Event: 29
+    10 trajectories stored in this event.
+    6 hits stored in this event
+    Total energy deposited:  671.565 keV
+  trackID: 4 chamberNb: 0Edep: 651.074 eV 
+>>> Event: 30
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  651.074 eV 
+  trackID: 8 chamberNb: 0Edep:  129.38 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:  1.2554 keV
+  trackID: 8 chamberNb: 0Edep:  11.067 keV
+  trackID: 10 chamberNb: 0Edep: 34.4889 keV
+>>> Event: 31
+    12 trajectories stored in this event.
+    5 hits stored in this event
+    Total energy deposited:  46.9789 keV
+>>> Event: 32
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 33
+    9 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 106.511 keV
+>>> Event: 34
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  106.511 keV
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:     6.5 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:  11.067 keV
+>>> Event: 35
+    15 trajectories stored in this event.
+    7 hits stored in this event
+    Total energy deposited:  11.2645 keV
+>>> Event: 36
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 37
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 38
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 39
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 40
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 41
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 42
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 119.064 keV
+>>> Event: 43
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  119.064 keV
+>>> Event: 44
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 45
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 46
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 47
+    9 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 48
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 49
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 50
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 51
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 52
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 8 chamberNb: 0Edep:  1.2554 keV
+  trackID: 8 chamberNb: 0Edep:  1.4023 keV
+  trackID: 8 chamberNb: 0Edep:  129.38 eV 
+  trackID: 8 chamberNb: 0Edep:   14.78 eV 
+  trackID: 8 chamberNb: 0Edep:   38.19 eV 
+  trackID: 8 chamberNb: 0Edep:  11.067 keV
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+>>> Event: 53
+    20 trajectories stored in this event.
+    10 hits stored in this event
+    Total energy deposited:  25.1798 keV
+>>> Event: 54
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 55
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 56
+    10 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 57
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 6 chamberNb: 0Edep:  1.4023 keV
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+>>> Event: 58
+    12 trajectories stored in this event.
+    4 hits stored in this event
+    Total energy deposited:  23.5745 keV
+>>> Event: 59
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 60
+    12 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 61
+    12 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 70.2868 keV
+>>> Event: 62
+    11 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  70.2868 keV
+>>> Event: 63
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 64
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 65
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 66
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 67
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 68
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 69
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 70
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 71
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 72
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 73
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 74
+    11 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 75
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 76
+    13 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 3.84977 keV
+>>> Event: 77
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  3.84977 keV
+>>> Event: 78
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 79
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 80
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 9.73424 keV
+>>> Event: 81
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  9.73424 keV
+>>> Event: 82
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 83
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 84
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 4 chamberNb: 0Edep: 95.6098 keV
+>>> Event: 85
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  95.6098 keV
+  trackID: 4 chamberNb: 0Edep: 115.886 keV
+  trackID: 4 chamberNb: 0Edep: 147.689 keV
+>>> Event: 86
+    8 trajectories stored in this event.
+    2 hits stored in this event
+    Total energy deposited:  263.575 keV
+>>> Event: 87
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 88
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 89
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 90
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 8 chamberNb: 0Edep:  129.38 eV 
+>>> Event: 91
+    9 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  129.38 eV 
+>>> Event: 92
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:     6.5 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+>>> Event: 93
+    14 trajectories stored in this event.
+    6 hits stored in this event
+    Total energy deposited:  14.9691 keV
+  trackID: 4 chamberNb: 0Edep: 49.4097 keV
+>>> Event: 94
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  49.4097 keV
+>>> Event: 95
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+>>> Event: 96
+    8 trajectories stored in this event.
+    0 hits stored in this event
+    Total energy deposited:  0 eV 
+  trackID: 6 chamberNb: 0Edep:   14.78 eV 
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:  1.4023 keV
+  trackID: 6 chamberNb: 0Edep:   14.78 eV 
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  1.2554 keV
+  trackID: 6 chamberNb: 0Edep:   38.19 eV 
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+  trackID: 9 chamberNb: 0Edep: 155.259 keV
+  trackID: 9 chamberNb: 0Edep: 16.6267 keV
+>>> Event: 97
+    17 trajectories stored in this event.
+    11 hits stored in this event
+    Total energy deposited:  187.01 keV
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+  trackID: 6 chamberNb: 0Edep:     6.5 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 6 chamberNb: 0Edep:  129.38 eV 
+  trackID: 6 chamberNb: 0Edep:  11.067 keV
+>>> Event: 98
+    14 trajectories stored in this event.
+    6 hits stored in this event
+    Total energy deposited:  22.5286 keV
+  trackID: 4 chamberNb: 0Edep: 20.4953 keV
+>>> Event: 99
+    8 trajectories stored in this event.
+    1 hits stored in this event
+    Total energy deposited:  20.4953 keV
+ Run terminated.
+Run Summary
+  Number of events processed : 100
+  User=0.17s Real=0.18s Sys=0s
+
+ ----> print histograms statistic for the entire run 
+
+ EAbs : mean = 124.342 keV rms = 213.257 keV
+... write Root file : ge-detectorWedOct1814:56:002017.root - done
+... close Root file : ge-detectorWedOct1814:56:002017.root - done
+*** VRML 2.0 File  g4_00.wrl  is generated.
+MESSAGE from VRML2FILE driver:
+    Set an environmental variable  G4VRMLFILE_VIEWER
+    if you want to visualize the generated VRML file
+    automatically.  For example, 
+    setenv  G4VRMLFILE_VIEWER  vrwave 
+Graphics systems deleted.
+Visualization Manager deleting...
+G4 kernel has come to Quit state.
+UserDetectorConstruction deleted.
+UserPhysicsList deleted.
+UserActionInitialization deleted.
+UserRunAction deleted.
+UserPrimaryGenerator deleted.
+RunManager is deleting RunManagerKernel.
+G4SDManager deleted.
+EventManager deleted.
+Units table cleared.
+Total navigation history collections cleaned: 9
+================== Deleting memory pools ===================
+Pool ID '20G4NavigationLevelRep', size : 0.0115 MB
+Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+Pool ID '7G4Event', size : 0.00961 MB
+Pool ID '15G4PrimaryVertex', size : 0.00961 MB
+Pool ID '17G4PrimaryParticle', size : 0.0144 MB
+Pool ID '15G4HCofThisEvent', size : 0.000961 MB
+Pool ID '16G4HitsCollection', size : 0.00385 MB
+Pool ID '17G4DynamicParticle', size : 0.00192 MB
+Pool ID '19G4ElectronOccupancy', size : 0.000961 MB
+Pool ID '7G4Track', size : 0.00385 MB
+Pool ID '18G4TouchableHistory', size : 0.000961 MB
+Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+Pool ID '12G4Trajectory', size : 0.0721 MB
+Pool ID '17G4TrajectoryPoint', size : 0.0807 MB
+Pool ID '21G4TrajectoryContainer', size : 0.000961 MB
+Pool ID '12geTrackerHit', size : 0.00481 MB
+Pool ID '10G4Fragment', size : 0.000961 MB
+Number of memory pools allocated: 17; of which, static: 0
+Dynamic pools deleted: 17 / Total memory freed: 0.22 MB
+============================================================
+G4Allocator objects are deleted.
+UImanager deleted.
+StateManager deleted.
+RunManagerKernel is deleted. Good bye :)

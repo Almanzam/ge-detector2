@@ -2,6 +2,8 @@
 #PBS -lwalltime=00:35:00
 #PBS -lnodes=1
 #PBS -j oe
+#PBS -m e
+#PBS -M almanzam@vt.edu
 #
 cd $PBS_O_WORKDIR
 echo $PBS_JOBID
