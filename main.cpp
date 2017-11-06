@@ -21,6 +21,7 @@
 #include "geEventAction.hh"
 #include "Randomize.hh"
 #include "time.h"
+#include "Shielding.hh"
 
 int main(int argc, char **argv)
 {
@@ -48,6 +49,7 @@ int main(int argc, char **argv)
 //     }
 //     #else
     G4RunManager* run_manager = new G4RunManager;
+    run_manager->SetUserInitialization(new Shielding); 
 //     #endif
 //     if (argc == 3) {
 //      detector_construction->SetCADFilename(argv[2]);
