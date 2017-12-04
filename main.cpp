@@ -1,6 +1,6 @@
 #include <iostream>
 #include "DetectorConstruction.hh"
-#include "PhysicsList.hh"
+//#include "PhysicsList.hh"
 #include "PrimaryGeneratorAction.hh"
 #include "geActionInitialization.hh"
 
@@ -45,7 +45,6 @@ int main(int argc, char **argv)
     DetectorConstruction* detector = new DetectorConstruction(parser);
     //add geometry to run
     run_manager->SetUserInitialization(detector);
-
 
     geActionInitialization *ge_action = new geActionInitialization(detector);
     run_manager->SetUserInitialization(ge_action);

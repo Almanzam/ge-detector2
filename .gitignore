@@ -6,3 +6,4 @@ build/**
 *.root
 *.out
 *.txt
+*.pbs.*
