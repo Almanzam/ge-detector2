@@ -4,20 +4,16 @@
 #include "PrimaryGeneratorAction.hh"
 #include "geActionInitialization.hh"
 
-// GEANT4 //
-// #ifdef G4MULTITHREADED
-// #include "G4MTRunManager.hh"
-// #else
+
 #include "G4RunManager.hh"
-// #endif
+
 #include "G4UImanager.hh"
-//#include "G4UIterminal.hh"
-//#include "G4UItcsh.hh"
+
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 #include "G4GDMLParser.hh"
 #include "geColorReader.hh"
-// #include "HistoManager.hh"
+
 #include "geEventAction.hh"
 #include "Randomize.hh"
 #include "time.h"
@@ -31,63 +27,29 @@ int main(int argc, char **argv)
     //set random seed with system time
     G4long seed = time(NULL);
     CLHEP::HepRandom::setTheSeed(seed);
-    //DetectorConstruction *detector_construction = new DetectorConstruction;
+    //create gdml reader object with support for colors
     G4GDMLReadStructure* fReader;
     fReader = new geColorReader();
+    //create gdml parser to process gdml file
     G4GDMLParser parser(fReader);
     parser.SetStripFlag(false);
-	parser.SetAddPointerToName(false);
+    parser.SetAddPointerToName(false);
+    //read file
     parser.Read("/home/almanzam/projects/ge-detector/CAD/HPGe_efficiency.gdml");
-	//parser.StripNamePointers();
-//     G4int numCPU = sysconf(_SC_NPROCESSORS_ONLN);
-//     #ifdef G4MULTITHREADED  
-//     G4MTRunManager* run_manager = new G4MTRunManager;
-//     if(numCPU > 10){
-//         run_manager->SetNumberOfThreads(10);
-//     }else{
-//         run_manager->SetNumberOfThreads(4);
-//     }
-//     #else
+    //create run manager
     G4RunManager* run_manager = new G4RunManager;
+    //use shielding physics list
     run_manager->SetUserInitialization(new Shielding); 
-//     #endif
-//     if (argc == 3) {
-//      detector_construction->SetCADFilename(argv[2]);
-//     } else if (argc == 4) {
-//      // We must specify the file type for tetrahedral meshes.
-//      detector_construction->SetCADFilename(argv[2]);
-//      detector_construction->SetCADFiletype(argv[3]);
-//     } else {
-//      G4cout << "Usage:" << G4endl;
-//      G4cout <<
-//          "    cadmesh_example <macro> <cad file name> <cad file type, optional>"
-//          << G4endl;
-//      return 0;
-//     }
 
+    //create new detector geometry using our gdml file
     DetectorConstruction* detector = new DetectorConstruction(parser);
+    //add geometry to run
     run_manager->SetUserInitialization(detector);
-//     HistoManager* histo = new HistoManager();
 
-    PhysicsList *physics_list = new PhysicsList;
-    run_manager->SetUserInitialization(physics_list);
-    
-    
-    
-    
 
-    //PrimaryGeneratorAction *primary_generator = new PrimaryGeneratorAction;
     geActionInitialization *ge_action = new geActionInitialization(detector);
     run_manager->SetUserInitialization(ge_action);
-//     PrimaryGeneratorAction* gen_action = 
-//                           new PrimaryGeneratorAction();
-//     run_manager->SetUserAction(gen_action);
-//     
-    
-    //
-//     geEventAction* event_action = new geEventAction(histo);
-//     run_manager->SetUserAction(event_action);
-    
+
     run_manager->Initialize();
 
     G4VisManager *vis_manager = new G4VisExecutive;
@@ -111,10 +73,6 @@ int main(int argc, char **argv)
     delete ui;
   }
 
-        
-    //histo->Book();
-    
-    
     delete vis_manager;
     delete run_manager;
     return 0;
