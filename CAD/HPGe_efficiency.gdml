@@ -312,7 +312,7 @@
 				<positionref ref="Lead_top_offset"/>
 			</physvol>
 			<physvol name="Lead_top_physNaI">
-				<volumeref ref="Lead_top_Vol_VolNai"/>
+				<volumeref ref="Lead_top_Vol_VolNaI"/>
 				<positionref ref="Lead_top_offsetNaI"/>
 			</physvol>
 			<physvol name="Shell_phys">
