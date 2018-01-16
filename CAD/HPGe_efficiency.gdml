@@ -179,6 +179,11 @@
 			<second ref="Lead_top_minus"/>
 			<positionref ref="t0"/>
 		</subtraction>
+		<subtraction name="Lead_top_VolNaI">
+			<first ref="Lead_top_plus"/>
+			<second ref="Lead_top_minus"/>
+			<positionref ref="t0"/>
+		</subtraction>
 		<!--<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="core1">
@@ -280,7 +285,7 @@
 		</volume>
 		<volume name="Lead_top_Vol_VolNaI" >
 			<materialref ref="G4_Pb"/>
-			<solidref ref="Lead_top_Vol" />
+			<solidref ref="Lead_top_VolNaI" />
 			<colorref ref="Violet"/>
 		</volume>
 		<!--<volume name="Lead_Core_vol_vol" >
