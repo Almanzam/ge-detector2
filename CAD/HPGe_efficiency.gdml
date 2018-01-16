@@ -35,7 +35,7 @@
 		<position name="Lead_bottom_offset" unit="mm" x="0" y="0" z="25.4"/>
 		<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="-101.9"/>
 		<position name="Lead_top_offset" unit="mm" x="0" y="0" z="101.6"/>
-		<position name="Lead_top_offsetNaI" unit="mm" x="0" y="0" z="105.6"/>
+		<position name="Lead_top_offsetNaI" unit="mm" x="0" y="0" z="155.6"/>
 	</define>
 	<materials>
 		<material Z="12" name="Magnesium" >
@@ -179,11 +179,7 @@
 			<second ref="Lead_top_minus"/>
 			<positionref ref="t0"/>
 		</subtraction>
-		<subtraction name="Lead_top_VolNaI">
-			<first ref="Lead_top_plus"/>
-			<second ref="Lead_top_minus"/>
-			<positionref ref="t0"/>
-		</subtraction>
+		
 		<!--<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="core1">
@@ -283,11 +279,11 @@
 			<solidref ref="Lead_top_Vol" />
 			<colorref ref="Violet"/>
 		</volume>
-		<volume name="Lead_top_Vol_VolNaI" >
+		<!--<volume name="Lead_top_Vol_VolNaI" >
 			<materialref ref="G4_Pb"/>
-			<solidref ref="Lead_top_VolNaI" />
+			<solidref ref="Lead_top_Vol" />
 			<colorref ref="Violet"/>
-		</volume>
+		</volume>-->
 		<!--<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
 			<solidref ref="Lead_Core_vol" />
@@ -317,7 +313,7 @@
 				<positionref ref="Lead_top_offset"/>
 			</physvol>
 			<physvol name="Lead_top_physNaI">
-				<volumeref ref="Lead_top_Vol_VolNaI"/>
+				<volumeref ref="Lead_top_Vol_Vol"/>
 				<positionref ref="Lead_top_offsetNaI"/>
 			</physvol>
 			<physvol name="Shell_phys">
