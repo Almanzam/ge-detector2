@@ -45,15 +45,16 @@ int main(int argc, char **argv)
     DetectorConstruction* detector = new DetectorConstruction(parser);
     //add geometry to run
     run_manager->SetUserInitialization(detector);
-
+    //create actionInitialization using geometry
     geActionInitialization *ge_action = new geActionInitialization(detector);
+    //tell run manager to use new actionInitialization
     run_manager->SetUserInitialization(ge_action);
-
+    //start
     run_manager->Initialize();
-
+    //initialize visualization manager
     G4VisManager *vis_manager = new G4VisExecutive;
     vis_manager->Initialize();
-
+    //initialize UI
     G4UImanager *ui_manager = G4UImanager::GetUIpointer();
     G4UIExecutive* ui = 0;
     if ( argc == 1 ) {

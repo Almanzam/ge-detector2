@@ -35,6 +35,7 @@
 		<position name="Lead_bottom_offset" unit="mm" x="0" y="0" z="25.4"/>
 		<position name="Lead_vol_offset" unit="mm" x="12.2174" y="0" z="-101.9"/>
 		<position name="Lead_top_offset" unit="mm" x="0" y="0" z="101.6"/>
+		<position name="Lead_top_offsetNaI" unit="mm" x="0" y="0" z="105.6"/>
 	</define>
 	<materials>
 		<material Z="12" name="Magnesium" >
@@ -305,7 +306,10 @@
 				<volumeref ref="Lead_top_Vol_Vol"/>
 				<positionref ref="Lead_top_offset"/>
 			</physvol>
-			
+			<physvol name="Lead_top_physNaI">
+				<volumeref ref="Lead_top_Vol_Vol"/>
+				<positionref ref="Lead_top_offsetNaI"/>
+			</physvol>
 			<physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
 				<position name="mgshelloffset" x="0" y="0" z="-24.5" unit="mm" />
