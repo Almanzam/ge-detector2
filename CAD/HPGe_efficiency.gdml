@@ -278,6 +278,11 @@
 			<solidref ref="Lead_top_Vol" />
 			<colorref ref="Violet"/>
 		</volume>
+		<volume name="Lead_top_Vol_VolNaI" >
+			<materialref ref="G4_Pb"/>
+			<solidref ref="Lead_top_Vol" />
+			<colorref ref="Violet"/>
+		</volume>
 		<!--<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
 			<solidref ref="Lead_Core_vol" />
@@ -307,7 +312,7 @@
 				<positionref ref="Lead_top_offset"/>
 			</physvol>
 			<physvol name="Lead_top_physNaI">
-				<volumeref ref="Lead_top_Vol_Vol"/>
+				<volumeref ref="Lead_top_Vol_VolNai"/>
 				<positionref ref="Lead_top_offsetNaI"/>
 			</physvol>
 			<physvol name="Shell_phys">
