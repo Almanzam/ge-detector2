@@ -1,0 +1,36 @@
+/control/verbose 2
+/run/verbose 2
+/vis/verbose 2
+/gps/verbose 2
+
+/vis/open VRML2FILE
+/vis/drawVolume
+
+/vis/viewer/set/style wireframe
+/vis/viewer/set/hiddenEdge 0
+
+
+
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+
+/vis/viewer/set/viewpointThetaPhi 60 60
+/vis/viewer/set/upVector 0 0 1
+
+
+
+/vis/scene/add/hits
+#/gps/source/multiplevertex true
+#Na22 ion
+#/gps/source/intensity 1
+/gps/ion 11 22
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius .25 cm
+/gps/pos/halfz .125 cm
+/gps/pos/centre 2.25 3.89711 12.7403 cm
+/gps/ene/type Mono
+/gps/ene/mono 0 MeV
+/run/beamOn 750
+
+
