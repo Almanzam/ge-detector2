@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     parser.SetStripFlag(false);
     parser.SetAddPointerToName(false);
     //read file
-    parser.Read("/home/almanzam/projects/ge-detector/CAD/HPGe_efficiency.gdml");
+    parser.Read("/home/almanzam/projects/ge-detector/CAD/HPGe.gdml");
     //create run manager
     G4RunManager* run_manager = new G4RunManager;
     //use shielding physics list
