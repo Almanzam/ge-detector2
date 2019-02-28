@@ -1,6 +1,6 @@
 #!/bin/bash
 mac=efficiency_Co60_X.mac
-count=12
+count=6
 COUNTER=0
          until [  $COUNTER -gt $count ]; do
              ../build/ge-detector ../macros/${mac/X/$COUNTER}
