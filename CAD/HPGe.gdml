@@ -19,8 +19,8 @@
 		<quantity type="density" name="universe_mean_density" value="1.e-25" unit="g/cm3" />
 		<position name="core_top" unit="mm" x="0" y="0" z="252.349" />
 		<position name="core_bot" unit="mm" x="0" y="0" z="-252.349" />
-		<position name="cu_ext_top" unit="mm" x="0" y="0" z="202.549" />
-		<position name="cu_ext_bot" unit="mm" x="0" y="0" z="-202.549" />
+		<position name="cu_ext_top" unit="mm" x="0" y="0" z="201.549" />
+		<position name="cu_ext_bot" unit="mm" x="0" y="0" z="-201.549" />
 		<position name="shell_top" unit="mm" x="0" y="0" z="307.912" />
 		<position name="shell_bot" unit="mm" x="0" y="0" z="-307.912" />
 		<position name="bultop_offset" unit="mm" x="0" y="0" z="33.3"/>
@@ -161,9 +161,9 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
-		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.875" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.874" z="403.097" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
-		<tube name="cu_ext_end" rmin="0" rmax="142.875" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="cu_ext_end" rmin="0" rmax="142.874" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="core1">
 			<first ref="core_wall" />
