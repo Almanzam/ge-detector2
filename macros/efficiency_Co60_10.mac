@@ -23,7 +23,7 @@
 #/gps/source/multiplevertex true
 #Na22 ion
 #/gps/source/intensity 1
-/gps/ion 11 22
+/gps/ion 27 60
 /gps/pos/type Volume
 /gps/pos/shape Cylinder
 /gps/pos/radius .25 cm
