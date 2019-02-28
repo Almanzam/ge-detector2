@@ -19,6 +19,8 @@
 		<quantity type="density" name="universe_mean_density" value="1.e-25" unit="g/cm3" />
 		<position name="core_top" unit="mm" x="0" y="0" z="252.349" />
 		<position name="core_bot" unit="mm" x="0" y="0" z="-252.349" />
+		<position name="cu_ext_top" unit="mm" x="0" y="0" z="202.549" />
+		<position name="cu_ext_bot" unit="mm" x="0" y="0" z="-202.549" />
 		<position name="shell_top" unit="mm" x="0" y="0" z="307.912" />
 		<position name="shell_bot" unit="mm" x="0" y="0" z="-307.912" />
 		<position name="bultop_offset" unit="mm" x="0" y="0" z="33.3"/>
@@ -159,7 +161,9 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
+		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.875" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="cu_ext_end" rmin="0" rmax="142.875" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="core1">
 			<first ref="core_wall" />
@@ -170,6 +174,16 @@
 			<first ref="core1" />
 			<second ref="core_end" />
 			<positionref ref="core_bot" />
+		</union>
+		<union name="cu1">
+			<first ref="cu_ext_wall" />
+			<second ref="cu_ext_end" />
+			<positionref ref="cu_ext_top" />
+		</union>
+		<union name="cu_ext">
+			<first ref="cu1" />
+			<second ref="cu_ext_end" />
+			<positionref ref="cu_ext_bot" />
 		</union>
 		
 		<tube name="Steel_shell_wall" rmax="254" rmin="244.475" z="606.298" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
@@ -234,11 +248,7 @@
 			<materialref ref="G4_Cu" />
 			<solidref ref="Copper_Cup_vol" />
 			<auxiliary auxtype="color" auxvalue="red"/>
-			<colorref ref="Red"/>
-			
-			
-			
-			
+			<colorref ref="Red"/>			
 		</volume>
 		<volume name="Shell_vol_vol" >
 			<materialref ref="G4_Mg" />
@@ -247,6 +257,12 @@
 			<colorref ref="Grey"/>
 			
 			
+		</volume>
+
+		<volume name="cu_ext_vol">
+			<materialref ref="G4_Cu"/>
+			<solidref ref="cu_ext"/>
+			<colorref ref="Red"/>
 		</volume>
 		<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
@@ -275,6 +291,10 @@
 			</physvol>
 			<physvol name="Lead_Core_phys">
 				<volumeref ref="Lead_Core_vol_vol"/>
+				<positionref ref="t0"/>
+			</physvol>
+			<physvol name="cu_ext_phys">
+				<volumeref ref="cu_ext_vol"/>
 				<positionref ref="t0"/>
 			</physvol>
 			<physvol name="Shell_phys">
