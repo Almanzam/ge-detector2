@@ -62,9 +62,14 @@ geRunAction::geRunAction()
   
   // Creating histograms
   analysisManager->CreateH1("Eabs","Edep in absorber", 8192, 0*CLHEP::keV, 3000*CLHEP::keV);
-  
+
   // Creating ntuple
   //
+  analysisManager->CreateNtuple("list","Eabs for each event");
+  analysisManager->CreateNtupleDColumn("Eabs");
+  analysisManager->FinishNtuple();
+  
+  
   
   G4cout << "geAI runaction" << G4endl;
 }
