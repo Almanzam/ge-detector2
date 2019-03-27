@@ -31,6 +31,6 @@
 /gps/pos/centre -11.2 0 -15.1549 cm
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
-/run/beamOn 8179230
+/run/beamOn 2125920 #8179230
 
 
