@@ -7,3 +7,4 @@ build/**
 *.out
 *.txt
 *.pbs.*
+.vscode/ipch/e89bbea25e9af9c/GEEVENTACTION.ipch

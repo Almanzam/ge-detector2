@@ -110,6 +110,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
 	  if(totEnergy > 0){
 		analysisManager->FillH1(0,totEnergy);
     analysisManager->FillNtupleDColumn(0, totEnergy);
+    man->AddNtupleRow();
       }
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
