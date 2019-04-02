@@ -87,7 +87,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
     geTrackerHitsCollection* HPGeHC = 0;
     G4int n_hit = 0;
     G4double totEnergy=0.;// energyD=0.;
-    
+    G4ThreeVector pos;
     G4SDManager * SDman = G4SDManager::GetSDMpointer();
     HPGeCollID = SDman->GetCollectionID("TrackerHitsCollectionName");
 //     HistoManager* histo = new HistoManager();
@@ -102,6 +102,10 @@ void geEventAction::EndOfEventAction(const G4Event* event)
         for (G4int i=0;i<n_hit;i++)
           {
             totEnergy += (*HPGeHC)[i]->GetEdepTot(); 
+            pos = (*HPGeHC)[i]->GetPos();
+            analysisManager->FillNtupleDColumn(1,0,eventID);
+            analysisManager->FillNtupleDColumn(1,1,pos);
+            analysisManager->AddNtupleRow(1);
 //             energyD = detectorType->ResponseFunction(totEnergy);            
 //             XrayFluoAnalysisManager* analysis = XrayFluoAnalysisManager::getInstance();
 //             analysis->analyseEnergyDep(energyD);
@@ -109,8 +113,8 @@ void geEventAction::EndOfEventAction(const G4Event* event)
           }
 	  if(totEnergy > 0){
 		analysisManager->FillH1(0,totEnergy);
-    analysisManager->FillNtupleDColumn(0, totEnergy);
-    analysisManager->AddNtupleRow();
+    analysisManager->FillNtupleDColumn(0,0, totEnergy);
+    analysisManager->AddNtupleRow(0);
       }
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;

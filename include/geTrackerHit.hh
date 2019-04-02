@@ -66,7 +66,7 @@ class geTrackerHit : public G4VHit
     void SetTrackID  (G4int track)      { fTrackID = track; };
     void SetChamberNb(G4int chamb)      { fChamberNb = chamb; };
     void SetEdep     (G4double de)      { fEdep = de; };
-    //void SetPos      (G4ThreeVector xyz){ fPos = xyz; };
+    void SetPos      (G4ThreeVector xyz){ fPos = xyz; };
 
     // Get methods
     G4int GetTrackID() const     { return fTrackID; };

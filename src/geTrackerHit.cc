@@ -47,6 +47,7 @@ geTrackerHit::geTrackerHit()
    fTrackID(-1),
    fChamberNb(-1),
    fEdep(0.),
+   fPos(G4ThreeVector(0,0,0)),
    EdepTot(0)
 {}
 
@@ -62,6 +63,7 @@ geTrackerHit::geTrackerHit(const geTrackerHit& right)
   fTrackID   = right.fTrackID;
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
+  fPos       = right.fPos;
   EdepTot       = right.EdepTot;
   G4cout << "geTH TH" << G4endl;
 }
@@ -73,6 +75,7 @@ const geTrackerHit& geTrackerHit::operator=(const geTrackerHit& right)
   fTrackID   = right.fTrackID;
   fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
+  fPos       = right.fPos;
   EdepTot       = right.EdepTot;
   G4cout << "geTH THo" << G4endl;
   return *this;

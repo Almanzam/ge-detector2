@@ -65,9 +65,16 @@ geRunAction::geRunAction()
 
   // Creating ntuple
   //
-  analysisManager->CreateNtuple("list","Eabs for each event");
-  analysisManager->CreateNtupleDColumn("Eabs");
-  analysisManager->FinishNtuple();
+  analysisManager->CreateNtuple("Event list","Eabs for each event");  
+  analysisManager->CreateNtupleDColumn(0,"Eabs");
+  analysisManager->FinishNtuple(0);
+
+  analysisManager->CreateNtuple("Position List","unique event id with positions for each hit");
+  analysisManager->CreateNtupleIColumn(1,"EventID");
+  analysisManager->CreateNtupleDColumn(1,"Hit Position");
+  analysisManager->FinishNtuple(1);
+
+
   
   
   
@@ -93,12 +100,16 @@ void geRunAction::BeginOfRunAction(const G4Run*)
 
   // Open an output file
   //
-  std::chrono::time_point<std::chrono::system_clock> time;
-  time = std::chrono::system_clock::now();
-  std::time_t s_time = std::chrono::system_clock::to_time_t(time);
-  std::string date = std::string(std::ctime(&s_time));
-  date.erase(std::remove(date.begin(), date.end(), ' '), date.end());
-  date.erase(std::remove(date.begin(), date.end(), '\n'), date.end());
+  std::time_t rawtime;
+  std::tm* timeinfo;
+  char buffer [80];
+
+  std::time(&rawtime);
+  timeinfo = std::localtime(&rawtime);
+
+  std::strftime(buffer,80,"%Y-%m-%d-%H-%M",timeinfo);
+  std::puts(buffer);
+  std::string date = buffer
   G4String fileName = "ge-detector"+date+".root";
   analysisManager->OpenFile(fileName);
 //   G4cout << "geRA begin" << id << G4endl;
