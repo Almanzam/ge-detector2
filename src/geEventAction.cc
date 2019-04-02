@@ -40,6 +40,7 @@
 #include "G4SDManager.hh"
 #include "G4UnitsTable.hh"
 #include "HistoManager.hh"
+#include <vector>
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 
@@ -88,6 +89,7 @@ void geEventAction::EndOfEventAction(const G4Event* event)
     G4int n_hit = 0;
     G4double totEnergy=0.;// energyD=0.;
     G4ThreeVector pos;
+    
     G4SDManager * SDman = G4SDManager::GetSDMpointer();
     HPGeCollID = SDman->GetCollectionID("TrackerHitsCollectionName");
 //     HistoManager* histo = new HistoManager();
@@ -105,7 +107,8 @@ void geEventAction::EndOfEventAction(const G4Event* event)
             pos = (*HPGeHC)[i]->GetPos();
             analysisManager->FillNtupleIColumn(1,0,eventID);
             analysisManager->FillNtupleDColumn(1,1,(*HPGeHC)[i]->GetEdepTot());
-            analysisManager->FillNtupleDColumn(1,2,std::vector(pos));
+            std::vector<double> pos_vec = {pos[0],pos[1],pos[2]};
+            analysisManager->FillNtupleDColumn(1,2,pos_vec);
             analysisManager->AddNtupleRow(1);
 //             energyD = detectorType->ResponseFunction(totEnergy);            
 //             XrayFluoAnalysisManager* analysis = XrayFluoAnalysisManager::getInstance();
