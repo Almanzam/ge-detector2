@@ -103,8 +103,9 @@ void geEventAction::EndOfEventAction(const G4Event* event)
           {
             totEnergy += (*HPGeHC)[i]->GetEdepTot(); 
             pos = (*HPGeHC)[i]->GetPos();
-            analysisManager->FillNtupleDColumn(1,0,eventID);
-            analysisManager->FillNtupleDColumn(1,1,pos);
+            analysisManager->FillNtupleIColumn(1,0,eventID);
+            analysisManager->FillNtupleDColumn(1,1,(*HPGeHC)[i]->GetEdepTot());
+            analysisManager->FillNtupleDColumn(1,2,pos);
             analysisManager->AddNtupleRow(1);
 //             energyD = detectorType->ResponseFunction(totEnergy);            
 //             XrayFluoAnalysisManager* analysis = XrayFluoAnalysisManager::getInstance();

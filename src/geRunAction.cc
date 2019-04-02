@@ -71,6 +71,7 @@ geRunAction::geRunAction()
 
   analysisManager->CreateNtuple("Position List","unique event id with positions for each hit");
   analysisManager->CreateNtupleIColumn(1,"EventID");
+  analysisManager->CreateNtupleDColumn(1,"Energy Deposited");
   analysisManager->CreateNtupleDColumn(1,"Hit Position");
   analysisManager->FinishNtuple(1);
 
@@ -108,8 +109,8 @@ void geRunAction::BeginOfRunAction(const G4Run*)
   timeinfo = std::localtime(&rawtime);
 
   std::strftime(buffer,80,"%Y-%m-%d-%H-%M",timeinfo);
-  std::puts(buffer);
-  std::string date = buffer
+  std::puts(buffer);  
+  std::string date = buffer;
   G4String fileName = "ge-detector"+date+".root";
   analysisManager->OpenFile(fileName);
 //   G4cout << "geRA begin" << id << G4endl;
