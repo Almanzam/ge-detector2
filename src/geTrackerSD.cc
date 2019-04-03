@@ -88,7 +88,7 @@ G4bool geTrackerSD::ProcessHits(G4Step* aStep,
   newHit->SetChamberNb(aStep->GetPreStepPoint()->GetTouchableHandle()
                                                ->GetCopyNumber());
   newHit->AddEnergy(edep);
-  //newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
+  newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
 
   fHitsCollection->insert( newHit );
 
