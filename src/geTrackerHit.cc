@@ -113,8 +113,8 @@ void geTrackerHit::Print()
      << "  trackID: " << fTrackID << " chamberNb: " << fChamberNb
      << "Edep: "
      << std::setw(7) << G4BestUnit(EdepTot,"Energy")
-//      << " Position: "
-//      << std::setw(7) << G4BestUnit( fPos,"Length")
+      << " Position: "
+      << std::setw(7) << G4BestUnit( fPos,"Length")
      << G4endl;
 }
 
