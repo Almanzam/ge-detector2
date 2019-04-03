@@ -71,10 +71,10 @@ geRunAction::geRunAction()
 
   analysisManager->CreateNtuple("Position List","unique event id with positions for each hit");
   analysisManager->CreateNtupleIColumn(1,"EventID");
-  analysisManager->CreateNtupleDColumn(1,"Energy Deposited");
-  analysisManager->CreateNtupleDColumn(1,"Hit x");
-  analysisManager->CreateNtupleDColumn(1,"Hit y");
-  analysisManager->CreateNtupleDColumn(1,"Hit z");
+  analysisManager->CreateNtupleDColumn(1,"Energy_Deposited");
+  analysisManager->CreateNtupleDColumn(1,"Hit_x");
+  analysisManager->CreateNtupleDColumn(1,"Hit_y");
+  analysisManager->CreateNtupleDColumn(1,"Hit_z");
   analysisManager->FinishNtuple(1);
 
 
