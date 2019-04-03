@@ -107,6 +107,10 @@ void geEventAction::EndOfEventAction(const G4Event* event)
             pos = (*HPGeHC)[i]->GetPos();
             analysisManager->FillNtupleIColumn(1,0,eventID);
             analysisManager->FillNtupleDColumn(1,1,(*HPGeHC)[i]->GetEdepTot());
+            G4cout << "  Hit vector  "  << G4endl;
+            G4cout << "X: " << pos[0] << "   " << G4endl;
+            G4cout << "Y: " << pos[1] << "   " << G4endl;
+            G4cout << "Z: " << pos[2] << "   " << G4endl;
             analysisManager->FillNtupleDColumn(1,2,pos[0]);
             analysisManager->FillNtupleDColumn(1,3,pos[1]);
             analysisManager->FillNtupleDColumn(1,4,pos[2]);
