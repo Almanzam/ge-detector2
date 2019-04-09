@@ -1,0 +1,18 @@
+/control/verbose 2
+
+#/vis/verbose 2
+/gps/verbose 2
+
+#Co60 ion
+#/gps/source/intensity 1
+/gps/ion 27 60
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/radius .25 cm
+/gps/pos/halfz .125 cm
+/gps/pos/centre 11.2 0 -15.1549 cm
+/gps/ene/type Mono
+/gps/ene/mono 0 MeV
+/run/beamOn 1000
+
+
