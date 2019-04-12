@@ -35,7 +35,7 @@
 		<position name="mgshell_top" unit="mm" x="0" y="0" z="80.4" />
 		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-81.2" />
 		<position name="mgshelloffset" x="12.5" y="0" z="252.12" unit="mm" />
-		<position name="originoffset" x ="0" y="0" z="-10" unit="mm"/>
+		<position name="originoffset" x ="0" y="0" z="149.38" unit="mm"/>
 		<position name="cry_o_offset" x="0" y="0" z="42.55" unit="mm"/>
 		<position name="mylpos" x="0" y="0" z="80.4" />
 		<position name="cup_o_offset" x="0" y="0" z="33.4" unit="mm"/>
