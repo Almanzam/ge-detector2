@@ -273,7 +273,7 @@
 			</physvol>
 			<physvol name="Ge_phys" >
 				<volumeref ref="Ge_Crystal_vol_vol" />
-				<position name="ge_pos" x="0" y="0" z="33.4" />
+				<position name="ge_pos" x="0" y="0" z="37.4" />
 				<rotationref ref="r0" />
 			</physvol>
 			<colorref ref="Grey"/>
