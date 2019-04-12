@@ -257,23 +257,23 @@
 			<auxiliary auxtype="Target" auxvalue="target"/>
 			<physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
-				<position name="alpos" x="0" y="0" z="45.503" />
+				<position name="alpos" x="0" y="0" z="78.403" />
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Copper_phys" >
 				<volumeref ref="Copper_Cup_vol_vol" />
-				<positionref ref="t0" />
+				<position name="cu_pos" x="0" y="0" z="33.4" />
 				<rotationref ref="r0" />
 			</physvol>
 			
 			<physvol name="Mylar_phys" >
 				<volumeref ref="Mylar_Foil_vol" />
-				<position name="mylpos" x="0" y="0" z="45.5" />
+				<position name="mylpos" x="0" y="0" z="78.4" />
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Ge_phys" >
 				<volumeref ref="Ge_Crystal_vol_vol" />
-				<positionref ref="t0" />
+				<position name="ge_pos" x="0" y="0" z="33.4" />
 				<rotationref ref="r0" />
 			</physvol>
 			<colorref ref="Grey"/>
@@ -321,7 +321,7 @@
 			</physvol>
 			<physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
-				<position name="mgshelloffset" x="0" y="0" z="200" unit="mm" />
+				<position name="mgshelloffset" x="0" y="0" z="220" unit="mm" />
 			</physvol>
 			<!--physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
