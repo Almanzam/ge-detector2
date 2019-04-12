@@ -321,7 +321,7 @@
 			</physvol>
 			<physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
-				<position name="mgshelloffset" x="0" y="0" z="220" unit="mm" />
+				<position name="mgshelloffset" x="12.5" y="0" z="220" unit="mm" />
 			</physvol>
 			<!--physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
