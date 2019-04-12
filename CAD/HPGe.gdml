@@ -288,7 +288,10 @@
 		<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
 			<solidref ref="Lead_Core_vol" />
-			
+			<physvol name="Shell_phys">
+				<volumeref ref="Shell_vol_vol"/>
+				<position name="mgshelloffset" x="-12.5" y="0" z="252.12" unit="mm" />
+			</physvol>
 			<colorref ref="Violet"/>
 			
 		</volume>
@@ -318,10 +321,10 @@
 				<volumeref ref="cu_ext_vol"/>
 				<positionref ref="originoffset"/>
 			</physvol>
-			<physvol name="Shell_phys">
+			<!--physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
 				<position name="mgshelloffset" x="-12.5" y="0" z="252.12" unit="mm" />
-			</physvol>
+			</physvol-->
 			<!--physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
 				<position name="alpos" x="0" y="0" z="45.503" />
