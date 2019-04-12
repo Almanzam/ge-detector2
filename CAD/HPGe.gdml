@@ -307,7 +307,7 @@
 			<physvol>
 				<volumeref ref="Steel_Shell_vol_vol"/>
 				<!--<file name="/home/daq/projects/git_projects/ge-detector/CAD/steelshell2.gdml"/>-->
-				<position name="originoffset" x ="0" y="0" z="201.5" unit="mm"/>
+				<position name="originoffset" x ="0" y="0" z="149.38" unit="mm"/>
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Lead_Core_phys">
