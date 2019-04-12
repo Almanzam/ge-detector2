@@ -284,13 +284,17 @@
 			<materialref ref="G4_Cu"/>
 			<solidref ref="cu_ext"/>
 			<colorref ref="Red"/>
+			<physvol name="Shell_phys">
+				<volumeref ref="Shell_vol_vol"/>
+				<position name="mgshelloffset" x="12.5" y="0" z="252.12" unit="mm" />
+			</physvol>
 		</volume>
 		<volume name="Lead_Core_vol_vol" >
 			<materialref ref="G4_Pb" />
 			<solidref ref="Lead_Core_vol" />
-			<physvol name="Shell_phys">
-				<volumeref ref="Shell_vol_vol"/>
-				<position name="mgshelloffset" x="-12.5" y="0" z="252.12" unit="mm" />
+			<physvol name="cu_ext_phys">
+				<volumeref ref="cu_ext_vol"/>
+				<positionref ref="originoffset"/>
 			</physvol>
 			<colorref ref="Violet"/>
 			
@@ -298,7 +302,10 @@
 		<volume name="Steel_Shell_vol_vol" >
 			<materialref ref="G4_STAINLESS-STEEL" />
 			<solidref ref="Steel_Shell_vol" />
-			
+			<physvol name="Lead_Core_phys">
+				<volumeref ref="Lead_Core_vol_vol"/>
+				<positionref ref="originoffset"/>
+			</physvol>
 <!-- 			<auxiliary auxtype="SensDet" auxvalue="Tracker"/> -->
 			<colorref ref="Blue-Green"/>
 			
@@ -313,14 +320,8 @@
 				<position name="originoffset" x ="0" y="0" z="149.38" unit="mm"/>
 				<rotationref ref="r0" />
 			</physvol>
-			<physvol name="Lead_Core_phys">
-				<volumeref ref="Lead_Core_vol_vol"/>
-				<positionref ref="originoffset"/>
-			</physvol>
-			<physvol name="cu_ext_phys">
-				<volumeref ref="cu_ext_vol"/>
-				<positionref ref="originoffset"/>
-			</physvol>
+			
+			
 			<!--physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
 				<position name="mgshelloffset" x="-12.5" y="0" z="252.12" unit="mm" />
