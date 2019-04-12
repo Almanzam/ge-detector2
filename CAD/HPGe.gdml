@@ -32,8 +32,8 @@
 		<position name="shelloffset" unit="mm" x="0" y="0" z="250"/>
 		<position name="coreoffset" unit="mm" x="0" y="0" z="60"/>
 		<position name="cuwalloffset" unit="mm" x="0" y="0" z="-47"/>
-		<position name="mgshell_top" unit="mm" x="0" y="0" z="75.1" />
-		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-75.1" />
+		<position name="mgshell_top" unit="mm" x="0" y="0" z="80.4" />
+		<position name="mgshell_bot" unit="mm" x="0" y="0" z="-81.2" />
 	</define>
 	<materials>
 		<material Z="12" name="Magnesium" >
@@ -148,7 +148,7 @@
 			<positionref ref="cuwalloffset"/>
 		</union>
 		
-		<tube name="shell_wall" rmin="33" rmax="34.6" z="148.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="shell_wall" rmin="33" rmax="34.6" z="164" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="shell_end" rmin="0" rmax="34.6" z="1.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="mgshell1">
 			<first ref="shell_wall" />
@@ -254,6 +254,27 @@
 			<materialref ref="G4_Mg" />
 			<solidref ref="Shell_vol" />
 			<auxiliary auxtype="Target" auxvalue="target"/>
+			<physvol name="Al_phys" >
+				<volumeref ref="Al_Foil_vol" />
+				<position name="alpos" x="0" y="0" z="80.403" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="Copper_phys" >
+				<volumeref ref="Copper_Cup_vol_vol" />
+				<position name="cup_o_offset" x="0" y="0" z="33.4" unit="mm"/>
+				<rotationref ref="r0" />
+			</physvol>
+			
+			<physvol name="Mylar_phys" >
+				<volumeref ref="Mylar_Foil_vol" />
+				<position name="mylpos" x="0" y="0" z="80.4" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="Ge_phys" >
+				<volumeref ref="Ge_Crystal_vol_vol" />
+				<position name="cry_o_offset" x="0" y="0" z="42.55" unit="mm"/>
+				<rotationref ref="r0" />
+			</physvol>
 			<colorref ref="Grey"/>
 			
 			
@@ -286,22 +307,22 @@
 			<physvol>
 				<volumeref ref="Steel_Shell_vol_vol"/>
 				<!--<file name="/home/daq/projects/git_projects/ge-detector/CAD/steelshell2.gdml"/>-->
-				<positionref ref="t0" />
+				<position name="originoffset" x ="0" y="0" z="201.5" unit="mm"/>
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="Lead_Core_phys">
 				<volumeref ref="Lead_Core_vol_vol"/>
-				<positionref ref="t0"/>
+				<positionref ref="originoffset"/>
 			</physvol>
 			<physvol name="cu_ext_phys">
 				<volumeref ref="cu_ext_vol"/>
-				<positionref ref="t0"/>
+				<positionref ref="originoffset"/>
 			</physvol>
 			<physvol name="Shell_phys">
 				<volumeref ref="Shell_vol_vol"/>
-				<position name="mgshelloffset" x="0" y="0" z="-24.5" unit="mm" />
+				<position name="mgshelloffset" x="-12.5" y="0" z="200" unit="mm" />
 			</physvol>
-			<physvol name="Al_phys" >
+			<!--physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
 				<position name="alpos" x="0" y="0" z="45.503" />
 				<rotationref ref="r0" />
@@ -321,7 +342,7 @@
 				<volumeref ref="Ge_Crystal_vol_vol" />
 				<positionref ref="t0" />
 				<rotationref ref="r0" />
-			</physvol>
+			</physvol-->
 			
 			<!---->
 			
