@@ -97,7 +97,7 @@
 			<fraction n="0.625016" ref="Carbon" />
 			<fraction n="0.333025" ref="Oxygen" />
 		</material>
-		<material formula="air" name="Air" >
+		<material formula="noFormula" name="Air" >
 			<D value="0.0012899999999999999" />
 			<fraction n="0.7" ref="Nitrogen" />
 			<fraction n="0.3" ref="Oxygen" />
