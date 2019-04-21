@@ -179,9 +179,9 @@
 
 		<tube name="horz_coldfinger" rmin="17" rmax="19" z="110" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 
-		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.874" z="403.097" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.87" z="403.09" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
-		<tube name="cu_ext_end" rmin="0" rmax="142.874" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+		<tube name="cu_ext_end" rmin="0" rmax="142.87" z="1.9" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_end" rmin="0" rmax="244.475" z="101.6" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<union name="core1">
 			<first ref="core_wall" />
