@@ -94,6 +94,11 @@
 			<fraction n="0.625016" ref="Carbon" />
 			<fraction n="0.333025" ref="Oxygen" />
 		</material>
+		<material formula="air" name="Air" >
+			<D value="0.0012899999999999999" />
+			<fraction n="0.7" ref="Nitrogen" />
+			<fraction n="0.3" ref="Oxygen" />
+		</material>
 	</materials>
 	<solids>
 		<box aunit="radian" lunit="mm" name="WorldBox" x="2000" y="2000" z="2000"/>
@@ -163,6 +168,8 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
+		
+
 		<tube name = "cu_coldfinger" rmin="17" rmax="19" z="66" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 
 		<tube name = "vert_coldfinger" rmin="17" rmax="19" z="80" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
@@ -193,6 +200,16 @@
 			<second ref="core_end" />
 			<positionref ref="core_bot" />
 		</union>
+
+		<tube name="atmo" rmin="0" rmax="142.87" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+
+		<tube name="vac" rmin="0" rmax="34.6" z="166"deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+
+		<subtraction name="atmosphere">
+			<first ref="atmo"/>
+			<second ref="vac"/>
+			<position name="vac_offset" x="12.5" y="0" z="220" unit="mm">
+		</subtraction>
 		<!--<union name="cu1">
 			<first ref="cu_ext_wall" />
 			<second ref="cu_ext_end" />
@@ -321,6 +338,12 @@
 			<colorref ref="Blue-Green"/>
 			
 		</volume>
+
+		<volume name="atmosphere_vol">
+			<materialref ref="Air"/>
+			<solidref ref='atmosphere'/>
+		</volume>
+
 		<volume name="World" >
 			<materialref ref="vacuum" />
 			<solidref ref="WorldBox" />
@@ -333,6 +356,10 @@
 			</physvol>
 			<physvol name="Lead_Core_phys">
 				<volumeref ref="Lead_Core_vol_vol"/>
+				<positionref ref="originoffset"/>
+			</physvol>
+			<physvol name="atmosphere_phys">
+				<volumeref ref="atmosphere_vol"/>
 				<positionref ref="originoffset"/>
 			</physvol>
 			<!-- <physvol name="cu_ext_phys">
