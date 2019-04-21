@@ -42,9 +42,9 @@
 			<D value="1.74"/>
 			<atom value="24.305" />
 		</material>
-		<material Z="7" name="Nitrogen" >
+		<element Z="7" name="Nitrogen" >
 			<atom value="14.007" />
-		</material>
+		</element>
 		<material Z="29" name="Copper" >
 			<D value="8.96"/>
 			<atom value="63.546"/>
