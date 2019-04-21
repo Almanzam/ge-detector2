@@ -163,7 +163,7 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
-		<tube name = "cu_coldfinger" rmin="17" rmax="19" z="60" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+		<tube name = "cu_coldfinger" rmin="17" rmax="19" z="66" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 
 		<tube name = "vert_coldfinger" rmin="17" rmax="19" z="80" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 
@@ -366,7 +366,7 @@
 			</physvol>
 			<physvol name="cu_coldfinger_phys" >
 				<volumeref ref="cu_coldfinger_vol" />
-				<position name="cucf_pos" x="12.5" y="0" z="170" />
+				<position name="cucf_pos" x="12.5" y="0" z="172" />
 				<rotationref ref="r0" />
 			</physvol>
 			<physvol name="vert_coldfinger_phys" >
@@ -381,7 +381,7 @@
 			</physvol>
 			<physvol name="horz_phys" >
 				<volumeref ref="horz_coldfinger_vol" />
-				<position name="hcf_pos" x="50" y="0" z="34" />
+				<position name="hcf_pos" x="93" y="0" z="34" />
 				<rotationref ref="horz" />
 			</physvol>
 			<!--physvol name="Al_phys" >
