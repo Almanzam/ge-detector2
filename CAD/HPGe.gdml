@@ -29,6 +29,7 @@
 		<position name="crystal_offset" unit="mm" x="0" y="0" z="3.75" />
 		<position name="t0" unit="mm" x="0" y="0" z="0" />
 		<rotation name="r0" unit="radian" x="0" y="0" z="0" />
+		<rotation name="horz" unit="deg" y="-90" />
 		<position name="shelloffset" unit="mm" x="0" y="0" z="250"/>
 		<position name="coreoffset" unit="mm" x="0" y="0" z="60"/>
 		<position name="cuwalloffset" unit="mm" x="0" y="0" z="-47"/>
@@ -95,7 +96,7 @@
 		</material>
 	</materials>
 	<solids>
-		<box aunit="radian" lunit="mm" name="WorldBox" x="1000" y="1000" z="1000"/>
+		<box aunit="radian" lunit="mm" name="WorldBox" x="2000" y="2000" z="2000"/>
 		<torus name="Ge_tor" rmin="0" rmax="8" rtor="19.9" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 		<tube name ="Ge_topcyl" rmin="0" rmax="19.9" z="15.9" deltaphi="360" aunit="deg" lunit="mm"/>
 		<union name="Ge_bultop">
@@ -162,6 +163,22 @@
 			<positionref ref="mgshell_bot" />
 		</union>
 		
+		<tube name = "cu_coldfinger" rmin="17" rmax="19" z="60" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+
+		<tube name = "vert_coldfinger" rmin="17" rmax="19" z="80" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+
+		<tube name="junction_in" rmin="0" rmax="33" z="56" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+
+		<tube name="junction_out" rmin="0" rmax="35" z="60" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
+
+		<subtraction name="junction">
+			<first ref="junction_out"/>
+			<second ref="junction_in"/>
+			<positionref ref="t0"/>
+		</subtraction>
+
+		<tube name="horz_coldfinger" rmin="17" rmax="19" z="110" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+
 		<tube name="cu_ext_wall" rmin="140.875" rmax = "142.874" z="403.097" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="core_wall" rmin="142.875" rmax="244.475" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
 		<tube name="cu_ext_end" rmin="0" rmax="142.874" z="2" deltaphi="360" startphi="0" aunit="deg" lunit="mm"/>
@@ -207,6 +224,30 @@
 			<colorref ref="Blue"/>
 		</volume>
 		
+		<volume name="cu_coldfinger_vol">
+			<materialref ref="G4_Cu"/>
+			<solidref ref="cu_coldfinger" />
+			<colorref ref="Red" />
+		</volume>
+		
+		<volume name="vert_coldfinger_vol">
+			<materialref ref="G4_Al"/>
+			<solidref ref="vert_coldfinger" />
+			<colorref ref="Blue" />
+		</volume>
+
+		<volume name="junction_vol">
+			<materialref ref="G4_Al"/>
+			<solidref ref="junction" />
+			<colorref ref="Blue" />
+		</volume>
+
+		<volume name="horz_coldfinger_vol">
+			<materialref ref="G4_Al"/>
+			<solidref ref="horz_coldfinger" />
+			<colorref ref="Blue" />
+		</volume>
+
 		<!--<volume name="Ge_B_Layer_vol_vol" >
 			<materialref ref="G4_Ge" />
 			<solidref ref="Ge_B_Layer_vol" />
@@ -322,6 +363,26 @@
 				<volumeref ref="Ge_Crystal_vol_vol" />
 				<position name="ge_pos" x="12.5" y="0" z="257.4" />
 				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="cu_coldfinger_phys" >
+				<volumeref ref="cu_coldfinger_vol" />
+				<position name="cucf_pos" x="12.5" y="0" z="170" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="vert_coldfinger_phys" >
+				<volumeref ref="vert_coldfinger_vol" />
+				<position name="vtcf" x="12.5" y="0" z="96" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="junction_phys" >
+				<volumeref ref="junction_vol" />
+				<position name="junc_pos" x="12.5" y="0" z="34" />
+				<rotationref ref="r0" />
+			</physvol>
+			<physvol name="horz_phys" >
+				<volumeref ref="horz_coldfinger_vol" />
+				<position name="hcf_pos" x="50" y="0" z="34" />
+				<rotationref ref="horz" />
 			</physvol>
 			<!--physvol name="Al_phys" >
 				<volumeref ref="Al_Foil_vol" />
