@@ -206,7 +206,7 @@
 
 		<tube name="atmo" rmin="0" rmax="142.87" z="403.098" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 
-		<tube name="vac" rmin="0" rmax="34.6" z="166"deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
+		<tube name="vac" rmin="0" rmax="34.6" z="166" deltaphi="360" startphi="0" aunit="deg" lunit="mm" />
 
 		<subtraction name="atmosphere">
 			<first ref="atmo"/>
