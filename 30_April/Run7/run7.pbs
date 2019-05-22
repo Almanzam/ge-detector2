@@ -1,0 +1,15 @@
+#PBS -l nodes=1
+
+#PBS -m abe
+
+#PBS -M almanzam@vt.edu
+
+#PBS -l walltime=10:00:00
+#PBS -j oe
+#
+cd $PBS_O_WORKDIR
+echo $PBS_JOBID
+echo $TMPDIR
+hostname
+/home/almanzam/projects/ge-detector2/build/ge-detector /home/almanzam/projects/ge-detector2/macros/2019_04_30_Run_7.mac
+#

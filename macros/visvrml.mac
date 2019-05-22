@@ -46,7 +46,7 @@
 /gps/pos/shape Cylinder
 /gps/pos/radius .25 cm
 /gps/pos/halfz .125 cm
-/gps/pos/centre 0 0 6.3903 cm
+/gps/pos/centre 11.2 0 .125 cm
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
 
@@ -65,6 +65,6 @@
 #/gps/ang/type iso
 
 
-/run/beamOn 100
+/run/beamOn 500
 
 

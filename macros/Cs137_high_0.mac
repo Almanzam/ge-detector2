@@ -3,17 +3,17 @@
 
 /gps/verbose 2
 
-# The activity for this run is 84.37 kBq
-# assuming runtime of 23.7 seconds
+# The activity for this run is 172.59 kBq
+# assuming runtime of 11.58 seconds each
 
-#Ba 133 ion
+#Cs137 ion
 #/gps/source/intensity 1
-/gps/ion 56 133
+/gps/ion 55 137
 /gps/pos/type Volume
 /gps/pos/shape Cylinder
 /gps/pos/radius .25 cm
 /gps/pos/halfz .125 cm
-/gps/pos/centre 0 11.2 .125 cm
+/gps/pos/centre 0 11.2 26.16 cm
 /gps/ene/type Mono
 /gps/ene/mono 0 MeV
 /run/beamOn 2000000 #11170340
